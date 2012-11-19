@@ -1,0 +1,29 @@
+
+<Chapters>
+	<Chapter>
+		<Name>Santa's Workshop</Name>
+        <Icon>chapter-1</Icon>
+		<Number>1</Number>
+	</Chapter>
+	<Chapter>
+		<Name>Candy Factory</Name>
+        <Icon>chapter-2</Icon>
+		<Number>2</Number>		
+	</Chapter>
+	<Chapter>
+		<Name>Cookie Bakery</Name>
+        <Icon>comingsoon</Icon>
+		<Number>3</Number>
+	</Chapter>
+	<Chapter>
+		<Name>Widget Inc.</Name>
+        <Icon>comingsoon</Icon>
+		<Number>4</Number>
+	</Chapter>
+	<Chapter>
+		<Name>Clockwork Apple</Name>
+        <Icon>comingsoon</Icon>
+		<Number>5</Number>
+	</Chapter>
+</Chapters>
+
