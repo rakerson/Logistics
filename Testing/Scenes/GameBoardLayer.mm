@@ -20,6 +20,7 @@
 #import "LevelParser.h"
 #import "Level.h"
 #import "CCActionManager.h"
+#import "HelpMenu.h"
 
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
@@ -77,19 +78,25 @@ enum {
     selSprite.opacity = 128;
 }
 -(void)resumeGame{
+    gameOverTimer = 0;
+    menuOpen = false;
     self.isPlaying=true;
     self.isPaused = false;
     [self playAnimations];
 }
 -(void)retryGame{
-    belts = currentLevel.belts;
-    fans = currentLevel.fans;
-    springs = currentLevel.springs;
+    gameOverTimer = 0;
+    //belts = currentLevel.belts;
+    //fans = currentLevel.fans;
+    //springs = currentLevel.springs;
     strikes = 0;
     //[self removeAllTools];
+    menuOpen = false;
     [self restartGame];
 }
 -(void)resetGame{
+    gameOverTimer = 0;
+    menuOpen = false;
     belts = currentLevel.belts;
     fans = currentLevel.fans;
     springs = currentLevel.springs;
@@ -100,6 +107,7 @@ enum {
     
 }
 -(void)restartGame{
+    gameOverTimeout = NULL;
     self.isPlaying=true;
     self.isPaused = false;
     //[[CCDirector sharedDirector] replaceScene:[GameBoardLayer scene]];
@@ -130,6 +138,9 @@ enum {
 -(id) init
 {
     
+    
+    
+    menuOpen = false;
 	// always call "super" init
     self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
     if (self.iPad) {
@@ -144,7 +155,7 @@ enum {
        
         
         GameData *gameData = [GameDataParser loadData];
-       //int selectedChapter = gameData.selectedChapter;
+       int selectedChapter = gameData.selectedChapter;
         int selectedLevel = gameData.selectedLevel;
         
         
@@ -162,6 +173,7 @@ enum {
                 fans = currentLevel.fans;
                 springs = currentLevel.springs;
                 background = currentLevel.background;
+                itemType = currentLevel.item;
             }
         }
         
@@ -226,6 +238,11 @@ enum {
 		// Define the ground box shape.
 		b2PolygonShape groundBox;		
 		
+        NSLog(@"activeLevel: %d", gameData.selectedLevel);
+        NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
+        //TUTORIAL - loading the active leve    l
+        lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
+        
 		// bottom
 		groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(screenSize.width/[LevelHelperLoader pointsToMeterRatio] ,0));
 		groundBody->CreateFixture(&groundBox,0);
@@ -249,10 +266,7 @@ enum {
         
         //GameData *gameData = [GameDataParser loadData];
     
-        NSLog(@"activeLevel: %d", gameData.selectedLevel);
-        NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
-        //TUTORIAL - loading the active leve    l
-        lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
+        
         
 
         //notification have to be added before creating the objects
@@ -305,7 +319,15 @@ enum {
         
         [buttonLayer addChild: topMatte];
         topMatte.scaleX = screenSize.width/topMatte.contentSize.width;
-        topMatte.scaleY = (screenSize.height*0.08)/topMatte.contentSize.height;
+        if(self.device == @"iphone")
+        {
+            topMatte.scaleY = (screenSize.height*0.1)/topMatte.contentSize.height;
+        }
+        else
+        {
+            topMatte.scaleY = (screenSize.height*0.08)/topMatte.contentSize.height;
+           
+        }
         [topMatte setAnchorPoint:ccp(0,0)];
         [topMatte setPosition:ccp(0, screenSize.height-(topMatte.contentSize.height*topMatte.scaleY))];
         
@@ -313,30 +335,18 @@ enum {
         bottomMatte = [CCSprite spriteWithFile:@"85.png"];
         [buttonLayer addChild: bottomMatte];
         bottomMatte.scaleX = screenSize.width/bottomMatte.contentSize.width;
-        bottomMatte.scaleY = (screenSize.height*0.08)/bottomMatte.contentSize.height;
+        
         [bottomMatte setAnchorPoint:ccp(0,0)];
         [bottomMatte setPosition:ccp(0, 0)];
         bottomMatte.color = ccc3(rr, gg,bb);
+        if(self.device == @"iphone"){
+            bottomMatte.scaleY = (screenSize.height*0.1)/bottomMatte.contentSize.height;
+        }
+        else
+        {
+            bottomMatte.scaleY = (screenSize.height*0.08)/bottomMatte.contentSize.height;
+        }
         
-        //place the pause button
-        pauseButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"pause-on-%@.png", self.device]];
-        [buttonLayer addChild: pauseButton];
-        [pauseButton setPosition:ccp(screenSize.width*(0.07*buttonSpacing), screenSize.height*0.05)];
-
-        //place belt button
-        beltButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"belt-on-%@.png", self.device]];
-        [buttonLayer addChild:  beltButton];
-        [beltButton setPosition:ccp(screenSize.width*(0.17*buttonSpacing), screenSize.height*0.05)];
-        
-        //place fan button
-        fanButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"fan-on-%@.png", self.device]];
-        [buttonLayer addChild:  fanButton];
-        [fanButton setPosition:ccp(screenSize.width*(0.27*buttonSpacing), screenSize.height*0.05)];
-        
-        //place spring button
-        springButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"spring-on-%@.png", self.device]];
-        [buttonLayer addChild:  springButton];
-        [springButton setPosition:ccp(screenSize.width*(0.37*buttonSpacing), screenSize.height*0.05)];
               
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         currentItemName = @"";
@@ -347,19 +357,34 @@ enum {
         [self setupCollisionHandling];
         [self initHUDLayer];
         [self initRewards];
-    
-	}
+        if(selectedLevel == 1 && selectedChapter == 1){
+            [self showHelpMenu];
+        }
+        if(selectedLevel == 12 && selectedChapter == 1){
+        snow = [[CCParticleSnow alloc] init];
+            
+        snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"snowflake-small.png"];
+        snow.speed = 100;
+        snow.gravity = ccp(0,0);
+            [self addChild:snow z:10];
+        }
+        }
     
 	return self;
 }
 -(void)showLevelFail
 {
     NSLog(@"FAIL");
+    gameOverTimer = 0;
     isPlaying = false;
     isPaused = true;
     [self stopAnimations];
-    LevelFail * lf = [[[LevelFail alloc]init]autorelease];
-    [self addChild:lf z:12];
+    if(menuOpen == false)
+    {
+        menuOpen = true;
+        LevelFail * lf = [[[LevelFail alloc]init]autorelease];
+        [self addChild:lf z:12];
+    }
 }
 -(void)calculateScore{
     //calculate the score
@@ -399,6 +424,12 @@ enum {
     
     //
 }
+-(void)showHelpMenu
+{
+    HelpMenu * p = [[[HelpMenu alloc]init]autorelease];
+    [self addChild:p z:10];
+    
+}
 -(void)showLevelComplete
 {
 
@@ -406,6 +437,7 @@ enum {
     isPaused = true;
     [self stopAnimations];
     [self calculateScore];
+    
     NSLog(@" ----Current Level Array %@", currentLevelArray);
     
     currentLevel.userLastScore = gameScore;
@@ -416,7 +448,8 @@ enum {
     for (Level *level in currentLevelArray) {
         if ([[NSNumber numberWithInt:level.number] intValue] == gameData.selectedLevel) {
             level.userLastScore = gameScore;
-            if(level.stars < bells)
+            level.userLastStars = bells;
+            if(level.userLastStars > level.stars)
             {
                 level.stars = bells;
             }
@@ -433,11 +466,13 @@ enum {
     }
 
     [LevelParser saveData:currentLevelArray forChapter:gameData.selectedChapter];
-    
+    if(menuOpen == false)
+    {
+        menuOpen = true;
     LevelComplete * p = [[[LevelComplete alloc]init]autorelease];
     NSLog(@"LEVEL SCORE after alloc %i", gameData.levelScore);
     [self addChild:p z:11];
-    
+    }
 }
 -(void)showPauseMenu
 {
@@ -445,8 +480,12 @@ enum {
     isPaused = true;
     [self stopAnimations];
     [self deselectActors];
+    if(menuOpen == false)
+    {
+    menuOpen = true;
     PauseMenu * p = [[[PauseMenu alloc]init]autorelease];
     [self addChild:p z:10];
+    }
     
 }
 - (void)initRewards{
@@ -483,8 +522,12 @@ enum {
     [beltCounter setString:[NSString stringWithFormat:@"%d", belts]];
     [fanCounter setString:[NSString stringWithFormat:@"%d", fans]];
     [springCounter setString:[NSString stringWithFormat:@"%d", springs]];
-    [giftRemainingCounter setString:[NSString stringWithFormat:@"%d", giftsRemaining]];
+    [giftRemainingCounter setString:[NSString stringWithFormat:@"items: %d", giftsRemaining]];
     //update strikes
+    if(strikes >3)
+    {
+    strikes = 3;
+    }
     NSString *strikeImage = [NSString stringWithFormat:@"%istrikes-%@.png",strikes, self.device];
     [buttonLayer removeChild:strikeSprite cleanup:TRUE];
     strikeSprite = [CCSprite spriteWithFile:strikeImage];
@@ -496,10 +539,17 @@ enum {
 }
 -(void) initHUDLayer
 {
-    float buttonSpacing= 1.0;
+    CGSize winSize = [CCDirector sharedDirector].winSize;
+    float buttonSpacing= 1.2;
+    float buttonCount = 0.1;
+    float margin = 50;
+    int mediumFont = winSize.height / kFontScaleMedium;
+    int smallFont = winSize.height / kFontScaleTiny;
     if(self.device == @"iphone")
     {
-        buttonSpacing = 1.25;
+        buttonSpacing = 1.51;
+        margin = 24;
+        smallFont = winSize.height / kFontScaleMedium;
     }
     
 
@@ -511,47 +561,77 @@ enum {
     //belts = 5;
     //fans= 1;
     //add level title
-   CGSize winSize = [CCDirector sharedDirector].winSize;
-   int largeFont = winSize.height / kFontScaleLarge;
-    int mediumFont = winSize.height / kFontScaleMedium;
-    int smallFont = winSize.height / kFontScaleSmall;
+   
+   //int largeFont = winSize.height / kFontScaleLarge;
+    
     giftCounter = [CCLabelTTF labelWithString:@"Gifts: 0" fontName:@"Fontdinerdotcom" fontSize:32];
     
-    giftCounter.position =  ccp(winSize.width*0.4,winSize.height-40);
+    giftCounter.position =  ccp(winSize.width*0.7,winSize.height*0.9);
     
     giftCounter.visible = false;
     [buttonLayer addChild: giftCounter];
     
     //add the gift remaining counter
-    giftRemainingCounter = [CCLabelTTF labelWithString:@"10" fontName:@"Fontdinerdotcom" fontSize:largeFont];
-    giftRemainingCounter.position =  ccp(winSize.width*0.093,winSize.height*0.88);
-    [giftRemainingCounter setColor:ccc3 (0,0,0)];
+    giftRemainingCounter = [CCLabelTTF labelWithString:@"items: 10"  fontName:@"Fontdinerdotcom" fontSize:smallFont];
+    [giftRemainingCounter setAnchorPoint:CGPointMake(0, 0.5)];
+    giftRemainingCounter.position =  ccp(winSize.width*0.05,winSize.height*0.96);
+    [giftRemainingCounter setColor:ccc3 (255,255,255)];
     [buttonLayer addChild: giftRemainingCounter];
     
+    
+    //place the pause button
+    pauseButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"pause-on-%@.png", self.device]];
+    [buttonLayer addChild: pauseButton];
+    
+    [pauseButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+    
+    if(belts >0)
+    {
+    buttonCount+=0.1;
+        
+    //place belt button
+    beltButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"belt-on-%@.png", self.device]];
+    [buttonLayer addChild:  beltButton];
+    [beltButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+        
     //add belt counter
     beltCounter = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", belts] fontName:@"Fontdinerdotcom" fontSize:smallFont];
-    [beltCounter setPosition:ccp(winSize.width*(0.2*buttonSpacing), winSize.height*0.04)];
-    
-    [beltCounter setColor:ccc3 (95,58,0)];
+    [beltCounter setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*(margin*2)), winSize.height*0.04)];
+    [beltCounter setColor:ccc3 (255,255,255)];
     [buttonLayer addChild: beltCounter];
+    }
     
-    
+    if(fans >0)
+    {
+    buttonCount+=0.1;
+        
+    //place fan button
+    fanButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"fan-on-%@.png", self.device]];
+    [buttonLayer addChild:  fanButton];
+    [fanButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+        
     //add fan counter
     fanCounter = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", fans] fontName:@"Fontdinerdotcom" fontSize:smallFont];
-    [fanCounter setPosition:ccp(winSize.width*(0.3*buttonSpacing), winSize.height*0.04)];
-    
-    
-    [fanCounter setColor:ccc3 (95,58,0)];
+    [fanCounter setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*(margin*2)), winSize.height*0.04)];
+    [fanCounter setColor:ccc3 (255,255,255)];
     [buttonLayer addChild: fanCounter];
+    }
     
+    if(springs >0)
+    {
+    buttonCount+=0.1;
     
+    //place spring button
+    springButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"spring-on-%@.png", self.device]];
+    [buttonLayer addChild:  springButton];
+    [springButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+        
     //add spring counter
     springCounter = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", springs] fontName:@"Fontdinerdotcom" fontSize:smallFont];
-    [springCounter setPosition:ccp(winSize.width*(0.4*buttonSpacing), winSize.height*0.04)];
-    
-    
-    [springCounter setColor:ccc3 (95,58,0)];
+    [springCounter setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*(margin*2)), winSize.height*0.04)];
+    [springCounter setColor:ccc3 (255,255,255)];
     [buttonLayer addChild: springCounter];
+    }
     
     //add bell counter
     bellCounter = [CCLabelTTF labelWithString:@"Bells: 0" fontName:@"Fontdinerdotcom" fontSize:mediumFont];
@@ -572,6 +652,11 @@ enum {
     //rotateTool.zOrder = 10000;
     rotateTool.visible = false;
     [rotateTool setPosition:ccp(-1000,-1000)];
+    
+    //scope tool
+    scopeSprite = [lh createSpriteWithName:@"scope" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:ROTATOR];
+    scopeSprite.visible = TRUE;
+    [scopeSprite setPosition:ccp(-1000,-1000)];
     
     
 }
@@ -627,7 +712,15 @@ enum {
     LHSprite * tSprite = contact.spriteB;
     [tSprite restartAnimation];
     //Apply force
-    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*50, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*50);
+    int forceAmt = 0;
+    if(self.device == @"iphone")
+    {
+        forceAmt = 70;
+    }
+    else{
+        forceAmt = 70;
+    }
+    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt);
     contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
     
     NSLog(@"SPRING");
@@ -673,6 +766,12 @@ enum {
 }
 -(void)presentRewardCollision:(LHContactInfo*)contact
 {
+    //place the spark sprite anim and remove.
+    LHSprite* myNewSprite = [lh createSpriteWithName:@"spark1" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:DEFAULT_TAG];
+    [myNewSprite.parent reorderChild:myNewSprite z:500];
+    [myNewSprite prepareAnimationNamed:@"spark" fromSHScene:@"logistics-chapter1"];
+    [myNewSprite transformPosition:ccp(contact.spriteB.position.x,contact.spriteB.position.y)];
+    [myNewSprite playAnimation];
     //NSLog(@"Sprite A \"%@\" Sprite B \"%@\" ",  contact.spriteA, contact.spriteB);
     //remove spriteA
     contact.spriteB.tag = 0;
@@ -739,6 +838,7 @@ enum {
     if(!isPaused)
     {
     CGPoint touchLocation = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
+    
     if (CGRectContainsPoint (beltButton.boundingBox,touchLocation) && belts > 0)
     {
         LHSprite* myNewSprite = [lh createSpriteWithName:@"belt0" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:BELT];
@@ -789,14 +889,15 @@ enum {
     {
         [self showPauseMenu];
     }
-    
     else if (CGRectContainsPoint (rotateTool.boundingBox,touchLocation))
-    {
-        editMode = @"rotate";    
-    }
+        {
+            editMode = @"rotate";
+        }
+    
     else
     {
         [self deselectActors];
+        
     }
     [self selectSpriteForTouch:touchLocation];
    
@@ -811,41 +912,39 @@ return FALSE;
     if(shooterPull == true)
     {
         shooterPull = false;
-        NSLog(@"  shooter points: %f-%f", shooterStartPoint.x,location.x);
+        [shooterSprite setFrame:0];
+        scopeSprite.visible = false;
+        //NSLog(@"shooter points: %f-%f", shooterStartPoint.x,location.x);
         
-        //NSLog(@"DROP THE PRESENT");
+        //NSLog(@"SHOOT THE PRESENT");
         giftsRemaining -=1;
         [self updateHUD];
         //int random = [self getRandomNumberBetweenMin:0 andMax:3];
-        NSString *theGift = [NSString stringWithFormat:@"ball1"];
+        int random = [self getRandomNumberBetweenMin:0 andMax:3];
+        NSString *theGift = [NSString stringWithFormat:@"%@%i", itemType, random];
+        
         LHSprite* myNewSprite = [lh createSpriteWithName:theGift fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:PRESENT];
         [myNewSprite.parent reorderChild:myNewSprite z:-5];
         
-        [myNewSprite transformPosition:ccp(shooterSprite.position.x,shooterSprite.position.y)];
+        gunLength = shooterSprite.contentSize.width*0.5;
         
+        xOffset = gunLength*(cosf((shooterSprite.rotation*-1)* M_PI / 180))+shooterSprite.position.x;
+        yOffset = gunLength*(sinf((shooterSprite.rotation*-1)* M_PI / 180))+shooterSprite.position.y;
         
-       
-        
-        //Apply force
-        //float xForce = (shooterStartPoint.x-location.x)*0.2;
-        //float yForce = (shooterStartPoint.y-location.y)*0.2;
-        //b2Vec2 force = b2Vec2(xForce,yForce);
+        [myNewSprite transformPosition:ccp(xOffset,yOffset)];
+
         
         //Apply force
-        b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation-90))*100, cosf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation-90))*100);
-        //contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
-        
-        //b2Vec2 force = b2Vec2(shooterStartPoint,location);
+        b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14), cosf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14));
         myNewSprite.body->ApplyForce(force, myNewSprite.body->GetWorldCenter());
-        //contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
-        //myNewSprite.zOrder = 1;
         
-        
-        
+ 
         [self playGame];
         
     }
     //NSLog(@"Touch 222  \"%f\" Ended:", location.x);
+    if(editMode == @"move")
+    {
     if (CGRectContainsPoint (bottomMatte.boundingBox,location) && selSprite.tag == BELT)
     {
         NSLog(@"Remove Belt");
@@ -863,6 +962,7 @@ return FALSE;
         NSLog(@"Remove Spring");
         springs+=1;
         [self removeItem];
+    }
     }
 }
 
@@ -1007,7 +1107,7 @@ return FALSE;
 	
     
     //m_debugDraw = new GLESDebugDraw( [LevelHelperLoader pointsToMeterRatio] );
-	//world->DrawDebugData();
+	world->DrawDebugData();
 	
 	// restore default GL states
 	glEnable(GL_TEXTURE_2D);
@@ -1021,6 +1121,9 @@ return FALSE;
 {
 	if(isPlaying)
     {
+        
+        
+      // NSLog(@"rotation:%f x:%f y:%f", shooterSprite.rotation,  xOffset, yOffset);
         gameTime+=.1;
     //It is recommended that a fixed time step is used with Box2D for stability
 	//of the simulation, however, we are using a variable time step here.
@@ -1062,24 +1165,44 @@ return FALSE;
                     }
                 if(myActor.tag == PRESENT_FAN)
                 {
-                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(fanAngle))*2, cosf (CC_DEGREES_TO_RADIANS(fanAngle))*2);
+                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(fanAngle))*1.75, cosf (CC_DEGREES_TO_RADIANS(fanAngle))*1.75);
                     b->ApplyForce(force, b->GetWorldCenter());
                 }
+                }
+            }
+        }
+    //check if presents are all in play and set a timeout
+        if(giftsRemaining == 0){
+            gameOverTimer++;
+            if(gameOverTimer == 800)
+            {
+                gameOverTimer = 0;
+                isPlaying = false;
+                if (gifts > 7)
+                {
+                [self showLevelComplete];
+                }
+                else
+                {
+                [self showLevelFail];
                 }
             }
         }
     //check if level is complete
     if (strikes >= 3)
         {
+            isPlaying = false;
             [self showLevelFail];
         }
    
     if (strikes+gifts >= 10)
         {
+            isPlaying = false;
             [self showLevelComplete];
         }
     }
 }
+
 /*
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -1146,11 +1269,40 @@ return FALSE;
                 {
                     if (CGRectContainsPoint(myActor.boundingBox, touchLocation))
                     {
-                    shooterSprite = myActor;
-                    //myActor.rotation = 45;
-                    NSLog(@"Start Shooter");
                     shooterPull = true;
+                    isPlaying = true;
+                    shooterSprite = myActor;
+                        
+                        [shooterSprite prepareAnimationNamed:@"gun-anim" fromSHScene:@"logistics-chapter1"];
+                        
+                        
+
+                    //shooterSprite.position = ccp(shooterSprite.position.x-(shooterSprite.contentSize.width*0.114),shooterSprite.position.y-(shooterSprite.contentSize.height*0.345));
+                    shooterSprite.anchorPoint = ccp(0.114,0.345);
+                    shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
+                    //shooterSprite.position = ccp(shooterSprite.position.x-(shooterSprite.contentSize.width*0.114),shooterSprite.position.y-(shooterSprite.contentSize.height*0.345));
+                    //myActor.rotation = 45;
+                    
                     shooterStartPoint = touchLocation;
+                        //orient the shooter to center on the scope.
+                       
+                        CGPoint p1 = shooterSprite.position;
+                        CGPoint p2 = touchLocation;
+                        
+                        float adjacent = p2.x-p1.x;
+                        float opposite = p2.y-p1.y;
+                        
+                        // calculate angle
+                        float angle = atan2f(adjacent, opposite); // radians over the x plane (anticlockwise)
+                        
+                        // convert to cocos2d
+                        angle = CC_RADIANS_TO_DEGREES(angle); // convert to degrees
+                        angle -= 90; // rotate
+                        //angle *= -1; // clockwise
+                        
+                        float newRotation = angle;
+                    shooterSprite.rotation = newRotation;
+                    shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
                     }
                     
                 }
@@ -1168,7 +1320,11 @@ return FALSE;
                         giftsRemaining -=1;
                         [self updateHUD];
                         int random = [self getRandomNumberBetweenMin:0 andMax:3];
-                        NSString *theGift = [NSString stringWithFormat:@"ball%i", random];
+                        
+                        NSString *theGift = [NSString stringWithFormat:@"%@%i", itemType, random];
+
+                        //NSString *theGift = @"wheel1";
+                        //NSString *theGift = @"truck1";
                         LHSprite* myNewSprite = [lh createSpriteWithName:theGift fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:PRESENT];
                         [myNewSprite.parent reorderChild:myNewSprite z:-5];
                        
@@ -1369,6 +1525,8 @@ return FALSE;
     {
         if(shooterPull)
         {
+            scopeSprite.visible = TRUE;
+            scopeSprite.position = touchingPoint;
             CGPoint sfirstVector = ccpSub(firstTouchingPoint, shooterSprite.position);
             CGFloat sfirstRotateAngle = -ccpToAngle(sfirstVector);
             CGFloat spreviousTouch = CC_RADIANS_TO_DEGREES(sfirstRotateAngle);
@@ -1380,27 +1538,51 @@ return FALSE;
 
             shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
             //shooterSprite.rotation = 95;
+            //calulate the power based on distance
+            NSLog(@"Shooting Power: %f", shootingPower);
+            int targetFrame=0;
+            if(self.device == @"iphone")
+            {
+            shootingPower = ccpDistance(shooterSprite.position, touchingPoint);
+            shootingPower*=2.5;
+            targetFrame = shootingPower/300;
+            }
+            else
+            {
+            shootingPower = ccpDistance(shooterSprite.position, touchingPoint);
+            targetFrame = shootingPower/150;
+            }
+            if(targetFrame < 0)
+            {
+                targetFrame=0;
+            }
+            if(targetFrame > 4)
+            {
+                targetFrame=4;
+            }
+            [shooterSprite setFrame:targetFrame];
+            NSLog(@" SHOOTING POWER:%f",shootingPower);
+            //[myActor playAnimation];
            
         }
     }
     else if(!isPlaying)
     {
-    //NSLog(@"MOVE");
         if(editMode == @"move" && selSprite != Nil)
         {
             [self panForTranslation:translation];
         }
-    else if(editMode == @"rotate")
+    else if(editMode == @"rotate" && selSprite != Nil)
         {
             NSLog(@"Rotate");
-                //UITouch *touch = [touch event];
-                
-                
-                
+                //UITouch *touch = [touch event];  
                 //keep adding the difference of the two angles to the dial rotation
                 selSprite.rotation +=currentTouch - previousTouch;
 selSpriteBody->SetTransform(b2Vec2(selSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , selSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(selSprite.rotation)));
 
+        }
+    else
+        {
         }
     }
 }

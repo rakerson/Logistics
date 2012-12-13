@@ -40,15 +40,22 @@
        
         
         // Calculate Large Font Size
-        int largeFont = screenSize.height / kFontScaleLarge; 
         
+        int largeFont = 0;
+        float yPos = screenSize.height*0.65;
         // Create a label
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Pause Menu"
-                                               fontName:@"Fontdinerdotcom" 
-                                               fontSize:largeFont];
+        if (self.iPad) {
+           largeFont = screenSize.height / kFontScaleLarge; 
+            yPos = screenSize.height*0.65;
+        }
+        else{
+            largeFont = screenSize.height / kFontScaleHuge;
+            yPos = screenSize.height*0.70;
+        }
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Pause Menu" fontName:@"Fontdinerdotcom" fontSize:largeFont];
         label.color = ccc3(95,58,0);
 		// Center label
-		label.position = ccp( screenSize.width/2, screenSize.height*0.65);
+		label.position = ccp( screenSize.width/2, yPos);
         
         // Add label to this scene
 		[self addChild:label z:0];
@@ -59,7 +66,7 @@
         
         // Set font settings
         [CCMenuItemFont setFontName:@"Fontdinerdotcom"];
-        [CCMenuItemFont setFontSize:65];
+        //[CCMenuItemFont setFontSize:65];
 
         
         CCMenuItemImage *resume = [CCMenuItemImage

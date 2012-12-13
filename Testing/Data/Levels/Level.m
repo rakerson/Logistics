@@ -11,6 +11,7 @@
 @synthesize number = _number;
 @synthesize unlocked = _unlocked;
 @synthesize stars = _stars;
+@synthesize userLastStars = _userLastStars;
 @synthesize data = _data;
 @synthesize belts = _belts;
 @synthesize fans = _fans;
@@ -18,19 +19,22 @@
 @synthesize userHighScore = _userHighScore;
 @synthesize userLastScore = _userLastScore;
 @synthesize background = _background;
+@synthesize item = _item;
 // Custom init method takes a variable 
 // for each class instance variable
 - (id)initWithName:(NSString *)name 
             number:(int)number 
           unlocked:(BOOL)unlocked 
-             stars:(int)stars 
+             stars:(int)stars
+             userLastStars:(int)userLastStars
               data:(NSString *)data
              belts:(int)belts
                 fans:(int)fans
             springs:(int)springs
 userHighScore:(int)userHighScore
      userLastScore:(int)userLastScore
-background:(NSString *)background{
+background:(NSString *)background
+item:(NSString *)item{
 
     if ((self = [super init])) {
 
@@ -41,12 +45,14 @@ background:(NSString *)background{
         self.number = number;
         self.unlocked = unlocked;
         self.stars = stars;
+        self.userLastStars = userLastStars;
         self.belts = belts;
         self.fans = fans;
         self.springs = springs;
         self.userLastScore = userLastScore;
         self.userHighScore = userHighScore;
         self.background = background;
+        self.item = item;
         
     }
     return self;
@@ -56,7 +62,7 @@ background:(NSString *)background{
     [_name release]; // FIX MEMORY LEAK
     [_data release]; // FIX MEMORY LEAK
     [_background release]; // FIX MEMORY LEAK
-
+    [_item release]; // FIX MEMORY LEAK
     [super dealloc];
 }
 

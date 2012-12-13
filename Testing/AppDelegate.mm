@@ -92,7 +92,7 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
+	[director setDisplayFPS:NO];
 	
 	
 	// make the OpenGLView a child of the view controller
@@ -100,6 +100,8 @@
 	
 	// make the View Controller a child of the main window
 	[window addSubview: viewController.view];
+    [window setRootViewController:viewController];
+    
 	
 	[window makeKeyAndVisible];
 	
@@ -115,7 +117,7 @@
 	// Run the intro Scene
 	//[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
     [SceneManager goMainMenu];
-}
+    }
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

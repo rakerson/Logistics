@@ -48,8 +48,24 @@
         
         
         
-        // Calculate Large Font Size
-        int largeFont = screenSize.height / kFontScaleLarge;
+        int largeFont = 0;
+        float yPos = screenSize.height*0.65;
+        float starYPos = screenSize.height*0.53;
+        float menuYPos = screenSize.height*0.4;
+        // Create a label
+        if (self.iPad) {
+            largeFont = screenSize.height / kFontScaleLarge;
+            yPos = screenSize.height*0.65;
+            starYPos = screenSize.height*0.53;
+            menuYPos = screenSize.height*0.4;
+        }
+        else{
+            largeFont = screenSize.height / kFontScaleHuge;
+            yPos = screenSize.height*0.70;
+            starYPos = screenSize.height*0.55;
+            menuYPos = screenSize.height*0.35;
+        }
+
         
         // Create a label
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"Level Failed"
@@ -57,7 +73,7 @@
                                                fontSize:largeFont];
         label.color = ccc3(95,58,0);
 		// Center label
-		label.position = ccp( screenSize.width/2, screenSize.height*0.65);
+		label.position = ccp( screenSize.width/2, yPos);
         
         // Add label to this scene
 		[self addChild:label z:0];

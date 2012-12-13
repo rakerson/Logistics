@@ -25,7 +25,7 @@
     
     //CCLOG(@"writing the selected stage to GameData.xml as %i", sender.tag);
     GameData *gameData = [GameDataParser loadData];
-    if(sender.tag < 3)
+    if(sender.tag < 2)
     {
     [gameData setSelectedChapter:sender.tag];
     [GameDataParser saveData:gameData];

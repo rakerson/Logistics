@@ -61,4 +61,5 @@ dependencies: \
   Testing/Scenes/OptionsMenu.h Testing/Scenes/ChapterSelect.h \
   Testing/Scenes/LevelSelect.h Testing/Scenes/GameScene.h \
   Testing/Scenes/LevelComplete.h Testing/Scenes/LevelFail.h \
-  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Levels/LevelParser.h
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Levels/LevelParser.h \
+  Testing/Scenes/HelpMenu.h

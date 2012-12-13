@@ -47,8 +47,24 @@
                
         
         
-        // Calculate Large Font Size
-        int largeFont = screenSize.height / kFontScaleLarge;
+        int largeFont = 0;
+        float yPos = screenSize.height*0.65;
+        float starYPos = screenSize.height*0.53;
+        float menuYPos = screenSize.height*0.4;
+        // Create a label
+        if (self.iPad) {
+            largeFont = screenSize.height / kFontScaleLarge;
+            yPos = screenSize.height*0.65;
+            starYPos = screenSize.height*0.53;
+            menuYPos = screenSize.height*0.4;
+        }
+        else{
+            largeFont = screenSize.height / kFontScaleHuge;
+            yPos = screenSize.height*0.70;
+            starYPos = screenSize.height*0.55;
+            menuYPos = screenSize.height*0.35;
+        }
+
         
         // Create a label
         NSString *successMessage = @"Level Complete";
@@ -59,7 +75,8 @@
         for (Level *level in currentLevelArray) {
             if ([[NSNumber numberWithInt:level.number] intValue] == gameData.selectedLevel) {
                 tempScore = level.userLastScore;
-                tempStars = level.stars;
+                tempStars = level.userLastStars;
+                //tempStars = level.stars;
                 if(tempScore == level.userHighScore)
                 {
                  successMessage = @"New High Score";
@@ -74,7 +91,7 @@
         CCSprite *starImage = [CCSprite spriteWithFile:tImage];
         
         
-        [starImage setPosition:ccp(screenSize.width*0.58, screenSize.height*0.53)];
+        [starImage setPosition:ccp(screenSize.width*0.61, starYPos)];
         starImage.scale = 1.0f;
         [self addChild:starImage z:1];
 
@@ -89,13 +106,14 @@
         
         label.color = ccc3(95,58,0);
 		// Center label
-		label.position = ccp( screenSize.width/2, screenSize.height*0.65);
+		label.position = ccp( screenSize.width/2, yPos);
        
         
         
         scorelabel.color = ccc3(95,58,0);
 		// Center label
-		scorelabel.position = ccp( screenSize.width*0.45, screenSize.height*0.53);
+        
+		scorelabel.position = ccp( screenSize.width*0.43, starYPos);
         
         // Add label to this scene
 		[self addChild:label z:0];
@@ -142,7 +160,7 @@
         
 
         CCMenu *menu = [CCMenu menuWithItems:exit, restart, nextLevel, nil];
-        [menu setPosition:ccp(screenSize.width/2, screenSize.height*0.4)];
+        [menu setPosition:ccp(screenSize.width/2, menuYPos)];
         [menu alignItemsHorizontally];
         [self addChild:menu z:1];
         

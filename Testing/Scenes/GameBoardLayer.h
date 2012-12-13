@@ -14,7 +14,8 @@
 // HelloWorldLayer
 @interface GameBoardLayer : CCLayer
 {
-	CCLayer *menuLayer;
+	CCParticleSnow *snow;
+    CCLayer *menuLayer;
     CCTexture2D *spriteTexture_;	// weak ref
 	b2World* world;					// strong ref
 	//GLESDebugDraw *m_debugDraw;		// strong ref
@@ -29,10 +30,14 @@
     int springs;
     int gameScore;
     BOOL shooterPull;
+    BOOL menuOpen;
+    int gameOverTimer;
+    id gameOverTimeout;
     LHSprite *shooterSprite;
 
     CGPoint shooterStartPoint;
     NSString *background;
+    NSString *itemType;
     float gameTime;
     CCLabelTTF *bellCounter;
     CCLabelTTF *giftCounter;
@@ -44,6 +49,7 @@
     NSMutableArray *rewardArray;
     double fanAngle;
     CCSprite *rotateTool;
+    CCSprite *scopeSprite;
     NSString *editMode;
     //CCSprite *selSprite;
     LHSprite *selSprite;
@@ -77,7 +83,10 @@
     float hue;
     float shade;
     float value;
-
+    float shootingPower;
+    float gunLength;
+    float xOffset;
+    float yOffset;
     
     
     
@@ -109,6 +118,7 @@
 
 @property (nonatomic,readwrite) BOOL isPaused;
 @property (nonatomic,readonly) int gameScore;
+
 @property (nonatomic,readwrite) BOOL isPlaying;
 ///@property (nonatomic,readwrite) BOOL boundarySet;
 @property (retain) NSMutableArray *currentLevelArray;
