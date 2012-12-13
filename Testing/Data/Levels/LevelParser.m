@@ -45,6 +45,7 @@
     int number;
     BOOL unlocked;
     int stars;
+    int userLastStars;
     NSString *data;
     int belts;
     int fans;
@@ -52,6 +53,7 @@
     int userHighScore;
     int userLastScore;
     NSString *background;
+    NSString *item;
     
     NSMutableArray *levels = [NSMutableArray arrayWithCapacity:1];
 
@@ -84,6 +86,7 @@
         NSArray *numberArray = [element elementsForName:@"Number"];
         NSArray *unlockedArray = [element elementsForName:@"Unlocked"];
         NSArray *starsArray = [element elementsForName:@"Stars"];
+        NSArray *userLastStarsArray = [element elementsForName:@"UserLastStars"];
         NSArray *dataArray= [element elementsForName:@"Data"];
         NSArray *beltsArray= [element elementsForName:@"Belts"];
         NSArray *fansArray= [element elementsForName:@"Fans"];
@@ -91,6 +94,7 @@
         NSArray *userLastScoreArray= [element elementsForName:@"UserLastScore"];
         NSArray *userHighScoreArray= [element elementsForName:@"UserHighScore"];
         NSArray *backgroundArray= [element elementsForName:@"Background"];
+        NSArray *itemArray= [element elementsForName:@"Item"];
         
         // name
         if (nameArray.count > 0) {
@@ -114,7 +118,12 @@
         if (starsArray.count > 0) {
             GDataXMLElement *starsElement = (GDataXMLElement *) [starsArray objectAtIndex:0];
             stars = [[starsElement stringValue] intValue];
-        }         
+        }
+        // User Last stars
+        if (starsArray.count > 0) {
+            GDataXMLElement *userLastStarsElement = (GDataXMLElement *) [userLastStarsArray objectAtIndex:0];
+            userLastStars = [[userLastStarsElement stringValue] intValue];
+        }
         
         // data
         if (dataArray.count > 0) {
@@ -154,18 +163,24 @@
             GDataXMLElement *backgroundElement = (GDataXMLElement *) [backgroundArray objectAtIndex:0];
             background = [backgroundElement stringValue];
         }
-        
+        // item
+        if (itemArray.count > 0) {
+            GDataXMLElement *itemElement = (GDataXMLElement *) [itemArray objectAtIndex:0];
+            item = [itemElement stringValue];
+        }
         Level *level = [[Level alloc] initWithName:name 
                                             number:number 
                                           unlocked:unlocked 
-                                             stars:stars 
+                                             stars:stars
+                                     userLastStars:userLastStars
                                               data:data
                                             belts:belts
                                               fans:fans
                                            springs:springs
                                             userHighScore:userHighScore
                                      userLastScore:userLastScore
-                        background:background];
+                        background:background
+                        item:item];
         [levels addObject:level];
         [level release];
     }
@@ -210,6 +225,9 @@
         // create the <Stars> element
         GDataXMLElement *starsElement = [GDataXMLNode elementWithName:@"Stars" 
                                                            stringValue:[[NSNumber numberWithInt:level.stars] stringValue]];
+        // create the <UserLastStars> element
+        GDataXMLElement *userLastStarsElement = [GDataXMLNode elementWithName:@"UserLastStars"
+                                                          stringValue:[[NSNumber numberWithInt:level.userLastStars] stringValue]];
         // create the <Data> element
         GDataXMLElement *dataElement = [GDataXMLNode elementWithName:@"Data"
                                                          stringValue:level.data];
@@ -232,11 +250,16 @@
         GDataXMLElement *backgroundElement = [GDataXMLNode elementWithName:@"Background"
                                                                   stringValue:level.background];
         
+        // create the <Item> element
+        GDataXMLElement *itemElement = [GDataXMLNode elementWithName:@"Item"
+                                                               stringValue:level.item];
+        
         // enclose variable elements into a <Level> element
         [levelElement addChild:nameElement];
         [levelElement addChild:numberElement];
         [levelElement addChild:unlockedElement];
         [levelElement addChild:starsElement];
+        [levelElement addChild:userLastStarsElement];
         [levelElement addChild:dataElement];
         [levelElement addChild:beltsElement];
         [levelElement addChild:fansElement];
@@ -244,6 +267,7 @@
         [levelElement addChild:userLastScoreElement];
         [levelElement addChild:userHighScoreElement];
         [levelElement addChild:backgroundElement];
+        [levelElement addChild:itemElement];
         // enclose each <Level> into the <Levels> element
         [levelsElement addChild:levelElement];
     }
