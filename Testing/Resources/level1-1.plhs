@@ -64,7 +64,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{152, 121}, {12, 12}}</string>
+								<string>{{249, 121}, {12, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -76,7 +76,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{436, 281}</string>
+								<string>{436, 270}</string>
 								<key>Scale</key>
 								<string>{2.6230523586273193, 0.96363550424575806}</string>
 								<key>SpriteSize</key>
@@ -139,7 +139,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{152, 121}, {12, 12}}</string>
+								<string>{{249, 121}, {12, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -214,7 +214,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{283, 262}, {32, 28.5}}</string>
+								<string>{{364, 430}, {32, 28.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -226,7 +226,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{202, 47}</string>
+								<string>{389, 184}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -289,7 +289,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{283, 262}, {32, 28.5}}</string>
+								<string>{{364, 430}, {32, 28.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -301,7 +301,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{59, 154}</string>
+								<string>{153, 141}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -364,7 +364,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{283, 262}, {32, 28.5}}</string>
+								<string>{{364, 430}, {32, 28.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -376,7 +376,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{126, 75}</string>
+								<string>{289, 167}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -425,13 +425,13 @@
 							<key>SHSheetName</key>
 							<string>Chapter1</string>
 							<key>SHSpriteName</key>
-							<string>curve</string>
+							<string>tube</string>
 							<key>SheetImage</key>
 							<string>logistics-chapter1_Chapter1.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
-								<integer>270</integer>
+								<integer>0</integer>
 								<key>Color</key>
 								<string>{{1, 1}, {1, 1}}</string>
 								<key>FlipX</key>
@@ -439,7 +439,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 268}, {80.5, 82.5}}</string>
+								<string>{{206, 86}, {42.75, 45.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -451,24 +451,24 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{58, 255}</string>
+								<string>{2.8597564101219515, 57.278067588806167}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
-								<string>{82.25, 84.25}</string>
+								<string>{42.25, 45.5}</string>
 								<key>Tag</key>
 								<integer>0</integer>
 								<key>TagName</key>
 								<string>DEFAULT</string>
 								<key>TextureOffset</key>
-								<string>{0.125, 0.125}</string>
+								<string>{0.25, -0.125}</string>
 								<key>UniqueName</key>
-								<string>curve</string>
+								<string>tube</string>
 								<key>ZOrder</key>
 								<integer>0</integer>
 							</dict>
 							<key>UniqueName</key>
-							<string>curve</string>
+							<string>tube</string>
 						</dict>
 						<dict>
 							<key>AnimationsProperties</key>
@@ -500,7 +500,7 @@
 							<key>SHSheetName</key>
 							<string>Chapter1</string>
 							<key>SHSpriteName</key>
-							<string>curve</string>
+							<string>tube</string>
 							<key>SheetImage</key>
 							<string>logistics-chapter1_Chapter1.png</string>
 							<key>TextureProperties</key>
@@ -514,7 +514,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 268}, {80.5, 82.5}}</string>
+								<string>{{206, 86}, {42.75, 45.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -526,24 +526,24 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{62, 158}</string>
+								<string>{482.48130440711975, 261.13449829816807}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
-								<string>{82.25, 84.25}</string>
+								<string>{42.25, 45.5}</string>
 								<key>Tag</key>
 								<integer>0</integer>
 								<key>TagName</key>
 								<string>DEFAULT</string>
 								<key>TextureOffset</key>
-								<string>{0.125, 0.125}</string>
+								<string>{0.25, -0.125}</string>
 								<key>UniqueName</key>
-								<string>curve_1</string>
+								<string>tube_1</string>
 								<key>ZOrder</key>
 								<integer>0</integer>
 							</dict>
 							<key>UniqueName</key>
-							<string>curve_1</string>
+							<string>tube_1</string>
 						</dict>
 						<dict>
 							<key>AnimationsProperties</key>
@@ -589,7 +589,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{86, 338}, {84.75, 74}}</string>
+								<string>{{105, 435}, {84.75, 74}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -601,7 +601,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{431, 266}</string>
+								<string>{431, 255}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -681,7 +681,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{86, 263}, {84.75, 74}}</string>
+								<string>{{361, 183}, {84.75, 74}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -693,7 +693,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{50, 52}</string>
+								<string>{54, 66}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -786,7 +786,7 @@
 		<key>ProjectName</key>
 		<string></string>
 		<key>ProjectPath</key>
-		<string>/Users/rakerson/Desktop/Projects/Logistics/Logistics/Resources</string>
+		<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources</string>
 		<key>SafeFrame</key>
 		<string>{480, 320}</string>
 		<key>Tags</key>
@@ -805,6 +805,7 @@
 			<string>ROTATOR</string>
 			<string>SPRING</string>
 			<string>SHOOTER</string>
+			<string>SHOOTER_ROTATOR</string>
 		</array>
 		<key>ZoomValue</key>
 		<real>0.0</real>
