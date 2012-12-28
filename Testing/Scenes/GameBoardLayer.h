@@ -18,7 +18,7 @@
     CCLayer *menuLayer;
     CCTexture2D *spriteTexture_;	// weak ref
 	b2World* world;					// strong ref
-	//GLESDebugDraw *m_debugDraw;		// strong ref
+	GLESDebugDraw *m_debugDraw;		// strong ref
     
     LevelHelperLoader* lh;
     int bells;
@@ -34,6 +34,7 @@
     int gameOverTimer;
     id gameOverTimeout;
     LHSprite *shooterSprite;
+    LHSprite *goalSprite;
 
     CGPoint shooterStartPoint;
     NSString *background;
@@ -52,10 +53,15 @@
     CCSprite *scopeSprite;
     NSString *editMode;
     //CCSprite *selSprite;
+    int selectedChapter;
+    int selectedLevel;
     LHSprite *selSprite;
     b2Body * selSpriteBody;
     CCSprite * _selSprite;
     CCSprite * pauseButton;
+    CCSprite * helpButton;
+    CCSprite * muteButton;
+    CCSprite * unmuteButton;
     CCSprite * bottomMatte;
     CCSprite * topMatte;
     CCSprite * beltButton;

@@ -31,7 +31,7 @@
         // Determine Screen Size
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         
-        CCSprite * bg = [CCSprite spriteWithFile:[NSString stringWithFormat:@"pausemenu-%@.png", self.device]];
+        CCSprite * bg = [CCSprite spriteWithFile:[NSString stringWithFormat:@"aboutmenu-%@.png", self.device]];
         [bg setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
 
         [self addChild:bg z:0];
@@ -40,18 +40,8 @@
        
         
         // Calculate Large Font Size
-        int largeFont = screenSize.height / kFontScaleLarge; 
+        //int largeFont = screenSize.height / kFontScaleLarge;
         
-        // Create a label
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"About"
-                                               fontName:@"Fontdinerdotcom" 
-                                               fontSize:largeFont];
-        label.color = ccc3(95,58,0);
-		// Center label
-		label.position = ccp( screenSize.width/2, screenSize.height*0.65);
-        
-        // Add label to this scene
-		[self addChild:label z:0];
         
         //create the menu
         // Calculate Large Font Size
@@ -61,21 +51,6 @@
         [CCMenuItemFont setFontName:@"Fontdinerdotcom"];
         [CCMenuItemFont setFontSize:65];
 
-        
-        /*CCMenuItemImage *resume = [CCMenuItemImage
-                                        //itemFromNormalImage:@"resume-off-ipad-hd.png"
-                                        itemFromNormalImage:[NSString stringWithFormat:@"resume-off-%@.png", self.device]
-                                        //selectedImage:@"resume-on-ipad-hd.png"
-                                        selectedImage:[NSString stringWithFormat:@"resume-on-%@.png", self.device]
-                                        target:self
-                                        selector:@selector(onResume:)];
-        CCMenuItemImage *restart = [CCMenuItemImage
-                                  //itemFromNormalImage:@"replay-off-ipad-hd.png"
-                                  //selectedImage:@"replay-on-ipad-hd.png"
-                                    itemFromNormalImage:[NSString stringWithFormat:@"replay-off-%@.png", self.device]
-                                    selectedImage:[NSString stringWithFormat:@"replay-on-%@.png", self.device]
-                                  target:self
-                                  selector:@selector(onRestart:)];*/
         CCMenuItemImage *exit = [CCMenuItemImage
                                   //itemFromNormalImage:@"menu-off-ipad-hd.png"
                                   //selectedImage:@"menu-on-ipad-hd.png"
@@ -87,8 +62,20 @@
 
        
         CCMenu *menu = [CCMenu menuWithItems:exit, nil];
-        [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.45)];
-        [menu alignItemsHorizontally];
+        if(self.device == @"iphone")
+        {
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
+            
+            exit.scale = 0.6;
+        }
+        else
+        {
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.27)];
+            
+           
+        }
+        
+        
         [self addChild:menu z:1];
      
     }

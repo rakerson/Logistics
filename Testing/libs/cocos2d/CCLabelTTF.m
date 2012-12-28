@@ -133,6 +133,6 @@
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | Label = %@, FontName = %@, FontSize = %.1f>", [self class], self, string_, fontName_, fontSize_];
+	return [NSString stringWithFormat:@"<%@ = %@ | Label = %@, FontName = %@, FontSize = %.1f>", [self class], self, string_, fontName_, fontSize_];
 }
 @end

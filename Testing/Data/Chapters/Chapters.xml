@@ -1,13 +1,13 @@
 
 <Chapters>
 	<Chapter>
-		<Name>Santa's Workshop</Name>
-        <Icon>chapter-1</Icon>
+		<Name>Candy Factory</Name>
+        <Icon>chapter-2</Icon>
 		<Number>1</Number>
 	</Chapter>
 	<Chapter>
-		<Name>Candy Factory</Name>
-        <Icon>chapter-2</Icon>
+		<Name>Ice House</Name>
+        <Icon>comingsoon</Icon>
 		<Number>2</Number>		
 	</Chapter>
 	<Chapter>
@@ -22,6 +22,11 @@
 	</Chapter>
 	<Chapter>
 		<Name>Clockwork Apple</Name>
+        <Icon>comingsoon</Icon>
+		<Number>5</Number>
+	</Chapter>
+    <Chapter>
+		<Name>Santa's Workshop'</Name>
         <Icon>comingsoon</Icon>
 		<Number>5</Number>
 	</Chapter>

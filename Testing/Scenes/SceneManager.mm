@@ -4,7 +4,9 @@
 
 #import "SceneManager.h"
 #import "CCDirector.h"
-
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
+#import "CocosDenshion.h"
 @interface SceneManager ()
 
 +(void) go: (CCLayer *) layer;
@@ -27,10 +29,13 @@
 */
 
 +(void) goMainMenu {
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
     [SceneManager go:[MainMenu node]];
     //[[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[MainMenu node]]];
+    
 }
 +(void) goMainMenuFromChapter {
+    
     //[SceneManager go:[MainMenu node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[MainMenu node]]];
 }
@@ -39,24 +44,29 @@
 }
 
 +(void) goChapterSelect {
+    
     //[SceneManager go:[ChapterSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInB transitionWithDuration:0.2 scene:[ChapterSelect node]]];
 }
 
 +(void) goChapterSelectFromLevel {
+    
     //[SceneManager go:[ChapterSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[ChapterSelect node]]];
 }
 +(void) goLevelSelectFromBoard {
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
     //[SceneManager go:[ChapterSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }
 
 +(void) goLevelSelect {
+    
     //[SceneManager go:[LevelSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInB transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }
 +(void) goLevelSelectFromLevel {
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
     //[SceneManager go:[LevelSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }

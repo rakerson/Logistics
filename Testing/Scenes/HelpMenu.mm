@@ -7,7 +7,7 @@
 //
 
 #import "HelpMenu.h"
-
+#import "GameBoardLayer.h"
 @implementation HelpMenu
 @synthesize iPad, device;
 
@@ -59,7 +59,7 @@
                                  itemFromNormalImage:[NSString stringWithFormat:@"help-mask-%@.png", self.device]
                                  selectedImage:[NSString stringWithFormat:@"help-mask-%@.png", self.device]
                                  target:self
-                                 selector:@selector(onMenu:)];
+                                 selector:@selector(onResume:)];
         
         
         
@@ -77,11 +77,11 @@
         
         
         
-        [self performSelector:@selector(helpIn2) withObject:nil afterDelay:2.0];
-        [self performSelector:@selector(helpIn3) withObject:nil afterDelay:4.0];
-        [self performSelector:@selector(helpIn4) withObject:nil afterDelay:6.0];
-        [self performSelector:@selector(helpFade) withObject:nil afterDelay:11.0];
-        [self performSelector:@selector(helpDone) withObject:nil afterDelay:11.5];
+        [self performSelector:@selector(helpIn2) withObject:nil afterDelay:3.0];
+        [self performSelector:@selector(helpIn3) withObject:nil afterDelay:5.0];
+        [self performSelector:@selector(helpIn4) withObject:nil afterDelay:7.0];
+        [self performSelector:@selector(helpFade) withObject:nil afterDelay:13.0];
+        [self performSelector:@selector(helpDone) withObject:nil afterDelay:13.5];
         
         
         
@@ -123,7 +123,10 @@
     [menu runAction:[CCFadeOut actionWithDuration:0.5]];
 }
 - (void)helpDone{
+    GameBoardLayer *gameParent = (GameBoardLayer *)self.parent;
+    [gameParent resumeGame];
     [self.parent removeChild:self cleanup:YES];
+    
 }
 - (void)onMenu: (id) sender {
     //[SceneManager goLevelSelectFromLevel];

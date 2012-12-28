@@ -1223,7 +1223,7 @@ triangulateAllFixtures:NO
     
     while (fixture) {
         
-        int32 childIndex = 0;
+        //int32 childIndex = 0;
         b2RayCastOutput output1;
         b2RayCastOutput output2;
         

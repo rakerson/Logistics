@@ -67,8 +67,17 @@
 
         
         // Create a label
-        NSString *successMessage = @"Level Complete";
         GameData *gameData = [GameDataParser loadData];
+        NSString *successMessage;
+        if(gameData.selectedLevel == 12)
+        {
+        successMessage = @"All Levels Complete";
+        }
+        else
+        {
+        successMessage = @"Level Complete";
+        }
+        
         NSMutableArray *currentLevelArray = [LevelParser loadLevelsForChapter:gameData.selectedChapter];
         int tempScore =0;
         int tempStars = 0;
@@ -157,15 +166,38 @@
                                       selector:@selector(nextLevel:)];
         
         
-        
-
-        CCMenu *menu = [CCMenu menuWithItems:exit, restart, nextLevel, nil];
+        CCMenu *menu;
+        if(gameData.selectedLevel == 12)
+        {
+        menu = [CCMenu menuWithItems:exit, restart, nil];
+        }
+        else
+        {
+        menu = [CCMenu menuWithItems:exit, restart, nextLevel, nil];
+        }
         [menu setPosition:ccp(screenSize.width/2, menuYPos)];
         [menu alignItemsHorizontally];
         [self addChild:menu z:1];
         
+        //fireworks
+        [self launchFirework];
+        
     }
     return self;
+}
+-(void)launchFirework
+{
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+    CCParticleSystem *firework = [[CCParticleExplosion alloc] initWithTotalParticles:75];
+    [self addChild:firework z:101];
+    int xrange = screenSize.width*0.5;
+    int yrange = screenSize.height*0.3;
+    int xPos = arc4random() % xrange;
+    int yPos = arc4random() % yrange;
+    firework.position = ccp(xPos+(screenSize.width*0.25),yPos+(screenSize.height*0.5));
+    firework.gravity = ccp(0,-100);
+    [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"spark.png"]];
+    [self performSelector:@selector(launchFirework) withObject:nil afterDelay:1.5f];
 }
 - (void)onMenu: (id) sender {
     [SceneManager goLevelSelectFromLevel];

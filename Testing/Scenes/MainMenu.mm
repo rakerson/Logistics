@@ -9,6 +9,9 @@
 #import "ChapterSelect.h"
 #import "AboutMenu.h"
 #import "ScoreMenu.h"
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
+#import "CocosDenshion.h"
 
 @implementation MainMenu
 @synthesize iPad, device;
@@ -54,11 +57,34 @@
     
     [self addChild:back];        
 }
+-(void)toggleSound{
+    if ([[SimpleAudioEngine sharedEngine] backgroundMusicVolume] == 0) {
+        // This will unmute the sound
+        //hide unmute
+        unmuteButton.visible = false;
+        //show mute
+        muteButton.visible = true;
+       [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.5];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5];
+        
+    }
+    else {
+        //This will mute the sound
+        //show unmute
+        unmuteButton.visible = true;
+        //hide mute
+        muteButton.visible = false;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.0];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.0];
+    }
+}
 
 - (id)init {
     
     if( (self=[super init])) {
-
+    
+        
+        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         // Determine Device
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {
@@ -78,9 +104,23 @@
         [self addChild:bg z:0];
         
         CCSprite * logo = [CCSprite spriteWithFile:[NSString stringWithFormat:@"title-%@.png", self.device]];
-        [logo setPosition:ccp(screenSize.width*0.5, screenSize.height*0.58)];
+        [logo setPosition:ccp(screenSize.width*0.51, screenSize.height*0.58)];
         [self addChild:logo z:3];
     
+        //animate the logo
+        [logo runAction:[CCRotateTo actionWithDuration:1 angle:0]];
+        CCRotateTo * rotLeft = [CCRotateBy actionWithDuration:1 angle:-0.5];
+        CCMoveBy * moveLeft = [CCMoveBy actionWithDuration:2 position:ccp(-5,-2)];
+        CCMoveBy * moveRight = [CCMoveBy actionWithDuration:2 position:ccp(5,2)];
+        CCMoveBy * moveUp = [CCMoveBy actionWithDuration:2 position:ccp(-2,5)];
+        CCMoveBy * moveDown = [CCMoveBy actionWithDuration:2 position:ccp(2,-5)];
+        CCRotateTo * rotCenter = [CCRotateBy actionWithDuration:1 angle:0.0];
+        CCRotateTo * rotRight = [CCRotateBy actionWithDuration:1 angle:0.5];
+        CCSequence * rotSeq = [CCSequence actions:rotLeft,rotCenter, rotRight, rotCenter, rotRight, rotCenter, rotLeft, nil];
+        CCSequence * moveSeq = [CCSequence actions:moveUp, moveLeft, moveDown, moveRight, nil];
+        [logo runAction:[CCRepeatForever actionWithAction:rotSeq]];
+        [logo runAction:[CCRepeatForever actionWithAction:moveSeq]];
+        
         // Calculate Large Font Size
         int largeFont = screenSize.height / kFontScaleLarge; 
 
@@ -106,27 +146,51 @@
                                         //selectedImage:@"play-on-ipad.png"
                                         target:self
                                         selector:@selector(onPlay:)];
-        CCMenuItemImage *scoresButton = [CCMenuItemImage
-                                         itemFromNormalImage:[NSString stringWithFormat:@"scores-off-%@.png", self.device]
-                                        //itemFromNormalImage:@"scores-off-ipad.png"
-                                         selectedImage:[NSString stringWithFormat:@"scores-on-%@.png", self.device]
-                                        //selectedImage:@"scores-on-ipad.png"
-                                        target:self
-                                        selector:@selector(showScoreMenu:)];
+       // CCMenuItemImage *scoresButton = [CCMenuItemImage
+                                        // itemFromNormalImage:[NSString stringWithFormat:@"scores-off-%@.png", self.device]
+                                         //selectedImage:[NSString stringWithFormat:@"scores-on-%@.png", self.device]
+                                        //target:self
+                                        //selector:@selector(showScoreMenu:)];
+       
         
         //CCMenuItemFont *item1 = [CCMenuItemFont itemFromString:@"Play" target:self selector:@selector(onPlay:)];
         //CCMenuItemFont *item2 = [CCMenuItemFont itemFromString:@"Options" target:self selector:@selector(onOptions:)];
 
         // Add font based items to CCMenu
-        CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, scoresButton, nil];
+        CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, nil];
         [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
         NSLog(@"Screen width %f", screenSize.width);
         // Align the menu 
         [menu alignItemsHorizontally];
 
         // Add the menu to the scene
+        
+        CCParticleSystem *snow = [[CCParticleMeteor alloc]init];
+        
+        snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"spark.png"];
+        snow.speed = 250;
+        snow.scale = 0.5;
+        snow.emissionRate = 5;
+        snow.position  = ccp(screenSize.width*0.5, screenSize.height*0.6);
+        snow.gravity = ccp(0,0);
+        
+        [self addChild:snow];
+        
         [self addChild:menu];
         
+        //place the mute button
+        muteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"mute-%@.png", self.device]];
+        [self addChild: muteButton];
+        muteButton.scale = 0.80;
+        [muteButton setPosition:ccp(screenSize.width*0.92, screenSize.height*0.08)];
+        
+        //place the unmute button
+        unmuteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"unmute-%@.png", self.device]];
+        [self addChild: unmuteButton];
+        unmuteButton.scale = 0.80;
+        [unmuteButton setPosition:ccp(screenSize.width*0.92, screenSize.height*0.08)];
+        unmuteButton.visible = false;
+        //[self launchFirework];
         // Testing GameData
         /*
         GameData *gameData = [GameDataParser loadData];
@@ -147,6 +211,39 @@
     return self;
 
 }
-
-
+-(void)launchFirework
+{
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+    CCParticleSystem *snow = [[CCParticleMeteor alloc]init];
+    
+    snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"spark.png"];
+    snow.speed = 50;
+    snow.scale = 2.0;
+    snow.emissionRate = 3;
+    snow.position  = ccp(screenSize.width*0.5, screenSize.height*0.22);
+    snow.gravity = ccp(0,0);
+    
+    [self addChild:snow];
+    
+    
+    //int xrange = screenSize.width*0.5;
+    //int yrange = screenSize.height*0.3;
+    //int xPos = arc4random() % xrange;
+    //int yPos = arc4random() % yrange;
+    //firework.position = ccp(xPos+(screenSize.width*0.25),yPos+(screenSize.height*0.5));
+   // firework.gravity = ccp(0,-100);
+    //[firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"spark.png"]];
+    //[self performSelector:@selector(launchFirework) withObject:nil afterDelay:1.5f];
+}
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    CGPoint touchLocation = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
+    if (CGRectContainsPoint (muteButton.boundingBox,touchLocation))
+    {
+        [self toggleSound];
+    }
+    else if (CGRectContainsPoint (unmuteButton.boundingBox,touchLocation))
+    {
+        [self toggleSound];
+    }
+}
 @end

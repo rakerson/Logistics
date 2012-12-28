@@ -21,6 +21,9 @@
 #import "Level.h"
 #import "CCActionManager.h"
 #import "HelpMenu.h"
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
+#import "CocosDenshion.h"
 
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
@@ -92,6 +95,7 @@ enum {
     strikes = 0;
     //[self removeAllTools];
     menuOpen = false;
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
     [self restartGame];
 }
 -(void)resetGame{
@@ -103,6 +107,7 @@ enum {
     strikes = 0;
     gameTime = 0;
     [self removeAllTools];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
     [self restartGame];
     
 }
@@ -137,9 +142,6 @@ enum {
 // on "init" you need to initialize your instance
 -(id) init
 {
-    
-    
-    
     menuOpen = false;
 	// always call "super" init
     self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
@@ -155,14 +157,14 @@ enum {
        
         
         GameData *gameData = [GameDataParser loadData];
-       int selectedChapter = gameData.selectedChapter;
-        int selectedLevel = gameData.selectedLevel;
+       selectedChapter = gameData.selectedChapter;
+        selectedLevel = gameData.selectedLevel;
         
         
         
         // Read in selected chapter levels
        //CCMenu *levelMenu = [CCMenu menuWithItems: nil];
-         
+        bool nextLevelUnlocked = false;
        self.currentLevelArray = [LevelParser loadLevelsForChapter:gameData.selectedChapter];
         NSLog(@" Current Level Array %@", currentLevelArray);
         for (Level *level in currentLevelArray) {
@@ -174,6 +176,9 @@ enum {
                 springs = currentLevel.springs;
                 background = currentLevel.background;
                 itemType = currentLevel.item;
+            }
+            if ([[NSNumber numberWithInt:level.number] intValue] == selectedLevel+1){
+                nextLevelUnlocked = level.unlocked;
             }
         }
         
@@ -214,8 +219,8 @@ enum {
 		world->SetContinuousPhysics(true);
 		
 		// Debug Draw functions
-		//m_debugDraw = new GLESDebugDraw( [LevelHelperLoader pointsToMeterRatio]  );
-		//world->SetDebugDraw(m_debugDraw);
+		m_debugDraw = new GLESDebugDraw( [LevelHelperLoader pointsToMeterRatio]  );
+		world->SetDebugDraw(m_debugDraw);
 		
 		//uint32 flags = 0;
 		//flags += b2DebugDraw::e_shapeBit;
@@ -238,7 +243,7 @@ enum {
 		// Define the ground box shape.
 		b2PolygonShape groundBox;		
 		
-        NSLog(@"activeLevel: %d", gameData.selectedLevel);
+       
         NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
         //TUTORIAL - loading the active leve    l
         lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
@@ -350,27 +355,31 @@ enum {
               
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         currentItemName = @"";
-        currentSpriteSheet = @"Chapter1";
+        currentSpriteSheet = @"chapter-1";
         currentTAG = FAN;
-        currentFile = @"logistics-chapter1";
+        currentFile = @"logistics";
         
         [self setupCollisionHandling];
         [self initHUDLayer];
         [self initRewards];
-        if(selectedLevel == 1 && selectedChapter == 1){
+        if(selectedLevel == 1 && selectedChapter == 1 && nextLevelUnlocked == false){
             [self showHelpMenu];
         }
-        if(selectedLevel == 12 && selectedChapter == 1){
-        snow = [[CCParticleSnow alloc] init];
+       // if(selectedLevel == 12 && selectedChapter == 1){
+        //snow = [[CCParticleSnow alloc] init];
             
-        snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"snowflake-small.png"];
-        snow.speed = 100;
-        snow.gravity = ccp(0,0);
-            [self addChild:snow z:10];
-        }
+        //snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"snowflake-small.png"];
+        //snow.speed = 100;
+        //snow.gravity = ccp(0,0);
+           // [self addChild:snow z:10];
+        //}
+        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
         }
     
 	return self;
+}
+-(void)playSoundEffect:(NSString*)soundFile {
+    [[SimpleAudioEngine sharedEngine]playEffect:soundFile];
 }
 -(void)showLevelFail
 {
@@ -384,6 +393,7 @@ enum {
         menuOpen = true;
         LevelFail * lf = [[[LevelFail alloc]init]autorelease];
         [self addChild:lf z:12];
+        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-fail.mp3" loop:FALSE];
     }
 }
 -(void)calculateScore{
@@ -426,28 +436,41 @@ enum {
 }
 -(void)showHelpMenu
 {
-    HelpMenu * p = [[[HelpMenu alloc]init]autorelease];
-    [self addChild:p z:10];
+    isPlaying = false;
+    isPaused = true;
+    
+    [self stopAnimations];
+    [self deselectActors];
+    if(menuOpen == false)
+    {
+        menuOpen = true;
+        HelpMenu * p = [[[HelpMenu alloc]init]autorelease];
+        [self addChild:p z:10];
+    }
+
+   
+    
     
 }
 -(void)showLevelComplete
 {
-
+    
     isPlaying = false;
     isPaused = true;
     [self stopAnimations];
     [self calculateScore];
     
-    NSLog(@" ----Current Level Array %@", currentLevelArray);
-    
     currentLevel.userLastScore = gameScore;
-    NSLog(@"CURRENT LEVEL SCORE %i", currentLevel.userLastScore);
     GameData *gameData = [GameDataParser loadData];
     //unlock the next level
     //gameData.levelScore = gameScore;
     for (Level *level in currentLevelArray) {
         if ([[NSNumber numberWithInt:level.number] intValue] == gameData.selectedLevel) {
             level.userLastScore = gameScore;
+            if(bells > 3)
+            {
+                bells = 3;
+            }
             level.userLastStars = bells;
             if(level.userLastStars > level.stars)
             {
@@ -471,6 +494,7 @@ enum {
         menuOpen = true;
     LevelComplete * p = [[[LevelComplete alloc]init]autorelease];
     NSLog(@"LEVEL SCORE after alloc %i", gameData.levelScore);
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-win.mp3" loop:TRUE];
     [self addChild:p z:11];
     }
 }
@@ -478,6 +502,7 @@ enum {
 {
     isPlaying = false;
     isPaused = true;
+    
     [self stopAnimations];
     [self deselectActors];
     if(menuOpen == false)
@@ -497,11 +522,23 @@ enum {
         if (b->GetUserData() != NULL) {
             //Synchronize the AtlasSprites position and rotation with the corresponding body
             LHSprite *myActor = (LHSprite*)b->GetUserData();
+            if(myActor.tag == GOALSPRITE)
+            {
+                goalSprite = myActor;
+                NSLog(@"WE HAVE A Goal SPRITE");
+            }
             if(myActor.tag == REWARD)
             {
                NSLog(@"initRewards");
                 [rewardArray addObject:myActor];
             }
+            if(myActor.tag == SHOOTER)
+            {
+                shooterSprite = myActor;
+                shooterSprite.position =  ccp(shooterSprite.position.x+(0.5-0.114),shooterSprite.position.y+(0.5-0.345));
+                shooterSprite.anchorPoint = ccp(0.114,0.345);
+            }
+            
             
         }
     }
@@ -633,6 +670,36 @@ enum {
     [buttonLayer addChild: springCounter];
     }
     
+    //place the help button
+    helpButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"help-on-%@.png", self.device]];
+    [buttonLayer addChild: helpButton];
+    helpButton.scale = 0.65;
+    [helpButton setPosition:ccp(winSize.width*0.94, winSize.height*0.04)];
+    
+    //place the mute button
+    muteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"mute-%@.png", self.device]];
+    [buttonLayer addChild: muteButton];
+    muteButton.scale = 0.65;
+    [muteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+    
+    //place the unmute button
+    unmuteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"unmute-%@.png", self.device]];
+    [buttonLayer addChild: unmuteButton];
+    unmuteButton.scale = 0.65;
+    [unmuteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+    if ([[SimpleAudioEngine sharedEngine] mute])
+    {
+        unmuteButton.visible = true;
+        muteButton.visible = false;
+        
+    }
+    else
+    {
+        unmuteButton.visible = false;
+        muteButton.visible = true;
+    }
+    
+    
     //add bell counter
     bellCounter = [CCLabelTTF labelWithString:@"Bells: 0" fontName:@"Fontdinerdotcom" fontSize:mediumFont];
     bellCounter.position =  ccp(winSize.width*0.6,winSize.height-40);
@@ -648,15 +715,20 @@ enum {
     strikeSprite.rotation = -90;
     
     //rotate tool
-    rotateTool = [lh createSpriteWithName:@"rotate" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:ROTATOR];
+    rotateTool = [lh createSpriteWithName:@"rotate" fromSheet:@"tools" fromSHFile:currentFile  tag:ROTATOR];
     //rotateTool.zOrder = 10000;
     rotateTool.visible = false;
+    
+    
     [rotateTool setPosition:ccp(-1000,-1000)];
     
     //scope tool
-    scopeSprite = [lh createSpriteWithName:@"scope" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:ROTATOR];
+    scopeSprite = [lh createSpriteWithName:@"scope" fromSheet:@"tools" fromSHFile:currentFile  tag:ROTATOR];
     scopeSprite.visible = TRUE;
     [scopeSprite setPosition:ccp(-1000,-1000)];
+    //to account for scaled down levels
+    rotateTool.scale = 1;
+    scopeSprite.scale = 1;
     
     
 }
@@ -722,7 +794,7 @@ enum {
     }
     b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt);
     contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
-    
+    [self playSoundEffect:@"spring.mp3"];
     NSLog(@"SPRING");
 }
 
@@ -751,8 +823,12 @@ enum {
     contact.spriteA.tag = 0;
     [[contact.spriteA parent] removeChild:contact.spriteA cleanup:YES];
     
+    [goalSprite prepareAnimationNamed:@"goal-anim" fromSHScene:@"logistics"];
+    
+    [goalSprite playAnimation];
     gifts+=1;
-    [self updateHUD];  
+    [self playSoundEffect:@"goal.mp3"];
+    [self updateHUD];
 }
 
 
@@ -762,14 +838,15 @@ enum {
     [[contact.spriteA parent] removeChild:contact.spriteA cleanup:YES];
     //gifts-=1;
     strikes+=1;
+    [self playSoundEffect:@"floor.mp3"];
     [self updateHUD];
 }
 -(void)presentRewardCollision:(LHContactInfo*)contact
 {
     //place the spark sprite anim and remove.
-    LHSprite* myNewSprite = [lh createSpriteWithName:@"spark1" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:DEFAULT_TAG];
+    LHSprite* myNewSprite = [lh createSpriteWithName:@"spark1" fromSheet:@"tools" fromSHFile:currentFile  tag:DEFAULT_TAG];
     [myNewSprite.parent reorderChild:myNewSprite z:500];
-    [myNewSprite prepareAnimationNamed:@"spark" fromSHScene:@"logistics-chapter1"];
+    [myNewSprite prepareAnimationNamed:@"spark" fromSHScene:@"logistics"];
     [myNewSprite transformPosition:ccp(contact.spriteB.position.x,contact.spriteB.position.y)];
     [myNewSprite playAnimation];
     //NSLog(@"Sprite A \"%@\" Sprite B \"%@\" ",  contact.spriteA, contact.spriteB);
@@ -780,7 +857,7 @@ enum {
     
     //
     //[[contact.spriteB parent] removeChild:contact.spriteB cleanup:YES];
-    
+    [self playSoundEffect:@"bell.mp3"];
     bells+=1;
     [self updateHUD];
     
@@ -812,15 +889,15 @@ enum {
 
 -(void)placeFan{
     currentItemName = @"fan0";
-    currentSpriteSheet = @"Chapter1";
+    
     currentTAG = FAN;
-    currentFile = @"logistics-chapter1";
+    currentFile = @"logistics";
 }
 -(void)placeBelt{
     currentItemName = @"belt0";
-    currentSpriteSheet = @"Chapter1";
+    
     currentTAG = BELT;
-    currentFile = @"logistics-chapter1";
+    currentFile = @"logistics";
 }
 -(void)removeItem{
     
@@ -841,9 +918,9 @@ enum {
     
     if (CGRectContainsPoint (beltButton.boundingBox,touchLocation) && belts > 0)
     {
-        LHSprite* myNewSprite = [lh createSpriteWithName:@"belt0" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:BELT];
+        LHSprite* myNewSprite = [lh createSpriteWithName:@"belt0" fromSheet:@"tools" fromSHFile:currentFile  tag:BELT];
         [myNewSprite.parent reorderChild:myNewSprite z:-500];
-        [myNewSprite prepareAnimationNamed:@"belt-anim" fromSHScene:@"logistics-chapter1"];
+        [myNewSprite prepareAnimationNamed:@"belt-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         [myNewSprite playAnimation];
         [self deselectActors];
@@ -857,9 +934,9 @@ enum {
     }
     else if (CGRectContainsPoint (fanButton.boundingBox,touchLocation) && fans > 0)
     {
-        LHSprite* myNewSprite = [lh createSpriteWithName:@"fan0" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:FAN];
+        LHSprite* myNewSprite = [lh createSpriteWithName:@"fan0" fromSheet:@"tools" fromSHFile:currentFile  tag:FAN];
          [myNewSprite.parent reorderChild:myNewSprite z:-500];
-        [myNewSprite prepareAnimationNamed:@"fan-anim" fromSHScene:@"logistics-chapter1"];
+        [myNewSprite prepareAnimationNamed:@"fan-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         [myNewSprite playAnimation];
        [self deselectActors];
@@ -872,9 +949,9 @@ enum {
     }
     else if (CGRectContainsPoint (springButton.boundingBox,touchLocation) && springs > 0)
     {
-        LHSprite* myNewSprite = [lh createSpriteWithName:@"spring0" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:SPRING];
+        LHSprite* myNewSprite = [lh createSpriteWithName:@"spring0" fromSheet:@"tools" fromSHFile:currentFile  tag:SPRING];
         [myNewSprite.parent reorderChild:myNewSprite z:-500];
-        [myNewSprite prepareAnimationNamed:@"spring-anim" fromSHScene:@"logistics-chapter1"];
+        [myNewSprite prepareAnimationNamed:@"spring-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         //[myNewSprite playAnimation];
         [self deselectActors];
@@ -885,9 +962,24 @@ enum {
         [self updateHUD];
         
     }
+        
     else if (CGRectContainsPoint (pauseButton.boundingBox,touchLocation))
     {
         [self showPauseMenu];
+    }
+    else if (CGRectContainsPoint (helpButton.boundingBox,touchLocation))
+    {
+        [self showHelpMenu];
+    }
+    else if (CGRectContainsPoint (muteButton.boundingBox,touchLocation))
+    {
+        editMode = @"none";
+        [self toggleSound];
+    }
+    else if (CGRectContainsPoint (unmuteButton.boundingBox,touchLocation))
+    {
+        editMode = @"none";
+        [self toggleSound];
     }
     else if (CGRectContainsPoint (rotateTool.boundingBox,touchLocation))
         {
@@ -938,7 +1030,7 @@ return FALSE;
         b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14), cosf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14));
         myNewSprite.body->ApplyForce(force, myNewSprite.body->GetWorldCenter());
         
- 
+        [self playSoundEffect:@"shoot.mp3"];
         [self playGame];
         
     }
@@ -980,8 +1072,26 @@ return FALSE;
 }
 
 -(void)toggleSound{
-    
-    ///
+    if ([[SimpleAudioEngine sharedEngine] backgroundMusicVolume] > 0) {
+        // This will unmute the sound
+        //hide unmute
+        unmuteButton.visible = false;
+        //show mute
+        muteButton.visible = true;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.0];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.0];
+        //[[SimpleAudioEngine sharedEngine] setMute:0];
+    }
+    else {
+        //This will mute the sound
+        //show unmute
+        unmuteButton.visible = true;
+        //hide mute
+        muteButton.visible = false;
+        //[[SimpleAudioEngine sharedEngine] setMute:1];
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.5];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.5];
+    }
 }
 
 
@@ -1028,19 +1138,21 @@ return FALSE;
     for (LHSprite *item in rewardArray)
         {
         NSLog(@"LOOP  %f", item.position.x);
-       LHSprite* myNewSprite = [lh createSpriteWithName:@"bell" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
+       LHSprite* myNewSprite = [lh createSpriteWithName:@"candy" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
             
             [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
        //  firefox myNewSprite.position = item.position;
         }
     }
 -(void)stopAnimations{
-    
+   
     for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
     {
         
         if (b->GetUserData() != NULL) {
+             
             LHSprite *myActor = (LHSprite*)b->GetUserData();
+            //[myActor pausePathMovement];
             if(myActor.tag == FAN || myActor.tag == BELT)
             {
                 //Synchronize the AtlasSprites position and rotation with the corresponding body
@@ -1049,6 +1161,7 @@ return FALSE;
                 //[[CCActionManager sharedManager] pauseTarget:myActor];
                 NSLog(@"PAUSE -- Anim");
                 [myActor pauseAnimation];
+               
             }
         }
     }
@@ -1060,6 +1173,7 @@ return FALSE;
         
         if (b->GetUserData() != NULL) {
             LHSprite *myActor = (LHSprite*)b->GetUserData();
+            [myActor startPathMovement];
             if(myActor.tag == FAN || myActor.tag == BELT)
             {
                 NSLog(@"PLayAnim");
@@ -1069,6 +1183,7 @@ return FALSE;
                 //[[CCActionManager sharedManager] resumeTarget:myActor];
                 
                 [myActor restartAnimation];
+                
                 //[myActor playAnimation];
             }
         }
@@ -1273,12 +1388,17 @@ return FALSE;
                     isPlaying = true;
                     shooterSprite = myActor;
                         
-                        [shooterSprite prepareAnimationNamed:@"gun-anim" fromSHScene:@"logistics-chapter1"];
+                        [shooterSprite prepareAnimationNamed:@"gun-anim" fromSHScene:@"logistics"];
                         
                         
 
                     //shooterSprite.position = ccp(shooterSprite.position.x-(shooterSprite.contentSize.width*0.114),shooterSprite.position.y-(shooterSprite.contentSize.height*0.345));
-                    shooterSprite.anchorPoint = ccp(0.114,0.345);
+                        //CGPoint tPos =
+                       
+                        //shooterSprite.position =  ccp(shooterSprite.position.x+(0.5-0.114),shooterSprite.position.y+(0.5-0.345));
+                        //shooterSprite.anchorPoint = ccp(0.114,0.345);
+                        
+                        //shooterSprite.position = sPoint;
                     shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
                     //shooterSprite.position = ccp(shooterSprite.position.x-(shooterSprite.contentSize.width*0.114),shooterSprite.position.y-(shooterSprite.contentSize.height*0.345));
                     //myActor.rotation = 45;
@@ -1311,7 +1431,7 @@ return FALSE;
                     if (CGRectContainsPoint(myActor.boundingBox, touchLocation))
                     {
                         //animate the launcher
-                       [myActor prepareAnimationNamed:@"launcher" fromSHScene:@"logistics-chapter1"];
+                       [myActor prepareAnimationNamed:@"launcher" fromSHScene:@"logistics"];
                         
                         [myActor playAnimation];
                 
@@ -1333,7 +1453,7 @@ return FALSE;
                         
                         [myActor.parent reorderChild:myActor z:1000];
                         
-                        
+                        [self playSoundEffect:@"drop.mp3"];
                         [self playGame];
                         break;
                     }
@@ -1544,7 +1664,7 @@ return FALSE;
             if(self.device == @"iphone")
             {
             shootingPower = ccpDistance(shooterSprite.position, touchingPoint);
-            shootingPower*=2.5;
+            shootingPower*=3;
             targetFrame = shootingPower/300;
             }
             else

@@ -37,7 +37,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -46,13 +46,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>floor</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -112,7 +112,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -121,13 +121,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>floor</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -187,7 +187,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -196,13 +196,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>bell</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -262,7 +262,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -271,13 +271,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>bell</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -337,7 +337,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -346,13 +346,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>bell</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -412,7 +412,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -421,13 +421,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>goal0</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -488,7 +488,7 @@
 								<key>OtherAnimations</key>
 								<array/>
 								<key>SHScene</key>
-								<string>logistics-chapter1.pshs</string>
+								<string>logistics.pshs</string>
 							</dict>
 							<key>Children</key>
 							<array/>
@@ -504,7 +504,7 @@
 							<key>ParentClass</key>
 							<string>LHBatch</string>
 							<key>ParentName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>PathProperties</key>
 							<dict/>
 							<key>PhysicProperties</key>
@@ -513,13 +513,13 @@
 								<true/>
 							</dict>
 							<key>SHSceneName</key>
-							<string>logistics-chapter1.pshs</string>
+							<string>logistics.pshs</string>
 							<key>SHSheetName</key>
-							<string>Chapter1</string>
+							<string>tools</string>
 							<key>SHSpriteName</key>
 							<string>gift-launcher0</string>
 							<key>SheetImage</key>
-							<string>logistics-chapter1_Chapter1.png</string>
+							<string>logistics-tools.png</string>
 							<key>TextureProperties</key>
 							<dict>
 								<key>Angle</key>
@@ -575,9 +575,9 @@
 					<key>ParentName</key>
 					<string>MAIN_LAYER</string>
 					<key>SHScene</key>
-					<string>logistics-chapter1.pshs</string>
+					<string>logistics.pshs</string>
 					<key>SheetImage</key>
-					<string>logistics-chapter1_Chapter1.png</string>
+					<string>logistics-tools.png</string>
 					<key>SheetImageRelative</key>
 					<string>/logistics-chapter1_Chapter1.png</string>
 					<key>Tag</key>
@@ -585,7 +585,7 @@
 					<key>TagName</key>
 					<string>DEFAULT</string>
 					<key>UniqueName</key>
-					<string>Chapter1</string>
+					<string>tools</string>
 					<key>ZOrder</key>
 					<integer>0</integer>
 				</dict>

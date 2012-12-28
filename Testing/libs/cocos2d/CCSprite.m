@@ -249,7 +249,7 @@ struct transformValues_ {
 	NSAssert(image!=nil, @"Invalid CGImageRef for sprite");
 
 	// XXX: possible bug. See issue #349. New API should be added
-	NSString *key = [NSString stringWithFormat:@"%08X",(unsigned long)image];
+	NSString *key = [NSString stringWithFormat:@"%lu",(unsigned long)image];
 	CCTexture2D *texture = [[CCTextureCache sharedTextureCache] addCGImage:image forKey:key];
 	
 	CGRect rect = CGRectZero;
@@ -290,7 +290,7 @@ struct transformValues_ {
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | Rect = (%.2f,%.2f,%.2f,%.2f) | tag = %i | atlasIndex = %i>", [self class], self,
+	return [NSString stringWithFormat:@"<%@ = %@ | Rect = (%.2f,%.2f,%.2f,%.2f) | tag = %i | atlasIndex = %i>", [self class], self,
 			rect_.origin.x, rect_.origin.y, rect_.size.width, rect_.size.height,
 			tag_,
 			atlasIndex_

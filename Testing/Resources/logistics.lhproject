@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>2HDSuffix</key>
+	<string>-ipadhd</string>
+	<key>AutoGenerateCode</key>
+	<false/>
+	<key>AutoIncludeXCode</key>
+	<false/>
+	<key>BookmarkProjectFolder</key>
+	<data>
+	Ym9va7ADAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AIA
+	AAUAAAABAQAAVXNlcnMAAAAIAAAAAQEAAHJha2Vyc29uBwAAAAEBAABEZXNrdG9wAAgA
+	AAABAQAAUHJvamVjdHMJAAAAAQEAAExvZ2lzdGljcwAAAAcAAAABAQAAVGVzdGluZwAJ
+	AAAAAQEAAFJlc291cmNlcwAAABwAAAABBgAABAAAABQAAAAkAAAANAAAAEQAAABYAAAA
+	aAAAAAgAAAAEAwAAI8AAAAAAAAAIAAAABAMAAMIfBQAAAAAACAAAAAQDAABgIAUAAAAA
+	AAgAAAAEAwAAOnoKAAAAAAAIAAAABAMAAFTwQQAAAAAACAAAAAQDAAAv+kEAAAAAAAgA
+	AAAEAwAACf1BAAAAAAAcAAAAAQYAAKAAAACwAAAAwAAAANAAAADgAAAA8AAAAAABAAAI
+	AAAAAAQAAEG0bHSeAAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAMAAAA
+	AQEAAE1hY2ludG9zaCBIRAgAAAAEAwAAAICBPXQAAAAIAAAAAAQAAEG0Q75UAAAAJAAA
+	AAEBAABDQjE1QTNBOC1CMTMxLTM0RjMtQTA1MC1GMUE1NkUyRjhEMzQYAAAAAQIAAIEA
+	AAABAAgA7z8AAAEACAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAABAAAAAMDAAAA
+	AQAAxAAAAAECAAA2ZGNkOTdlOWEzM2NlYTM1MDcwNzg3ZDNjNWE3Nzg4OTcxYTg5YWEw
+	OzAwMDAwMDAwOzAwMDAwMDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJl
+	YWQtd3JpdGU7MDAwMDAwMDE7MDEwMDAwMDI7MDAwMDAwMDAwMDQxZmQwOTsvdXNlcnMv
+	cmFrZXJzb24vZGVza3RvcC9wcm9qZWN0cy9sb2dpc3RpY3MvdGVzdGluZy9yZXNvdXJj
+	ZXMAqAAAAP7///8BAAAAAAAAAA0AAAAEEAAAfAAAAAAAAAAFEAAAEAEAAAAAAAAQEAAA
+	RAEAAAAAAABAEAAANAEAAAAAAAACIAAA5AEAAAAAAAAQIAAAZAEAAAAAAAARIAAAmAEA
+	AAAAAAASIAAAeAEAAAAAAAATIAAAiAEAAAAAAAAgIAAAxAEAAAAAAAAwIAAA8AEAAAAA
+	AAAQ0AAA+AEAAAAAAACA8AAABAIAAAAAAAA=
+	</data>
+	<key>BundleIdentifier</key>
+	<string></string>
+	<key>CodePathRelative</key>
+	<string>..</string>
+	<key>CustomClasses</key>
+	<array/>
+	<key>CustomScreenSize</key>
+	<string>{1024, 768}</string>
+	<key>Device</key>
+	<integer>1</integer>
+	<key>Engine</key>
+	<integer>0</integer>
+	<key>HDSuffix</key>
+	<string>-hd</string>
+	<key>LastLevelLoaded</key>
+	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level1-12.plhs</string>
+	<key>Orientation</key>
+	<integer>1</integer>
+	<key>ProjectName</key>
+	<string>logistics</string>
+	<key>ProjectPathRelative</key>
+	<string>./</string>
+	<key>Tags</key>
+	<array>
+		<string>DEFAULT</string>
+		<string>DRAGGABLE</string>
+		<string>GOAL</string>
+		<string>PRESENT</string>
+		<string>REWARD</string>
+		<string>FAN</string>
+		<string>BELT</string>
+		<string>PRESENT_BELT</string>
+		<string>PRESENT_FAN</string>
+		<string>PRESENT_DROP</string>
+		<string>FLOOR</string>
+		<string>ROTATOR</string>
+		<string>SPRING</string>
+		<string>SHOOTER</string>
+		<string>SHOOTER_ROTATOR</string>
+		<string>GOALSPRITE</string>
+	</array>
+</dict>
+</plist>

@@ -14,7 +14,7 @@
         
         <UserHighScore>1</UserHighScore>
         <Background>level-back-1</Background>
-        <Item>ball</Item>
+        <Item>mint</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level2</Name>
@@ -29,7 +29,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-2</Background>
-        <Item>ball</Item>
+        <Item>gum</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level3</Name>
@@ -44,7 +44,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-3</Background>
-        <Item>ball</Item>
+        <Item>mint</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level4</Name>
@@ -59,7 +59,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-4</Background>
-        <Item>ball</Item>
+        <Item>gum</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level5</Name>
@@ -74,7 +74,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>ball</Item>
+        <Item>gum</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level6</Name>
@@ -89,7 +89,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-6</Background>
-        <Item>horse</Item>
+        <Item>dot</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level7</Name>
@@ -104,7 +104,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-7</Background>
-        <Item>gift</Item>
+        <Item>bear</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level8</Name>
@@ -119,7 +119,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-8</Background>
-        <Item>truck</Item>
+        <Item>dot</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level9</Name>
@@ -134,7 +134,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-9</Background>
-        <Item>gift</Item>
+        <Item>bean</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level10</Name>
@@ -149,7 +149,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-10</Background>
-        <Item>ball</Item>
+        <Item>dot</Item>
 	</Level>    
 	<Level>
         <Name>Chapter1Level11</Name>
@@ -164,7 +164,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-1</Background>
-        <Item>gift</Item>
+        <Item>bear</Item>
 	</Level>
     <Level>
         <Name>Chapter1Level10</Name>
@@ -179,6 +179,6 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-2</Background>
-        <Item>gift</Item>
+        <Item>mint</Item>
 	</Level>
 </Levels>

@@ -118,8 +118,13 @@
                 [overlay addObject:overlaySprite];
             }
             else {
-                
+
+                if(level.stars > 3)
+                {
+                    level.stars = 3;
+                }
                 NSString *stars = [[NSNumber numberWithInt:level.stars] stringValue];
+                
                 NSString *overlayImage = [NSString stringWithFormat:@"%@Star-Normal-%@.png",stars, self.device];
                 CCSprite *overlaySprite = [CCSprite spriteWithFile:overlayImage];
                 [overlaySprite setTag:level.number];
