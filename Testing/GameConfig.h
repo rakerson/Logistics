@@ -27,7 +27,9 @@
 // TIP:
 // To improve the performance, you should set this value to "kGameAutorotationNone" or "kGameAutorotationCCDirector"
 #if defined(__ARM_NEON__) || TARGET_IPHONE_SIMULATOR
-#define GAME_AUTOROTATION kGameAutorotationUIViewController  // fine for #GS and above, slow for below
+//#define GAME_AUTOROTATION kGameAutorotationUIViewController
+#define GAME_AUTOROTATION kGameAutorotationNone
+// fine for #GS and above, slow for below
 //#define GAME_AUTOROTATION kGameAutorotationCCDirector  // Speeds app up however does not rotate non-cocos2d stuff.
 
 // ARMv6 (1st and 2nd generation devices): Don't rotate. It is very expensive

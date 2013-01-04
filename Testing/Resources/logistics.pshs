@@ -1064,7 +1064,7 @@
 									<string>{98, 143}</string>
 									<string>{85, 120}</string>
 									<string>{73, 92}</string>
-									<string>{63.999999999999993, 61}</string>
+									<string>{64, 61}</string>
 									<string>{59, 30}</string>
 									<string>{58, 2}</string>
 									<string>{1, 0}</string>
@@ -5757,7 +5757,7 @@
 			<key>MaxSheetSize</key>
 			<integer>4096</integer>
 			<key>NpotSize</key>
-			<string>{64, 64}</string>
+			<string>{492, 924}</string>
 			<key>Padding</key>
 			<integer>8</integer>
 			<key>PixelFormat</key>
@@ -5772,7 +5772,7 @@
 			<string></string>
 			<key>Sheet_Sprites_Info</key>
 			<dict>
-				<key>blocks</key>
+				<key>iceball0</key>
 				<dict>
 					<key>IsSHSprite</key>
 					<true/>
@@ -5797,14 +5797,61 @@
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>
-						<array/>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array/>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>131</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<true/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.75</real>
+								<key>LHShapePositionOffset</key>
+								<string>{0, 0.125}</string>
+								<key>LHWidth</key>
+								<real>32.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array/>
+								<key>ShapePositionOffset</key>
+								<string>{67, 65.5}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>130</real>
+							</dict>
+						</array>
 						<key>Type</key>
-						<integer>3</integer>
+						<integer>2</integer>
 					</dict>
 					<key>SHSheetName</key>
 					<string>chapter-2</string>
 					<key>SHSpriteName</key>
-					<string>blocks</string>
+					<string>iceball0</string>
 					<key>SheetImage</key>
 					<string>logistics_chapter-2.png</string>
 					<key>SheetImage-HD</key>
@@ -5828,9 +5875,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 0}, {16, 16}}</string>
+						<string>{{13, 68}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 0}, {64, 64}}</string>
+						<string>{{52, 272}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -5844,23 +5891,783 @@
 						<key>IsTrimmed</key>
 						<true/>
 						<key>Name</key>
-						<string>blocks</string>
+						<string>iceball0</string>
 						<key>Opacity</key>
 						<real>1</real>
 						<key>OriginalImage</key>
-						<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/blocks.png</string>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceball0.png</string>
 						<key>OriginalImage_RelativePath</key>
-						<string>blocks.png/</string>
+						<string>../../../../LogisticsImages/iceball0.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {64, 64}}</string>
+						<string>{{3, 5}, {134, 131}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{52, 272}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>iceball1</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array/>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>131</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<true/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.75</real>
+								<key>LHShapePositionOffset</key>
+								<string>{0, 0.125}</string>
+								<key>LHWidth</key>
+								<real>32.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array/>
+								<key>ShapePositionOffset</key>
+								<string>{67, 65.5}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>130</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>iceball1</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{82, 34}, {33.5, 32.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{328, 136}, {134, 131}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>iceball1</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceball1.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/iceball1.png/</string>
+						<key>OriginalRect</key>
+						<string>{{3, 5}, {134, 131}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{328, 136}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>iceball2</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array/>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>131</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<true/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.75</real>
+								<key>LHShapePositionOffset</key>
+								<string>{0, 0.125}</string>
+								<key>LHWidth</key>
+								<real>32.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array/>
+								<key>ShapePositionOffset</key>
+								<string>{67, 65.5}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>130</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>iceball2</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{13, 34}, {33.5, 32.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{52, 136}, {134, 131}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>iceball2</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceball2.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/iceball2.png/</string>
+						<key>OriginalRect</key>
+						<string>{{3, 5}, {134, 131}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{52, 136}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>iceball3</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array/>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>131</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<true/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.75</real>
+								<key>LHShapePositionOffset</key>
+								<string>{0, 0.125}</string>
+								<key>LHWidth</key>
+								<real>32.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array/>
+								<key>ShapePositionOffset</key>
+								<string>{67, 65.5}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>130</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>iceball3</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{48, 34}, {33.5, 32.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{192, 136}, {134, 131}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>iceball3</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceball3.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/iceball3.png/</string>
+						<key>OriginalRect</key>
+						<string>{{3, 5}, {134, 131}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{192, 136}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icebox</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-7.5, -7.5}</string>
+										<string>{7.75, -7.5}</string>
+										<string>{7.75, 7.5}</string>
+										<string>{-7.5, 7.5}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>60</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>15</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-7.5, -7.5}</string>
+								<key>LHWidth</key>
+								<real>15.25</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{0, 0}</string>
+									<string>{61, 0}</string>
+									<string>{61, 60}</string>
+									<string>{0, 60}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>61</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icebox</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{107, 85}, {15.75, 15}}</string>
+						<key>Frame-HD</key>
+						<string>{{428, 340}, {61, 60}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icebox</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icebox.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icebox.png/</string>
+						<key>OriginalRect</key>
+						<string>{{2, 2}, {61, 60}}</string>
 						<key>OriginalSize</key>
 						<string>{64, 64}</string>
 						<key>Position</key>
-						<string>{0, 0}</string>
+						<string>{428, 340}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
 						<string>{16, 16}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.375, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icecube0</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>2</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-16.528077206289893, -15.388111492531721}</string>
+										<string>{11.792779253512023, -15.388111492531721}</string>
+										<string>{11.792779253512023, 13.177948669775901}</string>
+										<string>{-16.528077206289893, 13.177948669775901}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>130</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-17, -16.25}</string>
+								<key>LHWidth</key>
+								<real>34</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{1.8876911748404268, 12.288205320896395}</string>
+									<string>{115.17111701404809, 12.288205320896395}</string>
+									<string>{115.17111701404809, 126.55244597012688}</string>
+									<string>{1.8876911748404268, 126.55244597012688}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>136</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icecube0</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{13, 0}, {34, 32.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{52, 0}, {136, 130}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icecube0</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icecube0.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icecube0.png/</string>
+						<key>OriginalRect</key>
+						<string>{{2, 5}, {136, 130}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{52, 0}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
 						<key>SpriteWasBreaked</key>
 						<false/>
 						<key>Tag</key>
@@ -5873,9 +6680,953 @@
 						<integer>0</integer>
 					</dict>
 				</dict>
+				<key>icecube1</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>2</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-16.395099863216153, -15.040558218897331}</string>
+										<string>{12.09648175586031, -15.040558218897331}</string>
+										<string>{12.09648175586031, 13.044241893722869}</string>
+										<string>{-16.395099863216153, 13.044241893722869}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>129</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.25</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-17, -16.25}</string>
+								<key>LHWidth</key>
+								<real>34</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{2.4196005471353885, 12.823032425108522}</string>
+									<string>{116.38592702344124, 12.823032425108522}</string>
+									<string>{116.38592702344124, 125.16223287558932}</string>
+									<string>{2.4196005471353885, 125.16223287558932}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>136</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icecube1</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{83, 0}, {34, 32.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{332, 0}, {136, 129}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icecube1</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icecube1.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icecube1.png/</string>
+						<key>OriginalRect</key>
+						<string>{{2, 5}, {136, 129}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{332, 0}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icecube2</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>2</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-16.444513106713764, -15.331330740611463}</string>
+										<string>{12.038114664888667, -15.331330740611463}</string>
+										<string>{12.038114664888667, 12.609605663670891}</string>
+										<string>{-16.444513106713764, 12.609605663670891}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>130</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-17, -16.25}</string>
+								<key>LHWidth</key>
+								<real>34</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{2.221947573144945, 14.561577345316437}</string>
+									<string>{116.15245865955467, 14.561577345316437}</string>
+									<string>{116.15245865955467, 126.32532296244585}</string>
+									<string>{2.221947573144945, 126.32532296244585}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>136</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icecube2</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{48, 0}, {34, 32.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{192, 0}, {136, 130}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icecube2</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icecube2.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icecube2.png/</string>
+						<key>OriginalRect</key>
+						<string>{{2, 5}, {136, 130}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{192, 0}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icecube3</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>2</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-16.009707939253389, -15.161524263793694}</string>
+										<string>{11.990753569200464, -15.161524263793694}</string>
+										<string>{11.990753569200464, 12.306953792217243}</string>
+										<string>{-16.009707939253389, 12.306953792217243}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>130</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>32.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-16.75, -16.25}</string>
+								<key>LHWidth</key>
+								<real>33.25</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{2.9611682429864459, 15.772184831131028}</string>
+									<string>{114.96301427680186, 15.772184831131028}</string>
+									<string>{114.96301427680186, 125.64609705517478}</string>
+									<string>{2.9611682429864459, 125.64609705517478}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>133</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icecube3</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{48, 68}, {33.75, 32.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{192, 272}, {133, 130}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icecube3</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icecube3.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icecube3.png/</string>
+						<key>OriginalRect</key>
+						<string>{{3, 5}, {133, 130}}</string>
+						<key>OriginalSize</key>
+						<string>{140, 140}</string>
+						<key>Position</key>
+						<string>{192, 272}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{35, 35}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.125, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>iceplank</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-115.75, -5.75}</string>
+										<string>{115, -5.75}</string>
+										<string>{115, 6.25}</string>
+										<string>{-115.75, 6.25}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.0010000000474974513</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>48</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>12</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-115.75, -6.25}</string>
+								<key>LHWidth</key>
+								<real>230.75</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{0, 0}</string>
+									<string>{5.6517449780650353e-14, 923}</string>
+									<string>{-47.999999999999943, 923}</string>
+									<string>{-48, 2.9391523179536475e-15}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>923</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>iceplank</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{0, 0}, {230.75, 12}}</string>
+						<key>Frame-HD</key>
+						<string>{{0, 0}, {923, 48}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<true/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>iceplank</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceplank.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/iceplank.png/</string>
+						<key>OriginalRect</key>
+						<string>{{2, 1}, {923, 48}}</string>
+						<key>OriginalSize</key>
+						<string>{930, 52}</string>
+						<key>Position</key>
+						<string>{0, 0}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{232.5, 13}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{-0.375, 0.25}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icicle</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-11.71241482404082, -13.874656514809743}</string>
+										<string>{11.996090546241376, 13.558713541517889}</string>
+										<string>{-11.887371963103071, 13.638033487983932}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<true/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-12.125, -13.75}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{0.95051214758771607, 0.44786604806427022}</string>
+									<string>{96.484362184965505, 0.76514583392844315}</string>
+									<string>{1.6503407038367186, 110.49862605923897}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icicle</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{82, 68}, {24.75, 27.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{328, 272}, {97, 110}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icicle</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icicle.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icicle.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {97, 110}}</string>
+						<key>OriginalSize</key>
+						<string>{97, 110}</string>
+						<key>Position</key>
+						<string>{328, 272}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{24.25, 27.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>icicle2</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-10.311317855022409, 15.868914848038798}</string>
+										<string>{9.6284400176033245, -16.393656572886158}</string>
+										<string>{10.271327175868009, 16.200344499738648}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<true/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-10.125, -16.375}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{-0.74527142008963665, 2.0243406078448061}</string>
+									<string>{79.013760070413298, 131.07462629154463}</string>
+									<string>{81.585308703472037, 0.69862200104540761}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>icicle2</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{13, 101}, {20.75, 32.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{52, 404}, {81, 131}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>icicle2</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/icicle2.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/icicle2.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {81, 131}}</string>
+						<key>OriginalSize</key>
+						<string>{81, 131}</string>
+						<key>Position</key>
+						<string>{52, 404}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{20.25, 32.75}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
 			</dict>
 			<key>Size</key>
-			<string>{64, 64}</string>
+			<string>{512, 1024}</string>
 			<key>Trim</key>
 			<true/>
 			<key>ZOrder</key>
@@ -8331,9 +10082,9 @@
 									<string>{375.56077109314964, 132.22744286869437}</string>
 									<string>{373.24137044613832, 236.47509897625559}</string>
 									<string>{315.96300213382767, 267.63029145097482}</string>
-									<string>{68.670442732334479, 265.00885583027411}</string>
+									<string>{68.670442732334493, 265.00885583027411}</string>
 									<string>{6.6449964373201453, 94.079855814410394}</string>
-									<string>{48.377111764257862, 13.846829501703041}</string>
+									<string>{48.377111764257847, 13.846829501703041}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>

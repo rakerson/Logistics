@@ -159,8 +159,8 @@ enum {
         GameData *gameData = [GameDataParser loadData];
        selectedChapter = gameData.selectedChapter;
         selectedLevel = gameData.selectedLevel;
-        
-        
+       // selectedLevel = 99;
+        NSLog(@"Current Level %i",selectedLevel);
         
         // Read in selected chapter levels
        //CCMenu *levelMenu = [CCMenu menuWithItems: nil];
@@ -200,7 +200,14 @@ enum {
 		buttonLayer.isTouchEnabled = NO;
         self.isTouchEnabled = NO;
 		// enable accelerometer
-		self.isAccelerometerEnabled = NO;
+        if(selectedLevel > 15)
+        {
+		self.isAccelerometerEnabled = YES;
+        }
+        else
+        {
+        self.isAccelerometerEnabled = NO;
+        }
 		
 		CGSize screenSize = [CCDirector sharedDirector].winSize;
 		CCLOG(@"Screen width %0.2f screen height %0.2f",screenSize.width,screenSize.height);
@@ -283,8 +290,8 @@ enum {
         //add in the background...
         //CCSprite * bg = [CCSprite spriteWithFile:@"level-back-small-1.jpg"];
         //NSString * tBackground = [NSString stringWithFormat:@"%@-%@.jpg", background, self.device];
-        //NSString * tBackground = [NSString stringWithFormat:@"level-%i-back-%@.png", gameData.selectedChapter, self.device];
-        NSString * tBackground = [NSString stringWithFormat:@"level-1-back-%@.png", self.device];
+        NSString * tBackground = [NSString stringWithFormat:@"level-%i-back-%@.png", gameData.selectedChapter, self.device];
+        //NSString * tBackground = [NSString stringWithFormat:@"level-1-back-%@.png", self.device];
         hue = (gameData.selectedLevel*0.22);
         hue = fmodf(hue, 1.0f);
         shade = 0.75;
@@ -355,7 +362,17 @@ enum {
               
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         currentItemName = @"";
+        if(selectedChapter == 1)
+        {
         currentSpriteSheet = @"chapter-1";
+        }
+        else if(selectedChapter == 2)
+        {
+        currentSpriteSheet = @"chapter-2";
+        }
+        
+        //currentSpriteSheet = [NSString stringWithFormat:@"chapter-%@", selectedChapter];
+        NSLog(@"Current Chapter:  %@" , currentSpriteSheet);
         currentTAG = FAN;
         currentFile = @"logistics";
         

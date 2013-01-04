@@ -43,14 +43,29 @@
                                target:self
                                selector:@selector(onBack:)];
     CCMenu *back = [CCMenu menuWithItems: goBack, nil];
-    
+     
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     [back setPosition:ccp(screenSize.width*0.15, screenSize.height*0.9)];
     [self addChild:back];
     
 
 }
-
+- (void)addBonusButton {
+    
+    CCMenuItemImage *goBonus = [CCMenuItemImage
+                               itemFromNormalImage:[NSString stringWithFormat:@"about-off-%@.png", self.device]
+                               selectedImage:[NSString stringWithFormat:@"about-on-%@.png", self.device]
+                               target:self
+                               selector:@selector(onPlay:)];
+    [goBonus setTag:99];
+    CCMenu *bonus = [CCMenu menuWithItems: goBonus, nil];
+    
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+    [bonus setPosition:ccp(screenSize.width*0.75, screenSize.height*0.9)];
+    [self addChild:bonus];
+    
+    
+}
 - (id)init {
     
     if( (self=[super init])) {
@@ -193,7 +208,9 @@
         
      // Add back button
         
-        [self addBackButton]; 
+        [self addBackButton];
+    //add bonus level button
+        [self addBonusButton];
     }
     return self;
 }
