@@ -91,6 +91,7 @@
         int selectedChapter = gameData.selectedChapter;
         
         
+        
      // Read in selected chapter name (use to load custom background later):
         NSString *selectedChapterName = nil;        
         NSMutableArray *selectedChapters = [ChapterParser loadData]; //Chapters *selectedChapters = [ChapterParser loadData];
@@ -101,6 +102,11 @@
                 selectedChapterName = chapter.name;
             }
         }
+        //Title Label
+        int largeFont = [CCDirector sharedDirector].winSize.height / kFontScaleLarge;
+        CCLabelTTF *layerLabel = [CCLabelTTF labelWithString:selectedChapterName fontName:@"Fontdinerdotcom" fontSize:largeFont];
+        layerLabel.position =  ccp( screenSize.width*0.5 , screenSize.height*0.92 );
+        [self addChild:layerLabel];
         
         
      // Read in selected chapter levels
@@ -159,6 +165,8 @@
         
         [levelMenu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.45)];
         
+        
+       
         [self addChild:levelMenu z:-3];
 
 
@@ -210,7 +218,7 @@
         
         [self addBackButton];
     //add bonus level button
-        [self addBonusButton];
+        //[self addBonusButton];
     }
     return self;
 }

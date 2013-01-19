@@ -74,9 +74,10 @@ enum {
 
 -(void)pauseGame{
     rotateTool.visible = true;
-    [self stopAnimations];
+    //[self stopAnimations];
     [rotateTool setPosition:ccp(selSprite.position.x,selSprite.position.y)];
-    
+    pauseButton.visible = false;
+    unpauseButton.visible = true;
     isPlaying = false;
     selSprite.opacity = 128;
 }
@@ -84,6 +85,8 @@ enum {
     gameOverTimer = 0;
     menuOpen = false;
     self.isPlaying=true;
+    pauseButton.visible = true;
+    unpauseButton.visible = false;
     self.isPaused = false;
     [self playAnimations];
 }
@@ -95,7 +98,7 @@ enum {
     strikes = 0;
     //[self removeAllTools];
     menuOpen = false;
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:[NSString stringWithFormat:@"level-%d.mp3", selectedChapter] loop:TRUE];
     [self restartGame];
 }
 -(void)resetGame{
@@ -107,7 +110,9 @@ enum {
     strikes = 0;
     gameTime = 0;
     [self removeAllTools];
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:[NSString stringWithFormat:@"level-%d.mp3", selectedChapter] loop:TRUE];
+    
+    //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-22.mp3" loop:TRUE];
     [self restartGame];
     
 }
@@ -253,6 +258,7 @@ enum {
        
         NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
         //TUTORIAL - loading the active leve    l
+        [LevelHelperLoader dontStretchArtOnIpad];
         lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
         
 		// bottom
@@ -390,7 +396,9 @@ enum {
         //snow.gravity = ccp(0,0);
            // [self addChild:snow z:10];
         //}
-        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
+        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:[NSString stringWithFormat:@"level-%d.mp3", selectedChapter] loop:TRUE];
+        
+        //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
         }
     
 	return self;
@@ -636,8 +644,13 @@ enum {
     //place the pause button
     pauseButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"pause-on-%@.png", self.device]];
     [buttonLayer addChild: pauseButton];
-    
     [pauseButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+    
+    //place the pause button
+    unpauseButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"unpause-on-%@.png", self.device]];
+    [buttonLayer addChild: unpauseButton];
+    [unpauseButton setPosition:ccp(winSize.width*(buttonCount*buttonSpacing)-(buttonSpacing*margin), winSize.height*0.05)];
+    unpauseButton.visible = false;
     
     if(belts >0)
     {
@@ -980,9 +993,20 @@ enum {
         
     }
         
-    else if (CGRectContainsPoint (pauseButton.boundingBox,touchLocation))
+    else if (CGRectContainsPoint (pauseButton.boundingBox,touchLocation) || CGRectContainsPoint (unpauseButton.boundingBox,touchLocation))
     {
-        [self showPauseMenu];
+        if(isPlaying)
+        {
+            pauseButton.visible = false;
+            unpauseButton.visible = true;
+            [self showPauseMenu];
+        }
+        else
+        {
+            pauseButton.visible = true;
+            unpauseButton.visible = false;
+            isPlaying = true;
+        }
     }
     else if (CGRectContainsPoint (helpButton.boundingBox,touchLocation))
     {
@@ -1054,6 +1078,11 @@ return FALSE;
     //NSLog(@"Touch 222  \"%f\" Ended:", location.x);
     if(editMode == @"move")
     {
+    if (CGRectContainsPoint (pauseButton.boundingBox,location) || CGRectContainsPoint (unpauseButton.boundingBox,location))
+    {
+    }
+    else
+    {
     if (CGRectContainsPoint (bottomMatte.boundingBox,location) && selSprite.tag == BELT)
     {
         NSLog(@"Remove Belt");
@@ -1073,12 +1102,16 @@ return FALSE;
         [self removeItem];
     }
     }
+    }
 }
 
 
 
 -(void)playGame{
     NSLog(@"PlayGame");
+    //change the pause/play button graphic
+    unpauseButton.visible = false;
+    pauseButton.visible =   true;
     isPlaying = true;
     isPaused = false;
     rotateTool.visible = false;
@@ -1154,10 +1187,18 @@ return FALSE;
 
     for (LHSprite *item in rewardArray)
         {
-        NSLog(@"LOOP  %f", item.position.x);
-       LHSprite* myNewSprite = [lh createSpriteWithName:@"candy" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
-            
+        if(selectedChapter == 1)
+        {
+            LHSprite* myNewSprite = [lh createSpriteWithName:@"candy" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
             [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
+        }
+        else if(selectedChapter == 2)
+        {
+            LHSprite* myNewSprite = [lh createSpriteWithName:@"snowflake2" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
+            [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
+        }
+        
+            
        //  firefox myNewSprite.position = item.position;
         }
     }
@@ -1278,6 +1319,20 @@ return FALSE;
                 
                 //Synchronize the AtlasSprites position and rotation with the corresponding body
                 LHSprite *myActor = (LHSprite*)b->GetUserData();
+                if(myActor.tag == HORIZONTALPLATFORM && myActor.position.x < 250)
+                {
+                //myActor.
+                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(90))*2, cosf (CC_DEGREES_TO_RADIANS(90))*2);
+                    b->ApplyForce(force, b->GetWorldCenter());
+
+                }
+                if(myActor.tag == HORIZONTALPLATFORM && myActor.position.x > 774)
+                {
+                    //myActor.
+                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(-90))*2, cosf (CC_DEGREES_TO_RADIANS(-90))*2);
+                    b->ApplyForce(force, b->GetWorldCenter());
+                    
+                }
                 if(myActor.tag == FAN)
                 {
                 fanAngle = myActor.rotation;

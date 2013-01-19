@@ -59,6 +59,7 @@
     b2Body * selSpriteBody;
     CCSprite * _selSprite;
     CCSprite * pauseButton;
+    CCSprite * unpauseButton;
     CCSprite * helpButton;
     CCSprite * muteButton;
     CCSprite * unmuteButton;

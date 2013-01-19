@@ -29,7 +29,7 @@
 */
 
 +(void) goMainMenu {
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"lobby.mp3" loop:TRUE];
     [SceneManager go:[MainMenu node]];
     //[[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[MainMenu node]]];
     
@@ -55,7 +55,7 @@
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[ChapterSelect node]]];
 }
 +(void) goLevelSelectFromBoard {
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"lobby.mp3" loop:TRUE];
     //[SceneManager go:[ChapterSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }
@@ -66,7 +66,7 @@
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInB transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }
 +(void) goLevelSelectFromLevel {
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-2.mp3" loop:TRUE];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"lobby.mp3" loop:TRUE];
     //[SceneManager go:[LevelSelect node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[LevelSelect node]]];
 }

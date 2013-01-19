@@ -71,7 +71,7 @@
         NSString *successMessage;
         if(gameData.selectedLevel == 12)
         {
-        successMessage = @"All Levels Complete";
+        successMessage = @"Chapter Complete";
         }
         else
         {

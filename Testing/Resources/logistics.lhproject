@@ -87,6 +87,7 @@
 		<string>SHOOTER</string>
 		<string>SHOOTER_ROTATOR</string>
 		<string>GOALSPRITE</string>
+		<string>HORIZONATALPLATFORM</string>
 	</array>
 </dict>
 </plist>

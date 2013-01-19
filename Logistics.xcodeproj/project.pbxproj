@@ -233,6 +233,8 @@
 		E52FF3AA1684853400A966E7 /* level-1-back-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FF3A71684853300A966E7 /* level-1-back-ipad.png */; };
 		E52FF3AB1684853400A966E7 /* level-1-back-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FF3A81684853300A966E7 /* level-1-back-ipadhd.png */; };
 		E52FF3AC1684853400A966E7 /* level-1-back-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FF3A91684853300A966E7 /* level-1-back-iphone.png */; };
+		E548F73216A2EDF10079FFBB /* lobby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E548F73116A2EDF10079FFBB /* lobby.mp3 */; };
+		E548F73916A2F87D0079FFBB /* level-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E548F73816A2F87D0079FFBB /* level-2.mp3 */; };
 		E56479371676FF0200B1D561 /* snowflake.png in Resources */ = {isa = PBXBuildFile; fileRef = E56479361676FF0200B1D561 /* snowflake.png */; };
 		E564793B1679693500B1D561 /* helpbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E564793A1679693500B1D561 /* helpbutton.png */; };
 		E564794016796A2100B1D561 /* help-off-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E564793C16796A2000B1D561 /* help-off-ipad.png */; };
@@ -243,7 +245,6 @@
 		E5647951167AD74200B1D561 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5647947167AD74200B1D561 /* bell.mp3 */; };
 		E5647952167AD74200B1D561 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5647948167AD74200B1D561 /* drop.mp3 */; };
 		E5647953167AD74200B1D561 /* level-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5647949167AD74200B1D561 /* level-1.mp3 */; };
-		E5647954167AD74200B1D561 /* level-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E564794A167AD74200B1D561 /* level-2.mp3 */; };
 		E5647955167AD74200B1D561 /* level-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E564794B167AD74200B1D561 /* level-3.mp3 */; };
 		E5647956167AD74200B1D561 /* level-fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E564794C167AD74200B1D561 /* level-fail.mp3 */; };
 		E5647957167AD74200B1D561 /* level-win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E564794D167AD74200B1D561 /* level-win.mp3 */; };
@@ -519,6 +520,10 @@
 		E58DD6FC165ADB6900A37C59 /* level-back-iphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E58DD6FA165ADB6900A37C59 /* level-back-iphone.jpg */; };
 		E58DD6FE165ADBAC00A37C59 /* Level-Normal-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E58DD6FD165ADBAC00A37C59 /* Level-Normal-iphone.png */; };
 		E58DD700165ADCCC00A37C59 /* FONTDINE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E58DD6FF165ADCCC00A37C59 /* FONTDINE.TTF */; };
+		E59134AD16AAEA5100FC1B50 /* unpause-off-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E59134A916AAEA5000FC1B50 /* unpause-off-ipad.png */; };
+		E59134AE16AAEA5100FC1B50 /* unpause-off-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E59134AA16AAEA5000FC1B50 /* unpause-off-iphone.png */; };
+		E59134AF16AAEA5100FC1B50 /* unpause-on-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E59134AB16AAEA5000FC1B50 /* unpause-on-ipad.png */; };
+		E59134B016AAEA5100FC1B50 /* unpause-on-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E59134AC16AAEA5000FC1B50 /* unpause-on-iphone.png */; };
 		E5AE7342168F1D49006CC451 /* level1-99.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5AE7341168F1D49006CC451 /* level1-99.plhs */; };
 		E5F000A516730425000B4FC6 /* help-mask-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F0009B16730425000B4FC6 /* help-mask-ipad.png */; };
 		E5F000A616730425000B4FC6 /* help-mask-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F0009C16730425000B4FC6 /* help-mask-iphone.png */; };
@@ -938,6 +943,8 @@
 		E52FF3A71684853300A966E7 /* level-1-back-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-1-back-ipad.png"; sourceTree = "<group>"; };
 		E52FF3A81684853300A966E7 /* level-1-back-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-1-back-ipadhd.png"; sourceTree = "<group>"; };
 		E52FF3A91684853300A966E7 /* level-1-back-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-1-back-iphone.png"; sourceTree = "<group>"; };
+		E548F73116A2EDF10079FFBB /* lobby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lobby.mp3; sourceTree = "<group>"; };
+		E548F73816A2F87D0079FFBB /* level-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-2.mp3"; sourceTree = "<group>"; };
 		E56479361676FF0200B1D561 /* snowflake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake.png; sourceTree = "<group>"; };
 		E564793A1679693500B1D561 /* helpbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpbutton.png; sourceTree = "<group>"; };
 		E564793C16796A2000B1D561 /* help-off-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-off-ipad.png"; sourceTree = "<group>"; };
@@ -948,7 +955,6 @@
 		E5647947167AD74200B1D561 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		E5647948167AD74200B1D561 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
 		E5647949167AD74200B1D561 /* level-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-1.mp3"; sourceTree = "<group>"; };
-		E564794A167AD74200B1D561 /* level-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-2.mp3"; sourceTree = "<group>"; };
 		E564794B167AD74200B1D561 /* level-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-3.mp3"; sourceTree = "<group>"; };
 		E564794C167AD74200B1D561 /* level-fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-fail.mp3"; sourceTree = "<group>"; };
 		E564794D167AD74200B1D561 /* level-win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-win.mp3"; sourceTree = "<group>"; };
@@ -1255,6 +1261,10 @@
 		E58DD6FA165ADB6900A37C59 /* level-back-iphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "level-back-iphone.jpg"; sourceTree = "<group>"; };
 		E58DD6FD165ADBAC00A37C59 /* Level-Normal-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Level-Normal-iphone.png"; sourceTree = "<group>"; };
 		E58DD6FF165ADCCC00A37C59 /* FONTDINE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = FONTDINE.TTF; path = Resources/FONTDINE.TTF; sourceTree = "<group>"; };
+		E59134A916AAEA5000FC1B50 /* unpause-off-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unpause-off-ipad.png"; sourceTree = "<group>"; };
+		E59134AA16AAEA5000FC1B50 /* unpause-off-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unpause-off-iphone.png"; sourceTree = "<group>"; };
+		E59134AB16AAEA5000FC1B50 /* unpause-on-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unpause-on-ipad.png"; sourceTree = "<group>"; };
+		E59134AC16AAEA5000FC1B50 /* unpause-on-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unpause-on-iphone.png"; sourceTree = "<group>"; };
 		E5AE7341168F1D49006CC451 /* level1-99.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level1-99.plhs"; path = "Resources/level1-99.plhs"; sourceTree = "<group>"; };
 		E5F0009B16730425000B4FC6 /* help-mask-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-mask-ipad.png"; sourceTree = "<group>"; };
 		E5F0009C16730425000B4FC6 /* help-mask-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-mask-iphone.png"; sourceTree = "<group>"; };
@@ -1433,6 +1443,10 @@
 		1047177E13CC5DC000AF03BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E59134A916AAEA5000FC1B50 /* unpause-off-ipad.png */,
+				E59134AA16AAEA5000FC1B50 /* unpause-off-iphone.png */,
+				E59134AB16AAEA5000FC1B50 /* unpause-on-ipad.png */,
+				E59134AC16AAEA5000FC1B50 /* unpause-on-iphone.png */,
 				E52882521696974300BBEE58 /* level-2-back-ipad.png */,
 				E52882531696974300BBEE58 /* level-2-back-ipadhd.png */,
 				E52882541696974300BBEE58 /* level-2-back-iphone.png */,
@@ -2271,12 +2285,13 @@
 		E5647946167AD74200B1D561 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E548F73816A2F87D0079FFBB /* level-2.mp3 */,
+				E548F73116A2EDF10079FFBB /* lobby.mp3 */,
 				E564795D167ADA6800B1D561 /* floor.mp3 */,
 				E564795B167AD97400B1D561 /* goal.mp3 */,
 				E5647947167AD74200B1D561 /* bell.mp3 */,
 				E5647948167AD74200B1D561 /* drop.mp3 */,
 				E5647949167AD74200B1D561 /* level-1.mp3 */,
-				E564794A167AD74200B1D561 /* level-2.mp3 */,
 				E564794B167AD74200B1D561 /* level-3.mp3 */,
 				E564794C167AD74200B1D561 /* level-fail.mp3 */,
 				E564794D167AD74200B1D561 /* level-win.mp3 */,
@@ -2723,7 +2738,6 @@
 				E5647951167AD74200B1D561 /* bell.mp3 in Resources */,
 				E5647952167AD74200B1D561 /* drop.mp3 in Resources */,
 				E5647953167AD74200B1D561 /* level-1.mp3 in Resources */,
-				E5647954167AD74200B1D561 /* level-2.mp3 in Resources */,
 				E5647955167AD74200B1D561 /* level-3.mp3 in Resources */,
 				E5647956167AD74200B1D561 /* level-fail.mp3 in Resources */,
 				E5647957167AD74200B1D561 /* level-win.mp3 in Resources */,
@@ -2761,6 +2775,12 @@
 				E52882551696974300BBEE58 /* level-2-back-ipad.png in Resources */,
 				E52882561696974300BBEE58 /* level-2-back-ipadhd.png in Resources */,
 				E52882571696974300BBEE58 /* level-2-back-iphone.png in Resources */,
+				E548F73216A2EDF10079FFBB /* lobby.mp3 in Resources */,
+				E548F73916A2F87D0079FFBB /* level-2.mp3 in Resources */,
+				E59134AD16AAEA5100FC1B50 /* unpause-off-ipad.png in Resources */,
+				E59134AE16AAEA5100FC1B50 /* unpause-off-iphone.png in Resources */,
+				E59134AF16AAEA5100FC1B50 /* unpause-on-ipad.png in Resources */,
+				E59134B016AAEA5100FC1B50 /* unpause-on-iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
