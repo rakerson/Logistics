@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/GLES-Render.mm \
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/GLES-Render.h \
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/libs/Box2D/Box2D.h \
+  Testing/libs/Box2D/Common/b2Settings.h \
+  Testing/libs/Box2D/Collision/Shapes/b2CircleShape.h \
+  Testing/libs/Box2D/Collision/Shapes/b2Shape.h \
+  Testing/libs/Box2D/Common/b2BlockAllocator.h \
+  Testing/libs/Box2D/Common/b2Math.h \
+  Testing/libs/Box2D/Collision/b2Collision.h \
+  Testing/libs/Box2D/Collision/Shapes/b2PolygonShape.h \
+  Testing/libs/Box2D/Collision/b2BroadPhase.h \
+  Testing/libs/Box2D/Collision/b2DynamicTree.h \
+  Testing/libs/Box2D/Collision/b2Distance.h \
+  Testing/libs/Box2D/Collision/b2TimeOfImpact.h \
+  Testing/libs/Box2D/Dynamics/b2Body.h \
+  Testing/libs/Box2D/Dynamics/b2Fixture.h \
+  Testing/libs/Box2D/Dynamics/b2WorldCallbacks.h \
+  Testing/libs/Box2D/Dynamics/b2TimeStep.h \
+  Testing/libs/Box2D/Dynamics/b2World.h \
+  Testing/libs/Box2D/Common/b2StackAllocator.h \
+  Testing/libs/Box2D/Dynamics/b2ContactManager.h \
+  Testing/libs/Box2D/Dynamics/Contacts/b2Contact.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2Joint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2GearJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2LineJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2MouseJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+  Testing/libs/Box2D/Dynamics/Joints/b2WeldJoint.h
