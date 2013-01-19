@@ -1319,18 +1319,18 @@ return FALSE;
                 
                 //Synchronize the AtlasSprites position and rotation with the corresponding body
                 LHSprite *myActor = (LHSprite*)b->GetUserData();
-                if(myActor.tag == HORIZONTALPLATFORM && myActor.position.x < 250)
+                if(myActor.tag == HORIZONTALPLATFORM)
                 {
-                //myActor.
-                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(90))*2, cosf (CC_DEGREES_TO_RADIANS(90))*2);
+               
+                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(-90))*.1, cosf (CC_DEGREES_TO_RADIANS(-90))*.1);
                     b->ApplyForce(force, b->GetWorldCenter());
 
                 }
                 if(myActor.tag == HORIZONTALPLATFORM && myActor.position.x > 774)
                 {
-                    //myActor.
-                    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(-90))*2, cosf (CC_DEGREES_TO_RADIANS(-90))*2);
-                    b->ApplyForce(force, b->GetWorldCenter());
+                 
+                  //  b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(-90))*2, cosf (CC_DEGREES_TO_RADIANS(-90))*2);
+                  //  b->ApplyForce(force, b->GetWorldCenter());
                     
                 }
                 if(myActor.tag == FAN)

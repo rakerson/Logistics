@@ -5757,7 +5757,7 @@
 			<key>MaxSheetSize</key>
 			<integer>4096</integer>
 			<key>NpotSize</key>
-			<string>{924, 984}</string>
+			<string>{1004, 1948}</string>
 			<key>Padding</key>
 			<integer>8</integer>
 			<key>PixelFormat</key>
@@ -5772,6 +5772,107 @@
 			<string></string>
 			<key>Sheet_Sprites_Info</key>
 			<dict>
+				<key>dottedline</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array/>
+						<key>Type</key>
+						<integer>3</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>dottedline</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{0, 135}, {352, 10}}</string>
+						<key>Frame-HD</key>
+						<string>{{0, 540}, {1408, 40}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<true/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>dottedline</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/dottedline.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/dottedline.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {1408, 40}}</string>
+						<key>OriginalSize</key>
+						<string>{1408, 41}</string>
+						<key>Position</key>
+						<string>{0, 540}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{352, 10.25}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, 0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
 				<key>iceball0</key>
 				<dict>
 					<key>IsSHSprite</key>
@@ -5875,9 +5976,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 182}, {33.5, 32.75}}</string>
+						<string>{{183, 61}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 728}, {134, 131}}</string>
+						<string>{{732, 244}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -5903,7 +6004,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 728}</string>
+						<string>{732, 244}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6023,9 +6124,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 148}, {33.5, 32.75}}</string>
+						<string>{{217, 28}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 592}, {134, 131}}</string>
+						<string>{{868, 112}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6051,7 +6152,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 592}</string>
+						<string>{868, 112}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6171,9 +6272,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{136, 75}, {33.5, 32.75}}</string>
+						<string>{{217, 61}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{544, 300}, {134, 131}}</string>
+						<string>{{868, 244}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6199,7 +6300,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{544, 300}</string>
+						<string>{868, 244}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6319,9 +6420,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{170, 75}, {33.5, 32.75}}</string>
+						<string>{{183, 28}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{680, 300}, {134, 131}}</string>
+						<string>{{732, 112}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6347,7 +6448,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{680, 300}</string>
+						<string>{732, 112}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6635,9 +6736,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{136, 109}, {15.75, 15}}</string>
+						<string>{{224, 0}, {15.75, 15}}</string>
 						<key>Frame-HD</key>
-						<string>{{544, 436}, {61, 60}}</string>
+						<string>{{896, 0}, {61, 60}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6663,7 +6764,7 @@
 						<key>OriginalSize</key>
 						<string>{64, 64}</string>
 						<key>Position</key>
-						<string>{544, 436}</string>
+						<string>{896, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6793,9 +6894,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{65, 148}, {29.75, 29.75}}</string>
+						<string>{{11, 148}, {29.75, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{260, 592}, {119, 117}}</string>
+						<string>{{44, 592}, {119, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6821,7 +6922,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{260, 592}</string>
+						<string>{44, 592}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6951,9 +7052,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{35, 179}, {29.5, 29.75}}</string>
+						<string>{{42, 148}, {29.5, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{140, 716}, {118, 117}}</string>
+						<string>{{168, 592}, {118, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6979,7 +7080,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{140, 716}</string>
+						<string>{168, 592}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7109,9 +7210,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 216}, {30.5, 29.75}}</string>
+						<string>{{183, 95}, {30.5, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 864}, {122, 117}}</string>
+						<string>{{732, 380}, {122, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7137,7 +7238,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 864}</string>
+						<string>{732, 380}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7267,9 +7368,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{35, 148}, {29.5, 29.5}}</string>
+						<string>{{214, 95}, {29.5, 29.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{140, 592}, {118, 118}}</string>
+						<string>{{856, 380}, {118, 118}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7295,7 +7396,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{140, 592}</string>
+						<string>{856, 380}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7344,7 +7445,7 @@
 								<key>Category</key>
 								<integer>1</integer>
 								<key>Density</key>
-								<real>0.20000000298023224</real>
+								<real>0.05000000074505806</real>
 								<key>Fixture</key>
 								<array>
 									<array>
@@ -7425,9 +7526,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 135}, {230.75, 12}}</string>
+						<string>{{11, 135}, {230.75, 12}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 540}, {923, 48}}</string>
+						<string>{{44, 540}, {923, 48}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7453,7 +7554,7 @@
 						<key>OriginalSize</key>
 						<string>{930, 52}</string>
 						<key>Position</key>
-						<string>{0, 540}</string>
+						<string>{44, 540}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7481,7 +7582,7 @@
 						<key>AngularVelocity</key>
 						<real>0.0</real>
 						<key>CanSleep</key>
-						<true/>
+						<false/>
 						<key>FixedRot</key>
 						<false/>
 						<key>GravityScale</key>
@@ -7506,14 +7607,14 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-43.5, -13.125}</string>
-										<string>{42.941497137621894, -13.125}</string>
-										<string>{42.941497137621894, -1.5786523473458232}</string>
-										<string>{-43.5, -1.5786523473458232}</string>
+										<string>{-43.5, -13.375}</string>
+										<string>{34.22410940938056, -13.375}</string>
+										<string>{34.22410940938056, -1.834975022035394}</string>
+										<string>{-43.5, -1.834975022035394}</string>
 									</array>
 								</array>
 								<key>Friction</key>
-								<real>2</real>
+								<real>0.5</real>
 								<key>Group</key>
 								<integer>0</integer>
 								<key>Height</key>
@@ -7529,7 +7630,7 @@
 								<key>LHHeight</key>
 								<real>26.5</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-43.5, -13.375}</string>
+								<string>{-43.5, -13.125}</string>
 								<key>LHWidth</key>
 								<real>87</real>
 								<key>Mask</key>
@@ -7537,12 +7638,12 @@
 								<key>Name</key>
 								<string>UntitledFixture</string>
 								<key>Restitution</key>
-								<real>0.20000000298023224</real>
+								<real>0.0</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{0, 59.814609389383293}</string>
-									<string>{345.76598855048758, 59.814609389383293}</string>
-									<string>{345.76598855048758, 106}</string>
+									<string>{0, 59.839900088141576}</string>
+									<string>{310.89643763752224, 59.839900088141576}</string>
+									<string>{310.89643763752224, 106}</string>
 									<string>{0, 106}</string>
 								</array>
 								<key>ShapePositionOffset</key>
@@ -7562,10 +7663,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-43.572710753880912, -13.125}</string>
-										<string>{-31.028522689762781, -13.125}</string>
-										<string>{-31.028522689762781, 13.381321514827178}</string>
-										<string>{-43.572710753880912, 13.381321514827178}</string>
+										<string>{-43.572710753880912, -13.375}</string>
+										<string>{-31.5680576149487, -13.375}</string>
+										<string>{-31.5680576149487, 12.775671084477651}</string>
+										<string>{-43.572710753880912, 12.775671084477651}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -7585,7 +7686,7 @@
 								<key>LHHeight</key>
 								<real>26.5</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-43.5, -13.375}</string>
+								<string>{-43.5, -13.125}</string>
 								<key>LHWidth</key>
 								<real>87</real>
 								<key>Mask</key>
@@ -7593,12 +7694,12 @@
 								<key>Name</key>
 								<string>UntitledFixture_1</string>
 								<key>Restitution</key>
-								<real>0.20000000298023224</real>
+								<real>0.0</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{-0.29084301552364877, -0.025286059308712083}</string>
-									<string>{49.885909240948877, -0.025286059308712083}</string>
-									<string>{49.885909240948877, 106}</string>
+									<string>{-0.29084301552364877, 1.3973156620893974}</string>
+									<string>{47.727769540205202, 1.3973156620893974}</string>
+									<string>{47.727769540205202, 106}</string>
 									<string>{-0.29084301552364877, 106}</string>
 								</array>
 								<key>ShapePositionOffset</key>
@@ -7639,9 +7740,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{136, 0}, {87, 26.5}}</string>
+						<string>{{136, 0}, {87, 26.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{544, 0}, {348, 106}}</string>
+						<string>{{544, 0}, {348, 105}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7663,7 +7764,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/iceplatform.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {348, 106}}</string>
+						<string>{{0, 1}, {348, 105}}</string>
 						<key>OriginalSize</key>
 						<string>{348, 107}</string>
 						<key>Position</key>
@@ -7677,7 +7778,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0, 0.125}</string>
+						<string>{0, -0.25}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -8461,9 +8562,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{205, 75}, {24.75, 27.5}}</string>
+						<string>{{73, 148}, {24.75, 27.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{820, 300}, {97, 110}}</string>
+						<string>{{292, 592}, {97, 110}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8489,7 +8590,7 @@
 						<key>OriginalSize</key>
 						<string>{97, 110}</string>
 						<key>Position</key>
-						<string>{820, 300}</string>
+						<string>{292, 592}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8617,9 +8718,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{35, 209}, {20.75, 32.75}}</string>
+						<string>{{11, 179}, {20.75, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{140, 836}, {81, 131}}</string>
+						<string>{{44, 716}, {81, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8645,7 +8746,7 @@
 						<key>OriginalSize</key>
 						<string>{81, 131}</string>
 						<key>Position</key>
-						<string>{140, 836}</string>
+						<string>{44, 716}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8765,9 +8866,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{183, 28}, {34, 35.5}}</string>
+						<string>{{136, 75}, {34, 35.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{732, 112}, {136, 142}}</string>
+						<string>{{544, 300}, {136, 142}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8793,7 +8894,7 @@
 						<key>OriginalSize</key>
 						<string>{136, 143}</string>
 						<key>Position</key>
-						<string>{732, 112}</string>
+						<string>{544, 300}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8812,7 +8913,7 @@
 				</dict>
 			</dict>
 			<key>Size</key>
-			<string>{1024, 1024}</string>
+			<string>{1024, 2048}</string>
 			<key>Trim</key>
 			<true/>
 			<key>ZOrder</key>
