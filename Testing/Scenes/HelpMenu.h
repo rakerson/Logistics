@@ -13,11 +13,15 @@
 #import "SceneManager.h"
 
 @interface HelpMenu : CCLayer {
+    CCMenu *exitMenu;
     CCMenu *menu;
+    CCSprite * help0;
     CCSprite * help1;
     CCSprite * help2;
     CCSprite * help3;
     CCSprite * help4;
+    CCSprite * help5;
+    CCSprite * help6;
 }
 
 @property (nonatomic, assign) BOOL iPad;

@@ -58,4 +58,7 @@ dependencies: \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/LevelHelper/Nodes/LHCustomSpriteMgr.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/LevelHelper/Nodes/LHCuttingEngineMgr.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/LevelHelper/CustomClasses/LHCustomClasses.h \
-  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Levels/Level.h
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Levels/Level.h \
+  /Users/rakerson/Desktop/Projects/Logistics/Helpers/GAI.h \
+  Helpers/GAITracker.h Helpers/GAITransaction.h \
+  Helpers/GAITransactionItem.h Helpers/GAITrackedViewController.h

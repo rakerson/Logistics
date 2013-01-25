@@ -59,4 +59,7 @@ dependencies: \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Chapters/Chapter.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/Chapters/ChapterParser.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/GameData/GameData.h \
-  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/GameData/GameDataParser.h
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/Data/GameData/GameDataParser.h \
+  /Users/rakerson/Desktop/Projects/Logistics/Helpers/GAI.h \
+  Helpers/GAITracker.h Helpers/GAITransaction.h \
+  Helpers/GAITransactionItem.h Helpers/GAITrackedViewController.h

@@ -9,7 +9,7 @@
 #import "ChapterParser.h"
 #import "GameData.h"
 #import "GameDataParser.h"
-
+#import "GAI.h"
 
 @implementation ChapterSelect
 @synthesize iPad, device;
@@ -108,6 +108,12 @@
 - (id)init {
     
     if( (self=[super init])) {
+        
+        id tracker = [GAI sharedInstance].defaultTracker;
+        [tracker sendEventWithCategory:@"Scene"
+                            withAction:@"Go"
+                             withLabel:@"Chapter"
+                             withValue:[NSNumber numberWithInt:100]];
         
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {

@@ -14,6 +14,7 @@
 #import "RootViewController.h"
 #import "Constants.h"
 #import "SceneManager.h"
+#import "GAI.h"
 
 @implementation AppDelegate
 
@@ -114,6 +115,17 @@
 	// Removes the startup flicker
 	[self removeStartupFlicker];
 	
+    
+    //Google Analytics
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
+    // Optional: set debug to YES for extra debugging information.
+    [GAI sharedInstance].debug = YES;
+    // Create tracker instance.
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-37403876-1"];
+    
 	// Run the intro Scene
 	//[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
     [SceneManager goMainMenu];

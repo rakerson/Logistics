@@ -9,6 +9,7 @@
 #import "GameDataParser.h"
 #import "Chapter.h"
 #import "ChapterParser.h"
+#import "GAI.h" 
 
 @implementation LevelSelect  
 @synthesize iPad, device;
@@ -69,6 +70,13 @@
 - (id)init {
     
     if( (self=[super init])) {
+        
+        
+        id tracker = [GAI sharedInstance].defaultTracker;
+        [tracker sendEventWithCategory:@"Scene"
+                            withAction:@"Go"
+                             withLabel:@"Level"
+                             withValue:[NSNumber numberWithInt:100]];
         
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {

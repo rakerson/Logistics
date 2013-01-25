@@ -24,7 +24,7 @@
 #import "SimpleAudioEngine.h"
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
-
+#import "GAI.h"
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -161,6 +161,9 @@ enum {
 	if((self=[super init])) {
        
         
+       
+        
+        
         GameData *gameData = [GameDataParser loadData];
        selectedChapter = gameData.selectedChapter;
         selectedLevel = gameData.selectedLevel;
@@ -296,7 +299,8 @@ enum {
         //add in the background...
         //CCSprite * bg = [CCSprite spriteWithFile:@"level-back-small-1.jpg"];
         //NSString * tBackground = [NSString stringWithFormat:@"%@-%@.jpg", background, self.device];
-        NSString * tBackground = [NSString stringWithFormat:@"level-%i-back-%@.png", gameData.selectedChapter, self.device];
+       NSString * tBackground = [NSString stringWithFormat:@"level-%i-back-%@.png", gameData.selectedChapter, self.device];
+       
         //NSString * tBackground = [NSString stringWithFormat:@"level-1-back-%@.png", self.device];
         hue = (gameData.selectedLevel*0.22);
         hue = fmodf(hue, 1.0f);
@@ -313,7 +317,10 @@ enum {
         //NSString * tBackground = [background stringByAppendingString:@"@2x.jpg"];
         //s = [s stringByAppendingString:@" - après"];
         CCSprite * bg = [CCSprite spriteWithFile:tBackground];
+        if(selectedChapter == 1)
+        {
         bg.color = ccc3(rr, gg,bb);
+        }
         [bg setPosition:ccp(screenSize.width/2, screenSize.height/2)];
         //bg.scale = 0.5;
         [self addChild:bg z:-10];
@@ -399,6 +406,13 @@ enum {
         [[SimpleAudioEngine sharedEngine]playBackgroundMusic:[NSString stringWithFormat:@"level-%d.mp3", selectedChapter] loop:TRUE];
         
         //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
+        
+        id tracker = [GAI sharedInstance].defaultTracker;
+        [tracker sendEventWithCategory:@"Level"
+                            withAction:@"Start"
+                             withLabel:@"Main"
+                             withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
+        
         }
     
 	return self;
@@ -408,7 +422,15 @@ enum {
 }
 -(void)showLevelFail
 {
-    NSLog(@"FAIL");
+    
+    GameData *gameData = [GameDataParser loadData];
+    id tracker = [GAI sharedInstance].defaultTracker;
+    [tracker sendEventWithCategory:@"Level"
+                        withAction:@"Fail"
+                         withLabel:@"Main"
+                         withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
+    
+    
     gameOverTimer = 0;
     isPlaying = false;
     isPaused = true;
@@ -480,6 +502,8 @@ enum {
 -(void)showLevelComplete
 {
     
+    
+    
     isPlaying = false;
     isPaused = true;
     [self stopAnimations];
@@ -512,6 +536,13 @@ enum {
             level.unlocked = 1;
         }
     }
+    
+    id tracker = [GAI sharedInstance].defaultTracker;
+    [tracker sendEventWithCategory:@"Level"
+                        withAction:@"Complete"
+                         withLabel:@"Main"
+                         withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
+    
 
     [LevelParser saveData:currentLevelArray forChapter:gameData.selectedChapter];
     if(menuOpen == false)

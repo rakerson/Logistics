@@ -13,6 +13,9 @@
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
 
+#import "GAI.h"
+
+
 @implementation MainMenu
 @synthesize iPad, device;
 
@@ -82,7 +85,13 @@
 - (id)init {
     
     if( (self=[super init])) {
-    
+        
+        id tracker = [GAI sharedInstance].defaultTracker;
+        [tracker sendEventWithCategory:@"Scene"
+                            withAction:@"Go"
+                             withLabel:@"Main"
+                             withValue:[NSNumber numberWithInt:100]];
+        
         
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         // Determine Device
@@ -165,14 +174,14 @@
 
         // Add the menu to the scene
         
-        CCParticleSystem *snow = [[CCParticleMeteor alloc]init];
+        CCParticleSystem *snow = [[CCParticleSnow alloc]init];
         
-        snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"spark.png"];
-        snow.speed = 250;
-        snow.scale = 0.5;
-        snow.emissionRate = 5;
-        snow.position  = ccp(screenSize.width*0.5, screenSize.height*0.6);
-        snow.gravity = ccp(0,0);
+        snow.texture = [[CCTextureCache sharedTextureCache] addImage:@"snowflakepart.png"];
+        snow.speed = 20;
+        snow.scale = 2;
+        snow.emissionRate = 7;
+        //snow.position  = ccp(screenSize.width, screenSize.height);
+        //snow.gravity = ccp(0,0);
         
         [self addChild:snow];
         
