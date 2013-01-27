@@ -13,5 +13,5 @@
 
 @property (nonatomic, assign) BOOL iPad;
 @property (nonatomic, assign) NSString *device;
-
+@property (nonatomic, assign) int currentChapter;
 @end

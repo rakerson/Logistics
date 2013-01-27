@@ -93,7 +93,7 @@
             
         }
         
-        
+        menu.opacity = 0;
         [self addChild:menu z:10];
         
         help0 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"drop0-%@.png", self.device]];
@@ -109,6 +109,7 @@
         [self performSelector:@selector(helpIn4) withObject:nil afterDelay:11.0];
         [self performSelector:@selector(helpIn5) withObject:nil afterDelay:13.0];
         [self performSelector:@selector(helpIn6) withObject:nil afterDelay:15.0];
+        [self performSelector:@selector(helpIn7) withObject:nil afterDelay:15.5];
         //[self performSelector:@selector(helpFade) withObject:nil afterDelay:19.0];
         //[self performSelector:@selector(helpDone) withObject:nil afterDelay:19.5];
         
@@ -174,6 +175,10 @@
     [help6 setOpacity:0];
     [self addChild:help6 z:14];
     [help5 runAction:[CCFadeOut actionWithDuration:1]];
+}
+- (void)helpIn7{
+
+    [menu runAction:[CCFadeIn actionWithDuration:1]];
 }
 - (void)helpFade{
     //[help1 runAction:[CCFadeOut actionWithDuration:0.5]];

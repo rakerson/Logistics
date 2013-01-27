@@ -10,9 +10,11 @@
 #import "Chapter.h"
 #import "ChapterParser.h"
 #import "GAI.h" 
+#import "Cinematic.h"
 
 @implementation LevelSelect  
 @synthesize iPad, device;
+@synthesize currentChapter;
 
 - (void) onPlay: (CCMenuItemImage*) sender {
 
@@ -36,6 +38,21 @@
     [SceneManager goChapterSelectFromLevel];
 }
 
+
+
+
+-(void)onCinematicA: (id) sender
+{
+    Cinematic * p = [[[Cinematic alloc]initWithLabel:[NSString stringWithFormat:@"%ia", self.currentChapter]]autorelease];
+    [self addChild:p z:10];
+    
+}
+-(void)onCinematicB: (id) sender
+{
+    Cinematic * p = [[[Cinematic alloc]initWithLabel:[NSString stringWithFormat:@"%ib", self.currentChapter]]autorelease];
+    [self addChild:p z:10];
+    
+}
 - (void)addBackButton {
        
     CCMenuItemImage *goBack = [CCMenuItemImage
@@ -43,6 +60,7 @@
                                selectedImage:[NSString stringWithFormat:@"back-on-%@.png", self.device]
                                target:self
                                selector:@selector(onBack:)];
+
     CCMenu *back = [CCMenu menuWithItems: goBack, nil];
      
     CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -51,32 +69,43 @@
     
 
 }
-- (void)addBonusButton {
+- (void)addCinematicButton {
     
-    CCMenuItemImage *goBonus = [CCMenuItemImage
-                               itemFromNormalImage:[NSString stringWithFormat:@"about-off-%@.png", self.device]
-                               selectedImage:[NSString stringWithFormat:@"about-on-%@.png", self.device]
+    CCMenuItemImage *goCinematicA = [CCMenuItemImage
+                               itemFromNormalImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
+                               selectedImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
                                target:self
-                               selector:@selector(onPlay:)];
-    [goBonus setTag:99];
-    CCMenu *bonus = [CCMenu menuWithItems: goBonus, nil];
-    
+                               selector:@selector(onCinematicA:)];
     CGSize screenSize = [CCDirector sharedDirector].winSize;
-    [bonus setPosition:ccp(screenSize.width*0.75, screenSize.height*0.9)];
-    [self addChild:bonus];
     
     
+   //[self addChild:goCinematicA];
+    
+    CCMenuItemImage *goCinematicB = [CCMenuItemImage
+                                     itemFromNormalImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
+                                     selectedImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
+                                     target:self
+                                     selector:@selector(onCinematicB:)];
+    
+    
+    //[self addChild:goCinematicB];
+    CCMenu *cinMenuA = [CCMenu menuWithItems: goCinematicA, nil];
+    [cinMenuA setPosition:ccp(screenSize.width*0.1, screenSize.height*0.72)];
+    [self addChild:cinMenuA];
+    CCMenu *cinMenuB = [CCMenu menuWithItems: goCinematicB, nil];
+    [cinMenuB setPosition:ccp(screenSize.width*0.9, screenSize.height*0.08)];
+    [self addChild:cinMenuB];
 }
 - (id)init {
     
     if( (self=[super init])) {
         
         
-        id tracker = [GAI sharedInstance].defaultTracker;
-        [tracker sendEventWithCategory:@"Scene"
-                            withAction:@"Go"
-                             withLabel:@"Level"
-                             withValue:[NSNumber numberWithInt:100]];
+        //id tracker = [GAI sharedInstance].defaultTracker;
+        //[tracker sendEventWithCategory:@"Scene"
+        //                    withAction:@"Go"
+         //                    withLabel:@"Level"
+         //                    withValue:[NSNumber numberWithInt:100]];
         
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {
@@ -97,6 +126,7 @@
      // read in selected chapter number:
         GameData *gameData = [GameDataParser loadData];
         int selectedChapter = gameData.selectedChapter;
+        currentChapter = gameData.selectedChapter;
         
         
         
@@ -226,7 +256,7 @@
         
         [self addBackButton];
     //add bonus level button
-        //[self addBonusButton];
+        [self addCinematicButton];
     }
     return self;
 }
