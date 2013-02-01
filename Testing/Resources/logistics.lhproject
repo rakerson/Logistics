@@ -36,9 +36,9 @@
 	<key>CustomClasses</key>
 	<array/>
 	<key>CustomScreenSize</key>
-	<string>{480, 320}</string>
+	<string>{1024, 768}</string>
 	<key>Device</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>Engine</key>
 	<integer>0</integer>
 	<key>HDSuffix</key>

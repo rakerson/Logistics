@@ -29,15 +29,15 @@
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
 	
-	//	CC_ENABLE_DEFAULT_GL_STATES();
-	//	CCDirector *director = [CCDirector sharedDirector];
-	//	CGSize size = [director winSize];
-	//	CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
-	//	sprite.position = ccp(size.width/2, size.height/2);
-	//	sprite.rotation = -90;
-	//	[sprite visit];
-	//	[[director openGLView] swapBuffers];
-	//	CC_ENABLE_DEFAULT_GL_STATES();
+		CC_ENABLE_DEFAULT_GL_STATES();
+		CCDirector *director = [CCDirector sharedDirector];
+		CGSize size = [director winSize];
+		CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
+		sprite.position = ccp(size.width/2, size.height/2);
+		sprite.rotation = -90;
+        [sprite visit];
+		[[director openGLView] swapBuffers];
+		CC_ENABLE_DEFAULT_GL_STATES();
 	
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
 }
@@ -88,6 +88,7 @@
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
 	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+    
 #else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif
@@ -100,8 +101,22 @@
 	[viewController setView:glView];
 	
 	// make the View Controller a child of the main window
-	[window addSubview: viewController.view];
-    [window setRootViewController:viewController];
+    
+    
+
+    
+    // Set RootViewController to window
+    if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)
+        {
+        // warning: addSubView doesn't work on iOS6
+        [window addSubview: viewController.view];
+       
+        }
+    else
+        {
+        // use this mehod on ios6
+        [window setRootViewController:viewController];
+        }
     
 	
 	[window makeKeyAndVisible];

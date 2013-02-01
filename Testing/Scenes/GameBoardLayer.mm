@@ -734,20 +734,32 @@ enum {
     //place the help button
     helpButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"help-on-%@.png", self.device]];
     [buttonLayer addChild: helpButton];
-    helpButton.scale = 0.65;
+    //helpButton.scale = 0.65;
     [helpButton setPosition:ccp(winSize.width*0.94, winSize.height*0.04)];
     
     //place the mute button
     muteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"mute-%@.png", self.device]];
     [buttonLayer addChild: muteButton];
-    muteButton.scale = 0.65;
-    [muteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+    
+    
+    
     
     //place the unmute button
     unmuteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"unmute-%@.png", self.device]];
     [buttonLayer addChild: unmuteButton];
-    unmuteButton.scale = 0.65;
-    [unmuteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+    //unmuteButton.scale = 0.65;
+    
+    if(self.device == @"iphone")
+    {
+        [muteButton setPosition:ccp(winSize.width*0.80, winSize.height*0.04)];
+        [unmuteButton setPosition:ccp(winSize.width*0.80, winSize.height*0.04)];
+    }
+    else
+    {
+        [muteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+        [unmuteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+    }
+    
     if ([[SimpleAudioEngine sharedEngine] mute])
     {
         unmuteButton.visible = true;
