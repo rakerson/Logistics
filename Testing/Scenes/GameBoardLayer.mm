@@ -756,8 +756,8 @@ enum {
     }
     else
     {
-        [muteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
-        [unmuteButton setPosition:ccp(winSize.width*0.87, winSize.height*0.04)];
+        [muteButton setPosition:ccp(winSize.width*0.84, winSize.height*0.04)];
+        [unmuteButton setPosition:ccp(winSize.width*0.84, winSize.height*0.04)];
     }
     
     if ([[SimpleAudioEngine sharedEngine] mute])
@@ -852,6 +852,7 @@ enum {
 }
 -(void)presentSpringCollision:(LHContactInfo*)contact
 {
+    
     //Animate the spring
     //contact.S
     LHSprite * tSprite = contact.spriteB;
@@ -860,11 +861,12 @@ enum {
     int forceAmt = 0;
     if(self.device == @"iphone")
     {
-        forceAmt = 70;
+        forceAmt = 50;
     }
     else{
-        forceAmt = 70;
+        forceAmt = 100;
     }
+    
     b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt);
     contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
     [self playSoundEffect:@"spring.mp3"];
@@ -1073,6 +1075,10 @@ enum {
     else
     {
         [self deselectActors];
+        pauseButton.visible = true;
+        unpauseButton.visible = false;
+        isPlaying = true;
+        //unpause the game
         
     }
     [self selectSpriteForTouch:touchLocation];
@@ -1332,7 +1338,48 @@ return FALSE;
 
 }
 
+-(void) checkifAwake
+{
+    NSLog(@"CHECKING IF SLEEPING");
+    int bodiesAsleep = 0;
+    int allBodiesinWorld = 0;
+    
+    
+    for(b2Body *bb = world->GetBodyList(); bb; bb=bb->GetNext())
+    {
+        LHSprite *bmyActor = (LHSprite*)bb->GetUserData();
+        if(bmyActor.tag == PRESENT)
+        {
+            allBodiesinWorld++;
+        }
+    }
+   // NSLog(@"CHECKING IF SLEEPING: %i", allBodiesinWorld);
+    for(b2Body *b = world->GetBodyList(); b; b=b->GetNext())
+    {
+        LHSprite *myActor = (LHSprite*)b->GetUserData();
+        if(!b->IsAwake() && myActor.tag == PRESENT)
+        {
+            bodiesAsleep++;
+            //NSLog(@"SOMEONE IS SLEEPING");
+        }
+    }
+    if(bodiesAsleep == allBodiesinWorld)
+    {
+       //NSLog(@"EVERYONE IS SLEEPING");
+        gameOverTimer = 0;
+        isPlaying = false;
+        if (gifts > 7)
+        {
+            [self showLevelComplete];
+        }
+        else
+        {
+            [self showLevelFail];
+        }
 
+        
+    }
+}
 -(void) tick: (ccTime) dt
 {
 	if(isPlaying)
@@ -1403,6 +1450,7 @@ return FALSE;
         }
     //check if presents are all in play and set a timeout
         if(giftsRemaining == 0){
+            [self checkifAwake];
             gameOverTimer++;
             if(gameOverTimer == 800)
             {

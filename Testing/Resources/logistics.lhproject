@@ -36,15 +36,15 @@
 	<key>CustomClasses</key>
 	<array/>
 	<key>CustomScreenSize</key>
-	<string>{1024, 768}</string>
+	<string>{480, 320}</string>
 	<key>Device</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>Engine</key>
 	<integer>0</integer>
 	<key>HDSuffix</key>
 	<string>-hd</string>
 	<key>LastLevelLoaded</key>
-	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level2-12.plhs</string>
+	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level2-1.plhs</string>
 	<key>Orientation</key>
 	<integer>1</integer>
 	<key>ProjectName</key>

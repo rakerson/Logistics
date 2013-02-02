@@ -26,16 +26,30 @@
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {
             self.device = @"ipad";
+            row1 = 0.7;
+            row2 = 0.33;
         }
         else {
             self.device = @"iphone";
+            row1 = 0.72;
+            row2 = 0.29;
         }
         
         
 
         // Determine Screen Size
         CGSize screenSize = [CCDirector sharedDirector].winSize;
-        
+        if(screenSize.width == 480)
+        {
+            col1 = 0.30;
+            col2= 0.7;
+            
+        }
+        else
+        {
+            col1 = 0.32;
+            col2= 0.67;
+        }
         
         
         // Calculate Large Font Size
@@ -83,9 +97,9 @@
         menu = [CCMenu menuWithItems:exit, nil];
         if(self.device == @"iphone")
         {
-            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.09)];
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.11)];
             
-            exit.scale = 0.6;
+            exit.scale = 0.75;
         }
         else
         {
@@ -125,7 +139,7 @@
     CGSize screenSize = [CCDirector sharedDirector].winSize;
      NSLog(@"type of Cinematic:  %@", self.cinLabel);
     cin1 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"cin-%@-1-%@.jpg", self.cinLabel, self.device]];
-    cin1.position = ccp(screenSize.width*.32,screenSize.height*.7);
+    cin1.position = ccp(screenSize.width*col1,screenSize.height*row1);
     [cin1 runAction:[CCFadeIn actionWithDuration:0.4]];
     [self addChild:cin1 z:20];
     }
@@ -133,7 +147,7 @@
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     cin2 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"cin-%@-2-%@.jpg", cinLabel, self.device]];
     [self addChild:cin2 z:20];
-    cin2.position = ccp(screenSize.width*.67,screenSize.height*.7);
+    cin2.position = ccp(screenSize.width*col2,screenSize.height*row1);
     [cin2 runAction:[CCFadeIn actionWithDuration:0.4]];
 }
 - (void)cinIn3{
@@ -142,13 +156,13 @@
     //cin3.position= ccp(screenSize.width,0);
     [self addChild:cin3 z:20];
     //[cin3 runAction:[CCMoveTo actionWithDuration:0.5 position:ccp(screenSize.width*.32,screenSize.height*.33)]];
-    cin3.position = ccp(screenSize.width*.32,screenSize.height*.33);
+    cin3.position = ccp(screenSize.width*col1,screenSize.height*row2);
     [cin3 runAction:[CCFadeIn actionWithDuration:0.4]];
 }
 - (void)cinIn4{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     cin4 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"cin-%@-4-%@.jpg", cinLabel, self.device]];
-    cin4.position = ccp(screenSize.width*.67,screenSize.height*.33);
+    cin4.position = ccp(screenSize.width*col2,screenSize.height*row2);
     [cin4 runAction:[CCFadeIn actionWithDuration:0.4]];
     [self addChild:cin4 z:20];
     //[cin4 runAction:[CCMoveTo actionWithDuration:0.5 position:ccp(screenSize.width*.67,screenSize.height*.33)]];

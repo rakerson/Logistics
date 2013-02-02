@@ -9561,7 +9561,7 @@
 			<key>MaxSheetSize</key>
 			<integer>4096</integer>
 			<key>NpotSize</key>
-			<string>{516, 1016}</string>
+			<string>{520, 1016}</string>
 			<key>Padding</key>
 			<integer>8</integer>
 			<key>PixelFormat</key>
@@ -13833,7 +13833,7 @@
 						<key>IsBullet</key>
 						<false/>
 						<key>LinearDamping</key>
-						<real>0.0</real>
+						<real>1</real>
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>
@@ -13981,7 +13981,7 @@
 						<key>IsBullet</key>
 						<false/>
 						<key>LinearDamping</key>
-						<real>0.0</real>
+						<real>1</real>
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>
@@ -14129,7 +14129,7 @@
 						<key>IsBullet</key>
 						<false/>
 						<key>LinearDamping</key>
-						<real>0.0</real>
+						<real>1</real>
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>
@@ -14211,9 +14211,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{97, 105}, {31.75, 31}}</string>
+						<string>{{98, 106}, {31.75, 31}}</string>
 						<key>Frame-HD</key>
-						<string>{{388, 420}, {125, 124}}</string>
+						<string>{{392, 424}, {125, 124}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-1.png</string>
 						<key>Image-HD</key>
@@ -14239,7 +14239,7 @@
 						<key>OriginalSize</key>
 						<string>{150, 150}</string>
 						<key>Position</key>
-						<string>{388, 420}</string>
+						<string>{392, 424}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -14277,7 +14277,7 @@
 						<key>IsBullet</key>
 						<false/>
 						<key>LinearDamping</key>
-						<real>0.0</real>
+						<real>1</real>
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>
@@ -14425,7 +14425,7 @@
 						<key>IsBullet</key>
 						<false/>
 						<key>LinearDamping</key>
-						<real>0.0</real>
+						<real>1</real>
 						<key>LinearVelocity</key>
 						<string>{0, 0}</string>
 						<key>SH_ComplexShapes</key>

@@ -27,9 +27,11 @@
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {
             self.device = @"ipad";
+            verticalPos = 0.5;
         }
         else {
             self.device = @"iphone";
+            verticalPos = 0.45;
         }
         
         // Determine Screen Size
@@ -82,9 +84,9 @@
         menu = [CCMenu menuWithItems:exit, nil];
         if(self.device == @"iphone")
         {
-            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.25)];
             
-            exit.scale = 0.6;
+            exit.scale = 0.75;
         }
         else
         {
@@ -94,10 +96,10 @@
         }
         
         menu.opacity = 0;
-        [self addChild:menu z:10];
+        [self addChild:menu z:21];
         
         help0 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"drop0-%@.png", self.device]];
-        [help0 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+        [help0 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
         [help0 runAction:[CCFadeIn actionWithDuration:1]];
         [help0 setOpacity:0];
         [self addChild:help0 z:20];
@@ -124,7 +126,7 @@
 - (void)helpIn1{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help1 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"place1-%@.png", self.device]];
-    [help1 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help1 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help1 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help1 setOpacity:0];
     [self addChild:help1 z:19];
@@ -133,7 +135,7 @@
 - (void)helpIn2{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help2 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"place2-%@.png", self.device]];
-    [help2 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help2 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help2 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help2 setOpacity:0];
     [self addChild:help2 z:18];
@@ -143,7 +145,7 @@
 - (void)helpIn3{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help3 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"place3-%@.png", self.device]];
-    [help3 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help3 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help3 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help3 setOpacity:0];
     [self addChild:help3 z:17];
@@ -152,7 +154,7 @@
 - (void)helpIn4{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help4 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"drop1-%@.png", self.device]];
-    [help4 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help4 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help4 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help4 setOpacity:0];
     [self addChild:help4 z:16];
@@ -161,7 +163,7 @@
 - (void)helpIn5{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help5 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"drop2-%@.png", self.device]];
-    [help5 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help5 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help5 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help5 setOpacity:0];
     [self addChild:help5 z:15];
@@ -170,7 +172,7 @@
 - (void)helpIn6{
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     help6 = [CCSprite spriteWithFile:[NSString stringWithFormat:@"drop3-%@.png", self.device]];
-    [help6 setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
+    [help6 setPosition:ccp(screenSize.width*0.5, screenSize.height*verticalPos)];
     [help6 runAction:[CCFadeIn actionWithDuration:0.5]];
     [help6 setOpacity:0];
     [self addChild:help6 z:14];

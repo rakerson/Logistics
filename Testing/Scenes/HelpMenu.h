@@ -22,6 +22,7 @@
     CCSprite * help4;
     CCSprite * help5;
     CCSprite * help6;
+    float verticalPos;
 }
 
 @property (nonatomic, assign) BOOL iPad;

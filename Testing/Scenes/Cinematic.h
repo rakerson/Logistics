@@ -20,6 +20,10 @@
     CCSprite * cin2;
     CCSprite * cin3;
     CCSprite * cin4;
+    float row1;
+    float row2;
+    float col1;
+    float col2;
 
 }
 
