@@ -1,15 +1,10 @@
-//
-//  RootViewController.h
-//  Testing
-//
-//  Created by Tim Roadley on 27/06/11.
-//  Copyright Tim Roadley 2011. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-
-@interface RootViewController : UIViewController {
+@interface RootViewController : UIViewController <MFMailComposeViewControllerDelegate>{
 
 }
 

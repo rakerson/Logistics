@@ -35,6 +35,7 @@ dependencies: \
   Testing/libs/Box2D/Dynamics/Joints/b2WeldJoint.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/GLES-Render.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/RootViewController.h \
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/RootViewControllerInterface.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/Constants.h \
   /Users/rakerson/Desktop/Projects/Logistics/Testing/Scenes/SceneManager.h \
   Testing/Scenes/MainMenu.h Testing/Scenes/OptionsMenu.h \

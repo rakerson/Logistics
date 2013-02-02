@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "HelloWorldLayer.h"
 #import "RootViewController.h"
+#import "RootViewControllerInterface.h"
 #import "Constants.h"
 #import "SceneManager.h"
 #import "GAI.h"
@@ -144,6 +145,11 @@
 	// Run the intro Scene
 	//[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
     [SceneManager goMainMenu];
+    
+    // Add the viewController to the RootViewControllerInterface.
+    [[RootViewControllerInterface rootViewControllerInterfaceSharedInstance] setRootViewController:viewController];
+
+    
     }
 
 

@@ -110,6 +110,11 @@
     [super dealloc];
 }
 
+#pragma mark - Mail Composer Delegate Methods
+-(void) mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:YES];
+}
+
 
 @end
 

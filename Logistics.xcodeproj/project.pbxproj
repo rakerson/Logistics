@@ -246,6 +246,8 @@
 		E5134CE316B41735006185C5 /* cinematic-matte-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134CE216B41735006185C5 /* cinematic-matte-iphone.png */; };
 		E5134CE516B42826006185C5 /* cinematic-button-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134CE416B42826006185C5 /* cinematic-button-ipad.png */; };
 		E5134CE716B42839006185C5 /* cinematic-button-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134CE616B42839006185C5 /* cinematic-button-iphone.png */; };
+		E520E61E16BD3F7500C21F44 /* RootViewControllerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = E520E61D16BD3F7500C21F44 /* RootViewControllerInterface.m */; };
+		E520E62016BD3FA800C21F44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E520E61F16BD3FA800C21F44 /* MessageUI.framework */; };
 		E528824C169690B500BBEE58 /* icehouse-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E528824B169690B500BBEE58 /* icehouse-icon.png */; };
 		E52882501696910800BBEE58 /* icehouse-icon-ipad.gif in Resources */ = {isa = PBXBuildFile; fileRef = E528824E1696910800BBEE58 /* icehouse-icon-ipad.gif */; };
 		E52882511696910800BBEE58 /* icehouse-icon-iphone.gif in Resources */ = {isa = PBXBuildFile; fileRef = E528824F1696910800BBEE58 /* icehouse-icon-iphone.gif */; };
@@ -943,6 +945,9 @@
 		E5134CE216B41735006185C5 /* cinematic-matte-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinematic-matte-iphone.png"; sourceTree = "<group>"; };
 		E5134CE416B42826006185C5 /* cinematic-button-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinematic-button-ipad.png"; sourceTree = "<group>"; };
 		E5134CE616B42839006185C5 /* cinematic-button-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinematic-button-iphone.png"; sourceTree = "<group>"; };
+		E520E61C16BD3F7500C21F44 /* RootViewControllerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControllerInterface.h; sourceTree = "<group>"; };
+		E520E61D16BD3F7500C21F44 /* RootViewControllerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerInterface.m; sourceTree = "<group>"; };
+		E520E61F16BD3FA800C21F44 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E528824B169690B500BBEE58 /* icehouse-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icehouse-icon.png"; sourceTree = "<group>"; };
 		E528824E1696910800BBEE58 /* icehouse-icon-ipad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icehouse-icon-ipad.gif"; sourceTree = "<group>"; };
 		E528824F1696910800BBEE58 /* icehouse-icon-iphone.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icehouse-icon-iphone.gif"; sourceTree = "<group>"; };
@@ -1251,6 +1256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E520E62016BD3FA800C21F44 /* MessageUI.framework in Frameworks */,
 				E51178D216AC9846001C5C67 /* SystemConfiguration.framework in Frameworks */,
 				E51178D016AC983C001C5C67 /* CoreData.framework in Frameworks */,
 				10102E6F13B8AFAD009525FD /* QuartzCore.framework in Frameworks */,
@@ -1272,6 +1278,7 @@
 		10102E5F13B8AFAC009525FD = {
 			isa = PBXGroup;
 			children = (
+				E520E61F16BD3FA800C21F44 /* MessageUI.framework */,
 				E51178D116AC9846001C5C67 /* SystemConfiguration.framework */,
 				E51178CF16AC983C001C5C67 /* CoreData.framework */,
 				E58DD65F165AD48E00A37C59 /* Helpers */,
@@ -1329,6 +1336,8 @@
 				1010304413B8AFB3009525FD /* AppDelegate.mm */,
 				1010304613B8AFB3009525FD /* RootViewController.h */,
 				1010304713B8AFB3009525FD /* RootViewController.m */,
+				E520E61C16BD3F7500C21F44 /* RootViewControllerInterface.h */,
+				E520E61D16BD3F7500C21F44 /* RootViewControllerInterface.m */,
 				1010304913B8AFB3009525FD /* HelloWorldLayer.h */,
 				1010304A13B8AFB3009525FD /* HelloWorldLayer.mm */,
 				1010304C13B8AFB3009525FD /* GLES-Render.h */,
@@ -2968,6 +2977,7 @@
 				E58DD6AA165AD4B800A37C59 /* SHDocumentLoader.mm in Sources */,
 				E50D8FDB1671C01E002BF33D /* HelpMenu.mm in Sources */,
 				E5134CDF16B412F5006185C5 /* Cinematic.mm in Sources */,
+				E520E61E16BD3F7500C21F44 /* RootViewControllerInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

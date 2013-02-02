@@ -12,6 +12,8 @@
 #import "SimpleAudioEngine.h"
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
+#import "RootViewControllerInterface.h"
+
 
 #import "GAI.h"
 
@@ -155,18 +157,18 @@
                                         //selectedImage:@"play-on-ipad.png"
                                         target:self
                                         selector:@selector(onPlay:)];
-       // CCMenuItemImage *scoresButton = [CCMenuItemImage
-                                        // itemFromNormalImage:[NSString stringWithFormat:@"scores-off-%@.png", self.device]
-                                         //selectedImage:[NSString stringWithFormat:@"scores-on-%@.png", self.device]
-                                        //target:self
-                                        //selector:@selector(showScoreMenu:)];
+        CCMenuItemImage *feedbackButton = [CCMenuItemImage
+                                         itemFromNormalImage:[NSString stringWithFormat:@"scores-off-%@.png", self.device]
+                                           selectedImage:[NSString stringWithFormat:@"scores-on-%@.png", self.device]
+                                           target:self
+                                    selector:@selector(feedbackForm:)];
        
         
         //CCMenuItemFont *item1 = [CCMenuItemFont itemFromString:@"Play" target:self selector:@selector(onPlay:)];
         //CCMenuItemFont *item2 = [CCMenuItemFont itemFromString:@"Options" target:self selector:@selector(onOptions:)];
 
         // Add font based items to CCMenu
-        CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, nil];
+        CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, feedbackButton, nil];
         [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
         NSLog(@"Screen width %f", screenSize.width);
         // Align the menu 
@@ -220,6 +222,12 @@
     return self;
 
 }
+
+-(void) feedbackForm:(id)sender {
+    NSLog(@"Show the Feedback From");
+    [[RootViewControllerInterface rootViewControllerInterfaceSharedInstance] sendContactMail];
+    NSLog(@"Should've Showed the Feedback From");
+}
 -(void)launchFirework
 {
     CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -254,5 +262,6 @@
     {
         [self toggleSound];
     }
+return NO;
 }
 @end
