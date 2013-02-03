@@ -7,6 +7,8 @@
 //
 
 #import "RootViewControllerInterface.h"
+#import "GameData.h"
+#import "GameDataParser.h"
 
 @implementation RootViewControllerInterface
 
@@ -87,7 +89,11 @@ static RootViewControllerInterface *rootViewControllerInterfaceSingletonDelegate
     
     NSString *appVersion = [[NSBundle mainBundle]
                             objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
-    NSString *deviceSpecs = [NSString stringWithFormat:@"%@ - %@ - %@ - %@ - %@",model, systemVersion, language, country, appVersion];
+    GameData *gameData = [GameDataParser loadData];
+    
+    NSString *currentLevel = [NSString stringWithFormat:@"%i~%i", gameData.selectedChapter, gameData.selectedLevel];
+
+    NSString *deviceSpecs = [NSString stringWithFormat:@"%@ - %@ - %@ - %@ - %@ - %@",model, systemVersion, language, country, appVersion, currentLevel];
     NSLog(@"Device Specs --> %@",deviceSpecs);
     
     NSString *emailBody = [NSString stringWithFormat:@"Device Info: %@", deviceSpecs];

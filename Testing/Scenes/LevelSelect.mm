@@ -9,7 +9,7 @@
 #import "GameDataParser.h"
 #import "Chapter.h"
 #import "ChapterParser.h"
-#import "GAI.h" 
+#import "GAI.h"
 #import "Cinematic.h"
 
 @implementation LevelSelect  
@@ -70,7 +70,22 @@
 
 }
 - (void)addCinematicButton {
+    GameData *gameData = [GameDataParser loadData];
+    NSArray *tempLevelArray = [LevelParser loadLevelsForChapter:gameData.selectedChapter];
+    BOOL showA = NO;
+    BOOL showB = NO;
+       for (Level *level in tempLevelArray) {
+        if ([[NSNumber numberWithInt:level.number] intValue] == 1 && level.userLastScore > 1) {
+            showA = YES;
+        }
+        if ([[NSNumber numberWithInt:level.number] intValue] == 12 && level.userLastScore > 1) {
+            showB = YES;
+        }
+    }
+
     
+    
+    //if level 1 has been completed
     CCMenuItemImage *goCinematicA = [CCMenuItemImage
                                itemFromNormalImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
                                selectedImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
@@ -78,8 +93,14 @@
                                selector:@selector(onCinematicA:)];
     CGSize screenSize = [CCDirector sharedDirector].winSize;
     
+    CCMenu *cinMenuA = [CCMenu menuWithItems: goCinematicA, nil];
+    [cinMenuA setPosition:ccp(screenSize.width*0.1, screenSize.height*0.72)];
+    if(showA)
+    {
+    [self addChild:cinMenuA];
+    }
+    //if level 12 has be completed.
     
-   //[self addChild:goCinematicA];
     
     CCMenuItemImage *goCinematicB = [CCMenuItemImage
                                      itemFromNormalImage:[NSString stringWithFormat:@"cinematic-button-%@.png", self.device]
@@ -88,13 +109,14 @@
                                      selector:@selector(onCinematicB:)];
     
     
-    //[self addChild:goCinematicB];
-    CCMenu *cinMenuA = [CCMenu menuWithItems: goCinematicA, nil];
-    [cinMenuA setPosition:ccp(screenSize.width*0.1, screenSize.height*0.72)];
-    [self addChild:cinMenuA];
+    
+    
     CCMenu *cinMenuB = [CCMenu menuWithItems: goCinematicB, nil];
     [cinMenuB setPosition:ccp(screenSize.width*0.9, screenSize.height*0.08)];
+    if(showB)
+    {
     [self addChild:cinMenuB];
+    }
 }
 - (id)init {
     

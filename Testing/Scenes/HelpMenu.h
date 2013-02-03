@@ -22,6 +22,10 @@
     CCSprite * help4;
     CCSprite * help5;
     CCSprite * help6;
+    CCSprite * help7;
+    CCSprite * help8;
+    CCSprite * help9;
+    CCSprite * help10;
     float verticalPos;
 }
 

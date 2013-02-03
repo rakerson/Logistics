@@ -20,6 +20,7 @@
 @implementation AppDelegate
 
 @synthesize window;
+@synthesize currentSceneName;
 
 - (void) removeStartupFlicker
 {

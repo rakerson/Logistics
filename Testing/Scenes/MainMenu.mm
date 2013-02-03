@@ -108,7 +108,7 @@
         // Determine Screen Size
         CGSize screenSize = [CCDirector sharedDirector].winSize;  
         
-    
+        
         //CCSprite * bg = [CCSprite spriteWithFile:@"titlescreen-back.jpg"];
         CCSprite * bg = [CCSprite spriteWithFile:[NSString stringWithFormat:@"titlescreen-back-%@.jpg", self.device]];
         [bg setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];

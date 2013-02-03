@@ -25,6 +25,7 @@
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
 #import "GAI.h"
+#import "Cinematic.h"
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -163,8 +164,9 @@ enum {
         
        
         
-        
+        BOOL showCinematic = NO;
         GameData *gameData = [GameDataParser loadData];
+       
        selectedChapter = gameData.selectedChapter;
         selectedLevel = gameData.selectedLevel;
        // selectedLevel = 99;
@@ -178,7 +180,10 @@ enum {
         for (Level *level in currentLevelArray) {
             if ([[NSNumber numberWithInt:level.number] intValue] == selectedLevel) {
                 self.currentLevel = level;
-                
+                if(currentLevel.userLastScore == 1)
+                {
+                    showCinematic = YES;
+                }
                 belts = currentLevel.belts;
                 fans = currentLevel.fans;
                 springs = currentLevel.springs;
@@ -226,7 +231,7 @@ enum {
 		
 		// Do we want to let bodies sleep?
 		// This will speed up the physics simulation
-		bool doSleep = true;
+		bool doSleep = TRUE;
 		
 		// Construct a world object, which will hold and simulate the rigid bodies.
 		world = new b2World(gravity, doSleep);
@@ -393,7 +398,10 @@ enum {
         [self initHUDLayer];
         [self initRewards];
         if(selectedLevel == 1 && selectedChapter == 1 && nextLevelUnlocked == false){
-            [self showHelpMenu];
+            [self showHelpMenu:@"drop"];
+        }
+        if(selectedLevel == 9 && selectedChapter == 1 && nextLevelUnlocked == false){
+            [self showHelpMenu:@"shoot"];
         }
        // if(selectedLevel == 12 && selectedChapter == 1){
         //snow = [[CCParticleSnow alloc] init];
@@ -407,6 +415,14 @@ enum {
         
         //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
         
+        //launch a cinematic if the leve is one and the score is > 1
+        if(selectedLevel == 1 && showCinematic)
+        {
+          //launch the cinematic...
+            [self showCinematicA];
+        
+        }
+        
         id tracker = [GAI sharedInstance].defaultTracker;
         [tracker sendEventWithCategory:@"Level"
                             withAction:@"Start"
@@ -416,6 +432,12 @@ enum {
         }
     
 	return self;
+}
+-(void)showCinematicA
+{
+    Cinematic * p = [[[Cinematic alloc]initWithLabel:[NSString stringWithFormat:@"%ia", selectedChapter]]autorelease];
+    [self addChild:p z:10];
+    
 }
 -(void)playSoundEffect:(NSString*)soundFile {
     [[SimpleAudioEngine sharedEngine]playEffect:soundFile];
@@ -481,7 +503,7 @@ enum {
     
     //
 }
--(void)showHelpMenu
+-(void)showHelpMenu :(NSString *) helpType
 {
     isPlaying = false;
     isPaused = true;
@@ -491,7 +513,9 @@ enum {
     if(menuOpen == false)
     {
         menuOpen = true;
-        HelpMenu * p = [[[HelpMenu alloc]init]autorelease];
+        //[[Message alloc] initWithName:someNameString message:someMessageString]
+        
+        HelpMenu * p = [[[HelpMenu alloc]initWithType:helpType]autorelease];
         [self addChild:p z:10];
     }
 
@@ -1055,7 +1079,7 @@ enum {
     }
     else if (CGRectContainsPoint (helpButton.boundingBox,touchLocation))
     {
-        [self showHelpMenu];
+        [self showHelpMenu:@"all"];
     }
     else if (CGRectContainsPoint (muteButton.boundingBox,touchLocation))
     {
@@ -1357,25 +1381,30 @@ return FALSE;
     for(b2Body *b = world->GetBodyList(); b; b=b->GetNext())
     {
         LHSprite *myActor = (LHSprite*)b->GetUserData();
-        if(!b->IsAwake() && myActor.tag == PRESENT)
+        if(myActor.tag == PRESENT)
         {
+        b2Vec2 tVect = b->GetLinearVelocity();
+        if(abs(tVect.x) < 0.5 && abs(tVect.y) < 0.5)
+           {
+             NSLog(@"SOMEONE IS SLEEPING: %f", tVect.x);
             bodiesAsleep++;
-            //NSLog(@"SOMEONE IS SLEEPING");
+           }
+            
         }
     }
     if(bodiesAsleep == allBodiesinWorld)
     {
        //NSLog(@"EVERYONE IS SLEEPING");
-        gameOverTimer = 0;
-        isPlaying = false;
-        if (gifts > 7)
-        {
-            [self showLevelComplete];
-        }
-        else
-        {
-            [self showLevelFail];
-        }
+        gameOverTimer+=10;
+        //isPlaying = false;
+        //if (gifts > 7)
+        //{
+            //[self showLevelComplete];
+        //}
+        //else
+        //{
+            //[self showLevelFail];
+        //}
 
         
     }
@@ -1452,7 +1481,8 @@ return FALSE;
         if(giftsRemaining == 0){
             [self checkifAwake];
             gameOverTimer++;
-            if(gameOverTimer == 800)
+            NSLog(@"Game Over Timer:%i", gameOverTimer);
+            if(gameOverTimer >= 800)
             {
                 gameOverTimer = 0;
                 isPlaying = false;
@@ -1465,6 +1495,10 @@ return FALSE;
                 [self showLevelFail];
                 }
             }
+        }
+        else
+        {
+        gameOverTimer = 0;
         }
     //check if level is complete
     if (strikes >= 3)

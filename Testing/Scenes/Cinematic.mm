@@ -9,7 +9,7 @@
 #import "Cinematic.h"
 #import "LevelSelect.h"
 @implementation Cinematic
-@synthesize iPad, device, cinLabel ;
+@synthesize iPad, device, cinLabel;
 
 - (void)onBack: (id) sender {
     /*
@@ -184,11 +184,30 @@
     GameBoardLayer *gameParent = (GameBoardLayer *)self.parent;
     [gameParent resumeGame];
     [self.parent removeChild:self cleanup:YES];
-    
 }
+
 - (void)onMenu: (id) sender {
-    //[SceneManager goLevelSelectFromLevel];
+    NSString *tempString = [cinLabel substringWithRange:NSMakeRange(1, 1)];
+    NSLog(@"xx:%@:", tempString);
+    if([tempString isEqualToString:@"b"])
+    {
+    [SceneManager goLevelSelectFromLevelNoTransition];
     [self.parent removeChild:self cleanup:YES];
+    }
+    else
+    {
+    
+    [self.parent removeChild:self cleanup:YES];
+    }
+    //CCDirector *director = [CCDirector sharedDirector];
+    /*if([[[CCDirector sharedDirector] runningScene] isKindOfClass:[GameBoardLayer class]])
+    {
+    
+    }
+    else
+    {
+    
+    }*/
 }
 
 

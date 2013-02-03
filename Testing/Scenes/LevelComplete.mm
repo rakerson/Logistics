@@ -14,6 +14,8 @@
 #import "GameData.h"
 #import "GameDataParser.h"
 #import "LevelParser.h"
+#import "Cinematic.h"
+
 @implementation LevelComplete
 @synthesize iPad, device;
 - (void)onBack: (id) sender {
@@ -93,6 +95,8 @@
                 
             }
         }
+        _currentLevel = gameData.selectedLevel;
+        _currentChapter = gameData.selectedChapter;
         CCLabelTTF *label = [CCLabelTTF labelWithString:successMessage
                                                fontName:@"Fontdinerdotcom"
                                                fontSize:largeFont];
@@ -164,12 +168,18 @@
                                       selectedImage:[NSString stringWithFormat:@"next-on-%@.png", self.device]
                                       target:self
                                       selector:@selector(nextLevel:)];
+        CCMenuItemImage *playCinematic = [CCMenuItemImage
+                                      itemFromNormalImage:[NSString stringWithFormat:@"next-off-%@.png", self.device]
+                                      selectedImage:[NSString stringWithFormat:@"next-on-%@.png", self.device]
+                                      target:self
+                                      selector:@selector(onCinematicB:)];
         
         
         CCMenu *menu;
-        if(gameData.selectedLevel == 12)
+        NSLog(@"TTTT:%i",tempScore);
+        if(gameData.selectedLevel == 12 && tempScore == 1)
         {
-        menu = [CCMenu menuWithItems:exit, restart, nil];
+        menu = [CCMenu menuWithItems:exit, restart,playCinematic, nil];
         }
         else
         {
@@ -185,6 +195,19 @@
     }
     return self;
 }
+-(void)onCinematicA: (id) sender
+{
+    Cinematic * p = [[[Cinematic alloc]initWithLabel:[NSString stringWithFormat:@"%ia", self.currentChapter]]autorelease];
+    [self addChild:p z:10];
+    
+}
+-(void)onCinematicB: (id) sender
+{
+    Cinematic * p = [[[Cinematic alloc]initWithLabel:[NSString stringWithFormat:@"%ib", self.currentChapter]]autorelease];
+    [self addChild:p z:10];
+    
+}
+
 -(void)launchFirework
 {
     CGSize screenSize = [CCDirector sharedDirector].winSize;

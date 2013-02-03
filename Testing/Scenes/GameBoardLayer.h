@@ -125,7 +125,8 @@
 
 @property (nonatomic,readwrite) BOOL isPaused;
 @property (nonatomic,readonly) int gameScore;
-
+@property (nonatomic, assign) int currentChapter;
+@property (nonatomic, assign) int currentLevelNumber;
 @property (nonatomic,readwrite) BOOL isPlaying;
 ///@property (nonatomic,readwrite) BOOL boundarySet;
 @property (retain) NSMutableArray *currentLevelArray;

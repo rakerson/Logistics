@@ -20,7 +20,10 @@
 #import "GameScene.h"
 #import "GameBoardLayer.h"
 
+
 @interface SceneManager : NSObject {
+    
+    
     
 }
 
@@ -42,4 +45,5 @@
 +(void) goLevelSelectFromLevel;
 +(void) goGameScene;
 
+@property (readwrite, assign) NSString *currentSceneName;
 @end
