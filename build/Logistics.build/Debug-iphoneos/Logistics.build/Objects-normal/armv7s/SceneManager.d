@@ -59,4 +59,5 @@ dependencies: \
   Testing/libs/CocosDenshion/CDAudioManager.h \
   Testing/libs/CocosDenshion/CocosDenshion.h \
   Testing/libs/CocosDenshion/CDConfig.h \
-  Testing/libs/CocosDenshion/CDOpenALSupport.h
+  Testing/libs/CocosDenshion/CDOpenALSupport.h \
+  /Users/rakerson/Desktop/Projects/Logistics/Testing/AppDelegate.h

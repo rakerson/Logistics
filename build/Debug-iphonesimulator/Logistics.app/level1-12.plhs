@@ -11,7 +11,7 @@
 	<key>JOINTS_INFO</key>
 	<array/>
 	<key>LHVersion</key>
-	<string>1.4.969</string>
+	<string>1.4.982</string>
 	<key>NODES_INFO</key>
 	<array>
 		<dict>
@@ -6531,7 +6531,7 @@
 		<key>CustomClasses</key>
 		<array/>
 		<key>Device</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>GameWorld</key>
 		<string>{{0, 0}, {1024, 768}}</string>
 		<key>HDSuffix</key>
@@ -6543,9 +6543,9 @@
 		<key>ProjectName</key>
 		<string>logistics</string>
 		<key>ProjectPath</key>
-		<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources</string>
+		<string>/Users/rakerson/Desktop/Projects/Logistics/Testing</string>
 		<key>SafeFrame</key>
-		<string>{1024, 768}</string>
+		<string>{480, 320}</string>
 		<key>Tags</key>
 		<array>
 			<string>DEFAULT</string>
@@ -6564,6 +6564,9 @@
 			<string>SHOOTER</string>
 			<string>SHOOTER_ROTATOR</string>
 			<string>GOALSPRITE</string>
+			<string>HORIZONATALPLATFORM</string>
+			<string>BREAKABLE</string>
+			<string>REPOSITION</string>
 		</array>
 		<key>ZoomValue</key>
 		<real>0.0</real>

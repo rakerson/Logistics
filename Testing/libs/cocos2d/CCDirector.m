@@ -24,9 +24,6 @@
  */
 
 
-/* Idea of decoupling Window from Director taken from OC3D project: http://code.google.com/p/oc3d/
- */
-
 #import <unistd.h>
 #import <Availability.h>
 

@@ -168,7 +168,7 @@
     <Level>
         <Name>Chapter1Level10</Name>
 		<Number>12</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
         <UserLastStars>0</UserLastStars>
 		<Data>Some Chapter 1 Level 12 Data</Data>

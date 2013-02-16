@@ -48,6 +48,9 @@
     CCLabelTTF *springCounter;
     
     NSMutableArray *rewardArray;
+    NSMutableArray *breakableArray;
+    NSMutableArray *platformArray;
+    NSMutableArray *positionArray;
     double fanAngle;
     CCSprite *rotateTool;
     CCSprite *scopeSprite;
@@ -117,6 +120,9 @@
 
 
 @property (nonatomic, retain) NSMutableArray *rewardArray;
+@property (nonatomic, retain) NSMutableArray *breakableArray;
+@property (nonatomic, retain) NSMutableArray *platformArray;
+@property (nonatomic, retain) NSMutableArray *positionArray;
 @property (nonatomic,retain) Level *currentLevel;
 @property (nonatomic, assign) BOOL iPad;
 @property (nonatomic, assign) NSString *device;

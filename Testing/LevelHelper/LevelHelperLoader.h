@@ -78,9 +78,9 @@ enum LevelHelper_TAG
     SHOOTER_ROTATOR     = 14,
     GOALSPRITE 			= 15,
     HORIZONTALPLATFORM  = 16,
-
-
-	NUMBER_OF_TAGS 	= 17
+    BREAKABLE = 17,
+    REPOSITION = 18,
+	NUMBER_OF_TAGS 	= 19
 };
 
 CGSize  LHSizeFromString(NSString* val);

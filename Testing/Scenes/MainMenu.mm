@@ -158,8 +158,8 @@
                                         target:self
                                         selector:@selector(onPlay:)];
         CCMenuItemImage *feedbackButton = [CCMenuItemImage
-                                         itemFromNormalImage:[NSString stringWithFormat:@"scores-off-%@.png", self.device]
-                                           selectedImage:[NSString stringWithFormat:@"scores-on-%@.png", self.device]
+                                         itemFromNormalImage:[NSString stringWithFormat:@"feedback-off-%@.png", self.device]
+                                           selectedImage:[NSString stringWithFormat:@"feedback-on-%@.png", self.device]
                                            target:self
                                     selector:@selector(feedbackForm:)];
        

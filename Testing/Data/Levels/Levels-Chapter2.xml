@@ -16,10 +16,10 @@
 	<Level>
         <Name>Chapter2Level2</Name>
 		<Number>2</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 2 Data</Data>
-        <Belts>5</Belts>
+        <Belts>3</Belts>
         <Fans>1</Fans>
         <Springs>2</Springs>
         <UserLastScore>1</UserLastScore>
@@ -30,11 +30,11 @@
 	<Level>
         <Name>Chapter2Level3</Name>
 		<Number>3</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 3 Data</Data>
-        <Belts>5</Belts>
-        <Fans>1</Fans>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
         <Springs>2</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
@@ -44,11 +44,11 @@
 	<Level>
         <Name>Chapter2Level4</Name>
 		<Number>4</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 4 Data</Data>
-        <Belts>5</Belts>
-        <Fans>1</Fans>
+        <Belts>3</Belts>
+        <Fans>0</Fans>
         <Springs>2</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
@@ -58,11 +58,11 @@
 	<Level>
         <Name>Chapter2Level5</Name>
 		<Number>5</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 5 Data</Data>
-        <Belts>5</Belts>
-        <Fans>1</Fans>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
         <Springs>2</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
@@ -72,12 +72,12 @@
 	<Level>
         <Name>Chapter2Level6</Name>
 		<Number>6</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 6 Data</Data>
-        <Belts>5</Belts>
-        <Fans>1</Fans>
-        <Springs>3  </Springs>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>3</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -86,12 +86,12 @@
 	<Level>
         <Name>Chapter2Level7</Name>
 		<Number>7</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 7 Data</Data>
-        <Belts>5</Belts>
+        <Belts>2</Belts>
         <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Springs>0</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -100,12 +100,12 @@
 	<Level>
         <Name>Chapter2Level8</Name>
 		<Number>8</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 8 Data</Data>
-        <Belts>5</Belts>
+        <Belts>1</Belts>
         <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Springs>0</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -114,12 +114,12 @@
 	<Level>
         <Name>Chapter2Level9</Name>
 		<Number>9</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 9 Data</Data>
-        <Belts>5</Belts>
+        <Belts>3</Belts>
         <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Springs>0</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -128,12 +128,12 @@
 	<Level>
         <Name>Chapter2Level10</Name>
 		<Number>10</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 10 Data</Data>
-        <Belts>5</Belts>
+        <Belts>1</Belts>
         <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Springs>1</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -142,12 +142,12 @@
 	<Level>
         <Name>Chapter2Level11</Name>
 		<Number>11</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 11 Data</Data>
         <Belts>3</Belts>
         <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Springs>0</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
@@ -156,12 +156,12 @@
 	<Level>
         <Name>Chapter2Level12</Name>
 		<Number>12</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 12 Data</Data>
-        <Belts>5</Belts>
-        <Fans>1</Fans>
-        <Springs>2</Springs>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>1</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>

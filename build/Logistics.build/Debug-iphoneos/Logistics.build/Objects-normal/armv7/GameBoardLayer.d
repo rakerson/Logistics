@@ -70,4 +70,5 @@ dependencies: \
   Testing/libs/CocosDenshion/CDOpenALSupport.h \
   /Users/rakerson/Desktop/Projects/Logistics/Helpers/GAI.h \
   Helpers/GAITracker.h Helpers/GAITransaction.h \
-  Helpers/GAITransactionItem.h Helpers/GAITrackedViewController.h
+  Helpers/GAITransactionItem.h Helpers/GAITrackedViewController.h \
+  Testing/Scenes/Cinematic.h

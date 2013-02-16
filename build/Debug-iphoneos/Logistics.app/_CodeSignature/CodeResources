@@ -166,11 +166,11 @@
 		</data>
 		<key>Levels-Chapter1.xml</key>
 		<data>
-		S3lgrd8UI4ZYUs9SIwQbOSTw82M=
+		hLL7SvmNLL9wZiQaLsvpq3unazw=
 		</data>
 		<key>Levels-Chapter2.xml</key>
 		<data>
-		lMlAAEZdOkY4c7qPEbMBuXq7KN0=
+		EmrmbzQfB7uIDkZ4On3OqGBQnlw=
 		</data>
 		<key>Levels-Chapter3.xml</key>
 		<data>
@@ -604,6 +604,30 @@
 		<data>
 		oBtr3hrE+rGXWYbjn/8UMGU3pxs=
 		</data>
+		<key>feedback-off-ipad-hd.png</key>
+		<data>
+		K5YIVWPo/N4o5XUpLXDCGn6kOFk=
+		</data>
+		<key>feedback-off-ipad.png</key>
+		<data>
+		qlmpcmIyD0OM0sr5oMyGsx697YM=
+		</data>
+		<key>feedback-off-iphone.png</key>
+		<data>
+		5xMInXgeST0ToVlLQ/IBoTQxb7o=
+		</data>
+		<key>feedback-on-ipad-hd.png</key>
+		<data>
+		UcYdRRhFwsKRmUMenYvn2Cn3Tvs=
+		</data>
+		<key>feedback-on-ipad.png</key>
+		<data>
+		2fftZmwI6b4/oGquqA59b21NEH4=
+		</data>
+		<key>feedback-on-iphone.png</key>
+		<data>
+		tE66Bg5A/AOLhRe4PGzT03ceE5o=
+		</data>
 		<key>fire.png</key>
 		<data>
 		wGxYLQBoiYTSVo9oLfaEfmgMN84=
@@ -738,51 +762,51 @@
 		</data>
 		<key>level1-1.plhs</key>
 		<data>
-		henp5YyBZ6ToOprhnjtzSJakT44=
+		8Jmcmw6nRGJbTeOml+tQz1UythM=
 		</data>
 		<key>level1-10.plhs</key>
 		<data>
-		COS7z5pVj7A4FULKUqX3pR4PB6I=
+		lq05bsVYltOAOoKgea9U9kNQhbY=
 		</data>
 		<key>level1-11.plhs</key>
 		<data>
-		ZQgbrwNyhUQPBb47bYHW12gztX4=
+		UwrGUyr45UNdloSnJpgdKeRYQKg=
 		</data>
 		<key>level1-12.plhs</key>
 		<data>
-		AsXpEFHGvOHI065/MKPQu673u6c=
+		BqliZwHfGbHEk3WokMmVN7ypeH0=
 		</data>
 		<key>level1-2.plhs</key>
 		<data>
-		F2SOFB0PETrN1CpPDS3nePApkeM=
+		8AxJLWSgWmwWtSWGycpg26VTeQc=
 		</data>
 		<key>level1-3.plhs</key>
 		<data>
-		3f45IZGFgSLqWoj8nwNwjo+CgIc=
+		rWYjXTfSvsg5pq7n7YoMeILgBro=
 		</data>
 		<key>level1-4.plhs</key>
 		<data>
-		faeP2DHyQ+UUOzXUjEMJtY8kLJY=
+		Dc72jf9bGgxzToBkdBjkv7tKNZo=
 		</data>
 		<key>level1-5.plhs</key>
 		<data>
-		iq0xDfYHqlnzkPfbEsGaCixVzcE=
+		P8sTJagYAeJymxuK3CMB1ANxmYc=
 		</data>
 		<key>level1-6.plhs</key>
 		<data>
-		2hdzUoxHfbu9edL2J+SZCm0WtAc=
+		7e97ro16ObyJw/utYKBx1YSLMiE=
 		</data>
 		<key>level1-7.plhs</key>
 		<data>
-		0up1Mi1+zYm/fTg3RgzKp2CxwdQ=
+		KBzx2zhlK2aU+Cxsq+lrLOnnAsA=
 		</data>
 		<key>level1-8.plhs</key>
 		<data>
-		mvSKwLlKBUs93dbCDdNkus3LZgo=
+		WJZP9zdadjrN2YDPmg5SH7yX7Lg=
 		</data>
 		<key>level1-9.plhs</key>
 		<data>
-		WBD1kX4mkOLT/vCKeIJTnWxeTqs=
+		ndV+N2Vu8GbQvTwX2GvY6pdPcLM=
 		</data>
 		<key>level1-99.plhs</key>
 		<data>
@@ -798,47 +822,51 @@
 		</data>
 		<key>level2-10.plhs</key>
 		<data>
-		EI15urxFiGM9RT+m5jVw6UvRnJE=
+		aSnE6wMdsC2V1ZLh6UYuf+gnth4=
 		</data>
 		<key>level2-11.plhs</key>
 		<data>
-		UJlaAUSMI4LpGGbrdnp8ZDjMd64=
+		nIOifdRuRDSOXKpjQ8VJ3CLzkvg=
+		</data>
+		<key>level2-12-iphone.plhs</key>
+		<data>
+		+c8PrTYtffYCjyEo6zQwOPVV+f4=
 		</data>
 		<key>level2-12.plhs</key>
 		<data>
-		7kCX3m1RMW67nBgXLCH3eZ/XHOo=
+		fwXE+EaBs+ABcsVBYmvBznF6HPA=
 		</data>
 		<key>level2-2.plhs</key>
 		<data>
-		U+xfJItpl2+SLMhqTG+oAfGmpJA=
+		6/h8N/MotjloOG432xpyandhjBY=
 		</data>
 		<key>level2-3.plhs</key>
 		<data>
-		3Xf48cMN2dgYJSOiT1blCb8Qrbc=
+		jfH4SqfcfPna6AoDzv9vFHWoSak=
 		</data>
 		<key>level2-4.plhs</key>
 		<data>
-		PGMh3gyT5iaCUWIIwEtfjmrhdvc=
+		VyBkgFv9BqF6Gbnj4drrhY5Zlks=
 		</data>
 		<key>level2-5.plhs</key>
 		<data>
-		qx8zbn8ekL0Nu7rxTcSAW4PMbHw=
+		C6fPP/CiJcEM2Ope/EyHHki6xyQ=
 		</data>
 		<key>level2-6.plhs</key>
 		<data>
-		oO7L2b1pIoKvnuaYDlCDX6bG03A=
+		wHdMubXufJO3SNRQ45mQjTf8XQg=
 		</data>
 		<key>level2-7.plhs</key>
 		<data>
-		V7jUqsRZXwJ/pxUnD7kCrRnGDO4=
+		OrrWtHNAHnmEJHrekbjy74fqMY4=
 		</data>
 		<key>level2-8.plhs</key>
 		<data>
-		rx3YVtKlt06maI13K5r0Bta2sqg=
+		SwRB7QjP+0u8rN1sofvndIXrIsQ=
 		</data>
 		<key>level2-9.plhs</key>
 		<data>
-		UFkPRyJfNBez57egUbaIIp8Pz+E=
+		oFSsBrDtOJ+ox9WDIXXWyOGRi/U=
 		</data>
 		<key>lobby.mp3</key>
 		<data>
@@ -858,7 +886,7 @@
 		</data>
 		<key>logistics.pshs</key>
 		<data>
-		XiFXCDSf6ghFBbtZD+SQgICvl7I=
+		0Ikj3WV2sKuU/j0IJ8y5Jm2aRbI=
 		</data>
 		<key>logistics_chapter-1-hd.png</key>
 		<data>
@@ -874,15 +902,15 @@
 		</data>
 		<key>logistics_chapter-2-hd.png</key>
 		<data>
-		Qhso2reVHyDJQvibYNYPlH8VpPI=
+		ax9HZqriLaRT1nrLHTdZX2eHHhM=
 		</data>
 		<key>logistics_chapter-2-ipadhd.png</key>
 		<data>
-		u0yRbN5cCtgrcV/C+x/NNxoz984=
+		2OuBCi3vEpxvSqq2JXPIk3b95dc=
 		</data>
 		<key>logistics_chapter-2.png</key>
 		<data>
-		VUYccoM2eOj8o2+E0s2hbOzL8XU=
+		S+lXOxEikolhRN31ONzJytJz1Bg=
 		</data>
 		<key>logistics_tools-hd.png</key>
 		<data>

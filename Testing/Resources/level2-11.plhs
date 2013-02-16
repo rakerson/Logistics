@@ -54,9 +54,9 @@
 		</dict>
 		<dict>
 			<key>AnchorA</key>
-			<string>{0, 0}</string>
+			<string>{8.8464053280642361, -0.80911461604648593}</string>
 			<key>AnchorB</key>
-			<string>{0, 0}</string>
+			<string>{37.097308219223294, -45.069905917773781}</string>
 			<key>CenterOfMass</key>
 			<false/>
 			<key>CollideConnected</key>
@@ -66,9 +66,9 @@
 			<key>EnableMotor</key>
 			<false/>
 			<key>LHAnchorA</key>
-			<string>{0, 0}</string>
+			<string>{8.8464053280642361, 0.80911461604648593}</string>
 			<key>LHAnchorB</key>
-			<string>{0, 0}</string>
+			<string>{37.097308219223294, 45.069905917773781}</string>
 			<key>LowerAngle</key>
 			<real>0.0</real>
 			<key>MaxTorque</key>
@@ -98,7 +98,7 @@
 			<key>AnchorA</key>
 			<string>{0, 0}</string>
 			<key>AnchorB</key>
-			<string>{0, 0}</string>
+			<string>{-2.0747293822476536, -10.417718808780251}</string>
 			<key>CenterOfMass</key>
 			<false/>
 			<key>CollideConnected</key>
@@ -110,7 +110,7 @@
 			<key>LHAnchorA</key>
 			<string>{0, 0}</string>
 			<key>LHAnchorB</key>
-			<string>{0, 0}</string>
+			<string>{-2.0747293822476536, 10.417718808780251}</string>
 			<key>ObjectA</key>
 			<string>icewheel</string>
 			<key>ObjectB</key>
@@ -617,7 +617,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{290.5, 199.25}</string>
+								<string>{305.56616830825806, 209.79631781578064}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -1892,7 +1892,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{431.95113046156098, 209.10729222102708}</string>
+								<string>{231.57109196172883, 279.91828326983995}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>

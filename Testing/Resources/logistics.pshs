@@ -4009,8 +4009,8 @@
 								<array>
 									<array>
 										<string>{-48.026558574195803, -20.229712244616167}</string>
-										<string>{-34.205842855023633, -22.728135029278008}</string>
-										<string>{-34.205842855023633, -4.0245702176488862}</string>
+										<string>{-25.987686220785974, -26.331049053845845}</string>
+										<string>{-26.146243710018837, -1.1241878376819727}</string>
 										<string>{-46.847237878991535, -6.1918603790312545}</string>
 									</array>
 								</array>
@@ -4043,8 +4043,8 @@
 								<key>ShapePoints</key>
 								<array>
 									<string>{19.611048484033859, 172.76744151612502}</string>
-									<string>{70.176628579905469, 164.09828087059554}</string>
-									<string>{70.176628579905469, 238.91254011711203}</string>
+									<string>{102.41502515992465, 152.49675135072789}</string>
+									<string>{103.0492551168561, 253.32419621538338}</string>
 									<string>{14.893765703216786, 228.91884897846467}</string>
 								</array>
 								<key>ShapePositionOffset</key>
@@ -4064,10 +4064,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{14.538851341088474, 8.9686725337769531}</string>
-										<string>{48.932519856635452, 8.9686725337769531}</string>
-										<string>{48.932519856635452, 15.755665199582864}</string>
-										<string>{14.538851341088474, 15.755665199582864}</string>
+										<string>{-25.098081196614061, 5.2352536200255884}</string>
+										<string>{48.947155930970951, 5.2352536200255884}</string>
+										<string>{48.947155930970951, 9.956120081585965}</string>
+										<string>{-25.098081196614061, 9.956120081585965}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -4098,10 +4098,10 @@
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{265.1554053643539, 84.977339201668542}</string>
-									<string>{402.73007942654181, 84.977339201668542}</string>
-									<string>{402.73007942654181, 112.12530986489219}</string>
-									<string>{265.1554053643539, 112.12530986489219}</string>
+									<string>{106.60767521354376, 108.17551967365614}</string>
+									<string>{402.7886237238838, 108.17551967365614}</string>
+									<string>{402.7886237238838, 127.05898551989765}</string>
+									<string>{106.60767521354376, 127.05898551989765}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
@@ -4120,10 +4120,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{15.572724695726777, -37.360097313514245}</string>
-										<string>{50.274444992670055, -37.360097313514245}</string>
-										<string>{50.274444992670055, -30.414155654236254}</string>
-										<string>{15.572724695726777, -30.414155654236254}</string>
+										<string>{-25.124103880431733, -37.360097313514245}</string>
+										<string>{50.58668128417554, -37.360097313514245}</string>
+										<string>{50.58668128417554, -31.400871166702018}</string>
+										<string>{-25.124103880431733, -31.400871166702018}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -4154,10 +4154,10 @@
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{269.29089878290711, 269.65662261694501}</string>
-									<string>{408.09777997068022, 269.65662261694501}</string>
-									<string>{408.09777997068022, 297.44038925405698}</string>
-									<string>{269.29089878290711, 297.44038925405698}</string>
+									<string>{106.50358447827307, 273.60348466680807}</string>
+									<string>{409.34672513670216, 273.60348466680807}</string>
+									<string>{409.34672513670216, 297.44038925405698}</string>
+									<string>{106.50358447827307, 297.44038925405698}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
@@ -5757,7 +5757,7 @@
 			<key>MaxSheetSize</key>
 			<integer>4096</integer>
 			<key>NpotSize</key>
-			<string>{1408, 1952}</string>
+			<string>{1704, 1892}</string>
 			<key>Padding</key>
 			<integer>8</integer>
 			<key>PixelFormat</key>
@@ -5828,9 +5828,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 214}, {352, 10}}</string>
+						<string>{{74, 213}, {352, 10}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 856}, {1408, 40}}</string>
+						<string>{{296, 852}, {1408, 40}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -5856,7 +5856,7 @@
 						<key>OriginalSize</key>
 						<string>{1408, 41}</string>
 						<key>Position</key>
-						<string>{0, 856}</string>
+						<string>{296, 852}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -5867,6 +5867,220 @@
 						<integer>0</integer>
 						<key>TextureOffset</key>
 						<string>{0, 0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>ice-switch</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>0.0</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.0</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{23.404294250269658, -36.5}</string>
+										<string>{36.75, -36.5}</string>
+										<string>{36.75, 36.508537704966301}</string>
+										<string>{23.404294250269658, 36.508537704966301}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>293</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>73.25</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.75, -36.75}</string>
+								<key>LHWidth</key>
+								<real>73.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.0</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{240.61717700107863, 0.96584918013479637}</string>
+									<string>{294, 0.96584918013479637}</string>
+									<string>{294, 293}</string>
+									<string>{240.61717700107863, 293}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>294</real>
+							</dict>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.0</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-36.303294754213653, -36.5}</string>
+										<string>{21.558399708839232, -36.5}</string>
+										<string>{21.558399708839232, -23.276319230407893}</string>
+										<string>{-36.303294754213653, -23.276319230407893}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>293</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>73.25</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.75, -36.75}</string>
+								<key>LHWidth</key>
+								<real>73.5</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture_1</string>
+								<key>Restitution</key>
+								<real>0.0</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{1.7868209831453896, 240.10527692163157}</string>
+									<string>{233.23359883535693, 240.10527692163157}</string>
+									<string>{233.23359883535693, 293}</string>
+									<string>{1.7868209831453896, 293}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>294</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>ice-switch</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{214, 135}, {73.5, 73.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{856, 540}, {294, 293}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>ice-switch</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/ice-switch.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/ice-switch.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {294, 293}}</string>
+						<key>OriginalSize</key>
+						<string>{294, 294}</string>
+						<key>Position</key>
+						<string>{856, 540}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{73.5, 73.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -5905,7 +6119,7 @@
 								<key>Category</key>
 								<integer>1</integer>
 								<key>Density</key>
-								<real>0.20000000298023224</real>
+								<real>0.5</real>
 								<key>Fixture</key>
 								<array>
 									<array/>
@@ -5976,9 +6190,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{302, 135}, {33.5, 32.75}}</string>
+						<string>{{349, 84}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{1208, 540}, {134, 131}}</string>
+						<string>{{1396, 336}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6004,7 +6218,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{1208, 540}</string>
+						<string>{1396, 336}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6053,7 +6267,7 @@
 								<key>Category</key>
 								<integer>1</integer>
 								<key>Density</key>
-								<real>0.20000000298023224</real>
+								<real>0.5</real>
 								<key>Fixture</key>
 								<array>
 									<array/>
@@ -6124,9 +6338,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{302, 169}, {33.5, 32.75}}</string>
+						<string>{{349, 118}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{1208, 676}, {134, 131}}</string>
+						<string>{{1396, 472}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6152,7 +6366,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{1208, 676}</string>
+						<string>{1396, 472}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6201,7 +6415,7 @@
 								<key>Category</key>
 								<integer>1</integer>
 								<key>Density</key>
-								<real>0.20000000298023224</real>
+								<real>0.5</real>
 								<key>Fixture</key>
 								<array>
 									<array/>
@@ -6272,9 +6486,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 238}, {33.5, 32.75}}</string>
+						<string>{{384, 47}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 952}, {134, 131}}</string>
+						<string>{{1536, 188}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6300,7 +6514,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 952}</string>
+						<string>{1536, 188}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6349,7 +6563,7 @@
 								<key>Category</key>
 								<integer>1</integer>
 								<key>Density</key>
-								<real>0.20000000298023224</real>
+								<real>0.5</real>
 								<key>Fixture</key>
 								<array>
 									<array/>
@@ -6420,9 +6634,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 271}, {33.5, 32.75}}</string>
+						<string>{{383, 84}, {33.5, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1084}, {134, 131}}</string>
+						<string>{{1532, 336}, {134, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6448,7 +6662,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 1084}</string>
+						<string>{1532, 336}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6578,9 +6792,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{214, 163}, {46.75, 46}}</string>
+						<string>{{288, 135}, {46.75, 46}}</string>
 						<key>Frame-HD</key>
-						<string>{{856, 652}, {185, 184}}</string>
+						<string>{{1152, 540}, {185, 184}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6606,7 +6820,165 @@
 						<key>OriginalSize</key>
 						<string>{185, 185}</string>
 						<key>Position</key>
-						<string>{856, 652}</string>
+						<string>{1152, 540}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{46.25, 46.25}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.25, 0.125}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>iceblocklarge-cracked</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>100</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1000</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>100</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>5000</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-23.125, -22.875}</string>
+										<string>{23.125, -22.875}</string>
+										<string>{23.125, 23.125}</string>
+										<string>{-23.125, 23.125}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>5000</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>184</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>46</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-23.125, -23.125}</string>
+								<key>LHWidth</key>
+								<real>46.25</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.10000000149011612</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{0, 0}</string>
+									<string>{185, 0}</string>
+									<string>{185, 184}</string>
+									<string>{0, 184}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>185</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>iceblocklarge-cracked</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{349, 0}, {46.75, 46}}</string>
+						<key>Frame-HD</key>
+						<string>{{1396, 0}, {185, 184}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>iceblocklarge-cracked</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/iceblocklarge-cracked.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/iceblocklarge-cracked.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {185, 184}}</string>
+						<key>OriginalSize</key>
+						<string>{185, 185}</string>
+						<key>Position</key>
+						<string>{1396, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6736,9 +7108,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{336, 135}, {15.75, 15}}</string>
+						<string>{{396, 31}, {15.75, 15}}</string>
 						<key>Frame-HD</key>
-						<string>{{1344, 540}, {61, 60}}</string>
+						<string>{{1584, 124}, {61, 60}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6764,7 +7136,7 @@
 						<key>OriginalSize</key>
 						<string>{64, 64}</string>
 						<key>Position</key>
-						<string>{1344, 540}</string>
+						<string>{1584, 124}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -6894,9 +7266,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 366}, {29.75, 29.75}}</string>
+						<string>{{383, 118}, {29.75, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1464}, {119, 117}}</string>
+						<string>{{1532, 472}, {119, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6922,7 +7294,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 1464}</string>
+						<string>{1532, 472}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7052,9 +7424,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 396}, {29.5, 29.75}}</string>
+						<string>{{349, 151}, {29.5, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1584}, {118, 117}}</string>
+						<string>{{1396, 604}, {118, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7080,7 +7452,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 1584}</string>
+						<string>{1396, 604}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7210,9 +7582,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 305}, {30.5, 29.75}}</string>
+						<string>{{288, 182}, {30.5, 29.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1220}, {122, 117}}</string>
+						<string>{{1152, 728}, {122, 117}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7238,7 +7610,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 1220}</string>
+						<string>{1152, 728}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7368,9 +7740,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 335}, {29.5, 29.5}}</string>
+						<string>{{396, 0}, {29.5, 29.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1340}, {118, 118}}</string>
+						<string>{{1584, 0}, {118, 118}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7396,7 +7768,7 @@
 						<key>OriginalSize</key>
 						<string>{140, 140}</string>
 						<key>Position</key>
-						<string>{0, 1340}</string>
+						<string>{1584, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7526,9 +7898,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 225}, {230.75, 12}}</string>
+						<string>{{74, 224}, {230.75, 12}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 900}, {923, 48}}</string>
+						<string>{{296, 896}, {923, 48}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7554,7 +7926,7 @@
 						<key>OriginalSize</key>
 						<string>{930, 52}</string>
 						<key>Position</key>
-						<string>{0, 900}</string>
+						<string>{296, 896}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -7740,9 +8112,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{214, 135}, {87, 26.75}}</string>
+						<string>{{74, 237}, {87, 26.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{856, 540}, {348, 105}}</string>
+						<string>{{296, 948}, {348, 105}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -7768,7 +8140,7 @@
 						<key>OriginalSize</key>
 						<string>{348, 107}</string>
 						<key>Position</key>
-						<string>{856, 540}</string>
+						<string>{296, 948}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8562,9 +8934,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 426}, {24.75, 27.5}}</string>
+						<string>{{320, 182}, {24.75, 27.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1704}, {97, 110}}</string>
+						<string>{{1280, 728}, {97, 110}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8590,7 +8962,7 @@
 						<key>OriginalSize</key>
 						<string>{97, 110}</string>
 						<key>Position</key>
-						<string>{0, 1704}</string>
+						<string>{1280, 728}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8718,9 +9090,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 455}, {20.75, 32.75}}</string>
+						<string>{{379, 151}, {20.75, 32.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 1820}, {81, 131}}</string>
+						<string>{{1516, 604}, {81, 131}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8746,7 +9118,7 @@
 						<key>OriginalSize</key>
 						<string>{81, 131}</string>
 						<key>Position</key>
-						<string>{0, 1820}</string>
+						<string>{1516, 604}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -8757,6 +9129,370 @@
 						<integer>0</integer>
 						<key>TextureOffset</key>
 						<string>{0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>multiplank</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>100</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-19.612521171019523, 113.52884056356856}</string>
+										<string>{-19.538552297971847, 128.94469236123462}</string>
+										<string>{-35.985597925329188, 128.5107248286825}</string>
+										<string>{-35.742705649647036, 100.98131430286764}</string>
+									</array>
+									<array>
+										<string>{-19.612521171019523, 113.52884056356856}</string>
+										<string>{-35.742705649647036, 100.98131430286764}</string>
+										<string>{36.193875620805557, 101.20863895886021}</string>
+										<string>{36.079737817351173, 110.06227560452595}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.25, -129.75}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{1.0576082986832489, 4.9571006852699497}</string>
+									<string>{66.845790808112611, 3.2212305550615383}</string>
+									<string>{66.549915315921908, 64.884637745725797}</string>
+									<string>{289.31895126940469, 78.750897581896254}</string>
+									<string>{289.77550248322223, 114.16544416455906}</string>
+									<string>{2.0291774014118573, 115.07474278852942}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-20.78630525589125, 51.874564502177122}</string>
+										<string>{-35.927904887439269, 52.639388425137554}</string>
+										<string>{-35.183125223404261, 24.191641212338027}</string>
+										<string>{-20.322111393310109, 37.149381680077454}</string>
+									</array>
+									<array>
+										<string>{-20.322111393310109, 37.149381680077454}</string>
+										<string>{-35.183125223404261, 24.191641212338027}</string>
+										<string>{36.00380234106342, 24.620260615052302}</string>
+										<string>{36.398972988238569, 32.411852571434963}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.25, -129.75}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture_1</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{1.2883804502429257, 308.44244629944967}</string>
+									<string>{61.854778976435, 311.5017419912914}</string>
+									<string>{63.711554426759562, 370.40247327969018}</string>
+									<string>{290.59589195295428, 389.35258971426015}</string>
+									<string>{289.01520936425368, 420.5189575397909}</string>
+									<string>{4.2674991063829566, 422.23343515064801}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-20.758830001749345, -23.875385272866424}</string>
+										<string>{-35.43328029794327, -23.952889659563084}</string>
+										<string>{-34.143933624402791, -28.541994393437562}</string>
+										<string>{-19.339682748879625, -40.84283628505608}</string>
+									</array>
+									<array>
+										<string>{-19.339682748879625, -40.84283628505608}</string>
+										<string>{-34.143933624402791, -28.541994393437562}</string>
+										<string>{-35.618110380285543, -51.915173682361001}</string>
+									</array>
+									<array>
+										<string>{-19.339682748879625, -40.84283628505608}</string>
+										<string>{-35.618110380285543, -51.915173682361001}</string>
+										<string>{35.129554973774077, -52.639962315464061}</string>
+										<string>{35.205937397879012, -45.40531247260202}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.25, -129.75}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture_2</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{3.2668788082269202, 614.81155863825234}</string>
+									<string>{61.964679993002619, 614.5015410914657}</string>
+									<string>{67.641269004481501, 682.37134514022432}</string>
+									<string>{285.82374959151605, 700.62124989040808}</string>
+									<string>{285.51821989509631, 729.55984926185624}</string>
+									<string>{2.5275584788578271, 726.660694729444}</string>
+									<string>{8.4242655023888346, 633.16797757375025}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-21.363470589331826, -101.77651685840038}</string>
+										<string>{-36.105237495756313, -101.51586532759114}</string>
+										<string>{-36.105237495756313, -128.76035976102963}</string>
+										<string>{-19.939145449953742, -117.82806693602055}</string>
+									</array>
+									<array>
+										<string>{-19.939145449953742, -117.82806693602055}</string>
+										<string>{-36.105237495756313, -128.76035976102963}</string>
+										<string>{34.72489015948679, -129.9610659931181}</string>
+										<string>{34.762068052953936, -120.8938111016883}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>0.0</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>0.0</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-36.25, -129.75}</string>
+								<key>LHWidth</key>
+								<real>0.0</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture_3</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{59.546117642672698, 926.10606743360154}</string>
+									<string>{65.243418200185033, 990.31226774408219}</string>
+									<string>{284.04827221181574, 1002.5752444067532}</string>
+									<string>{283.89956063794716, 1038.8442639724724}</string>
+									<string>{0.57905001697474745, 1034.0414390441185}</string>
+									<string>{0.57905001697474745, 925.06346131036457}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>0.0</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-2</string>
+					<key>SHSpriteName</key>
+					<string>multiplank</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-2.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-2-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{0, 213}, {72.5, 259.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{0, 852}, {290, 1037}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-2.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-2-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>multiplank</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/multiplank.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/multiplank.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {290, 1037}}</string>
+						<key>OriginalSize</key>
+						<string>{290, 1038}</string>
+						<key>Position</key>
+						<string>{0, 852}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{72.5, 259.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0.125}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -8866,9 +9602,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{261, 163}, {34, 35.5}}</string>
+						<string>{{349, 47}, {34, 35.5}}</string>
 						<key>Frame-HD</key>
-						<string>{{1044, 652}, {136, 142}}</string>
+						<string>{{1396, 188}, {136, 142}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -8894,7 +9630,7 @@
 						<key>OriginalSize</key>
 						<string>{136, 143}</string>
 						<key>Position</key>
-						<string>{1044, 652}</string>
+						<string>{1396, 188}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -9492,9 +10228,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, -3}, {212.75, 212}}</string>
+						<string>{{0, 0}, {212.75, 212}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, -12}, {849, 848}}</string>
+						<string>{{0, 0}, {849, 848}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -9520,7 +10256,7 @@
 						<key>OriginalSize</key>
 						<string>{850, 850}</string>
 						<key>Position</key>
-						<string>{0, -12}</string>
+						<string>{0, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>

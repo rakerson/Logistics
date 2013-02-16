@@ -11,7 +11,7 @@
 	<key>JOINTS_INFO</key>
 	<array/>
 	<key>LHVersion</key>
-	<string>1.4.976</string>
+	<string>1.4.982</string>
 	<key>NODES_INFO</key>
 	<array>
 		<dict>
@@ -151,7 +151,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{241, 328}</string>
+								<string>{244.04872870445251, 349.95084667205811}</string>
 								<key>Scale</key>
 								<string>{41.086498260498047, 1}</string>
 								<key>SpriteSize</key>
@@ -504,7 +504,7 @@
 					<key>SheetImage</key>
 					<string>logistics_tools.png</string>
 					<key>SheetImageRelative</key>
-					<string>/Resources/logistics_tools.png</string>
+					<string>/logistics_tools.png</string>
 					<key>Tag</key>
 					<integer>0</integer>
 					<key>TagName</key>
@@ -561,7 +561,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -636,7 +636,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -711,7 +711,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -786,7 +786,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -861,7 +861,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -936,7 +936,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{0, 225}, {230.75, 12}}</string>
+								<string>{{74, 224}, {230.75, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1011,7 +1011,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{261, 163}, {34, 35.5}}</string>
+								<string>{{349, 47}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1086,7 +1086,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{261, 163}, {34, 35.5}}</string>
+								<string>{{349, 47}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1161,7 +1161,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{261, 163}, {34, 35.5}}</string>
+								<string>{{349, 47}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1209,7 +1209,7 @@
 					<key>SheetImage</key>
 					<string>logistics_chapter-2.png</string>
 					<key>SheetImageRelative</key>
-					<string>/Resources/logistics_chapter-2.png</string>
+					<string>/logistics_chapter-2.png</string>
 					<key>Tag</key>
 					<integer>0</integer>
 					<key>TagName</key>
@@ -1288,9 +1288,80 @@
 			<string>SHOOTER_ROTATOR</string>
 			<string>GOALSPRITE</string>
 			<string>HORIZONATALPLATFORM</string>
+			<string>BREAKABLE</string>
+			<string>REPOSITION</string>
 		</array>
 		<key>ZoomValue</key>
 		<real>0.0</real>
+	</dict>
+	<key>WBInfo</key>
+	<dict>
+		<key>AngularDamping</key>
+		<real>0.0</real>
+		<key>AngularVelocity</key>
+		<real>0.0</real>
+		<key>CanSleep</key>
+		<true/>
+		<key>Category</key>
+		<integer>1</integer>
+		<key>Density</key>
+		<real>0.20000000298023224</real>
+		<key>FixedRot</key>
+		<false/>
+		<key>Fixture</key>
+		<array/>
+		<key>Friction</key>
+		<real>0.20000000298023224</real>
+		<key>GravityScale</key>
+		<real>1</real>
+		<key>Group</key>
+		<integer>0</integer>
+		<key>HandledBySH</key>
+		<false/>
+		<key>IsBullet</key>
+		<false/>
+		<key>IsCircle</key>
+		<false/>
+		<key>IsSensor</key>
+		<false/>
+		<key>LHHeight</key>
+		<real>0.0</real>
+		<key>LHShapePositionOffset</key>
+		<string>{0, 0}</string>
+		<key>LHWidth</key>
+		<real>0.0</real>
+		<key>LinearDamping</key>
+		<real>0.0</real>
+		<key>LinearVelocity</key>
+		<string>{0, 0}</string>
+		<key>Mask</key>
+		<integer>65535</integer>
+		<key>Name</key>
+		<string>LH_Generic_Fixture</string>
+		<key>Restitution</key>
+		<real>0.20000000298023224</real>
+		<key>Tag</key>
+		<integer>0</integer>
+		<key>TagBottom</key>
+		<integer>0</integer>
+		<key>TagBottomName</key>
+		<string>DEFAULT</string>
+		<key>TagLeft</key>
+		<integer>0</integer>
+		<key>TagLeftName</key>
+		<string>DEFAULT</string>
+		<key>TagRight</key>
+		<integer>0</integer>
+		<key>TagRightName</key>
+		<string>DEFAULT</string>
+		<key>TagTop</key>
+		<integer>0</integer>
+		<key>TagTopName</key>
+		<string>DEFAULT</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>WBRect</key>
+		<string>{{0, 0}, {480, 320}}</string>
 	</dict>
 </dict>
 </plist>

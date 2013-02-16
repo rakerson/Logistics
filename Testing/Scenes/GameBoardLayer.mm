@@ -50,6 +50,9 @@ enum {
 @synthesize gameScore;
 @synthesize isPlaying;
 @synthesize rewardArray;
+@synthesize breakableArray;
+@synthesize platformArray;
+@synthesize positionArray;
 @synthesize currentLevel;
 @synthesize currentLevelArray;
 @synthesize iPad, device;
@@ -103,6 +106,8 @@ enum {
     [self restartGame];
 }
 -(void)resetGame{
+    
+    
     gameOverTimer = 0;
     menuOpen = false;
     belts = currentLevel.belts;
@@ -117,8 +122,24 @@ enum {
     [self restartGame];
     
 }
+-(void)reloadLevel{
+    [lh release];
+        
+    //creating the objects
+    NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", selectedChapter, selectedLevel];
+    [LevelHelperLoader dontStretchArtOnIpad];
+   
+    lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
+    
+    [lh addObjectsToWorld:world cocos2dLayer:gameLayer];
+    
+
+}
 -(void)restartGame{
-    gameOverTimeout = NULL;
+    
+     
+   
+     gameOverTimeout = NULL;
     self.isPlaying=true;
     self.isPaused = false;
     //[[CCDirector sharedDirector] replaceScene:[GameBoardLayer scene]];
@@ -137,12 +158,13 @@ enum {
     [self removeAllPresents];
 
     [self replaceAwardsFromArray];
+   
     [self updateHUD];
     rotateTool.visible = false;
     [rotateTool setPosition:ccp(-1000,-1000)];
     //[self playAnimations];
     
-    
+   
 }
 
 // on "init" you need to initialize your instance
@@ -261,14 +283,14 @@ enum {
 		b2Body* groundBody = world->CreateBody(&groundBodyDef);
 		
 		// Define the ground box shape.
-		b2PolygonShape groundBox;		
+		b2PolygonShape groundBox;
 		
-       
         NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
         //TUTORIAL - loading the active leve    l
         [LevelHelperLoader dontStretchArtOnIpad];
         lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
         
+               
 		// bottom
 		groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(screenSize.width/[LevelHelperLoader pointsToMeterRatio] ,0));
 		groundBody->CreateFixture(&groundBox,0);
@@ -295,15 +317,10 @@ enum {
         
         
 
-        //notification have to be added before creating the objects
-        //if you dont want notifications - it is better to remove this lines
-        //[lh registerNotifierOnAllPathEndPoints:self selector:@selector(spriteMoveOnPathEnded:pathUniqueName:)];
-        //[lh registerNotifierOnAllAnimationEnds:self selector:@selector(spriteAnimHasEnded:animationName:)];
-        //[lh enableNotifOnLoopForeverAnimations];
+
         
         //add in the background...
-        //CCSprite * bg = [CCSprite spriteWithFile:@"level-back-small-1.jpg"];
-        //NSString * tBackground = [NSString stringWithFormat:@"%@-%@.jpg", background, self.device];
+
        NSString * tBackground = [NSString stringWithFormat:@"level-%i-back-%@.png", gameData.selectedChapter, self.device];
        
         //NSString * tBackground = [NSString stringWithFormat:@"level-1-back-%@.png", self.device];
@@ -330,13 +347,12 @@ enum {
         //bg.scale = 0.5;
         [self addChild:bg z:-10];
 
+        [self reloadLevel];
         
-        //creating the objects
-        [lh addObjectsToWorld:world cocos2dLayer:gameLayer];
         
         //add the menu buttons
         float buttonSpacing= 1.0;
-        if(self.device == @"iphone")
+        if([self.device isEqual: @"iphone"])
         {
             buttonSpacing = 1.25;
         }
@@ -349,7 +365,7 @@ enum {
         
         [buttonLayer addChild: topMatte];
         topMatte.scaleX = screenSize.width/topMatte.contentSize.width;
-        if(self.device == @"iphone")
+        if([self.device isEqual: @"iphone"])
         {
             topMatte.scaleY = (screenSize.height*0.1)/topMatte.contentSize.height;
         }
@@ -369,7 +385,7 @@ enum {
         [bottomMatte setAnchorPoint:ccp(0,0)];
         [bottomMatte setPosition:ccp(0, 0)];
         bottomMatte.color = ccc3(rr, gg,bb);
-        if(self.device == @"iphone"){
+        if([self.device isEqual: @"iphone"]){
             bottomMatte.scaleY = (screenSize.height*0.1)/bottomMatte.contentSize.height;
         }
         else
@@ -416,15 +432,16 @@ enum {
         //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
         
         //launch a cinematic if the leve is one and the score is > 1
-        if(selectedLevel == 1 && showCinematic)
+        if(gameData.selectedLevel == 1 && showCinematic)
         {
           //launch the cinematic...
             [self showCinematicA];
         
         }
+        NSString *tLevel = [NSString stringWithFormat:@"Level-%d-%d",gameData.selectedChapter, gameData.selectedLevel];
         
         id tracker = [GAI sharedInstance].defaultTracker;
-        [tracker sendEventWithCategory:@"Level"
+        [tracker sendEventWithCategory:tLevel
                             withAction:@"Start"
                              withLabel:@"Main"
                              withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
@@ -444,10 +461,11 @@ enum {
 }
 -(void)showLevelFail
 {
-    
+     
     GameData *gameData = [GameDataParser loadData];
+    NSString *tLevel = [NSString stringWithFormat:@"Level-%d-%d",gameData.selectedChapter, gameData.selectedLevel];
     id tracker = [GAI sharedInstance].defaultTracker;
-    [tracker sendEventWithCategory:@"Level"
+    [tracker sendEventWithCategory:tLevel
                         withAction:@"Fail"
                          withLabel:@"Main"
                          withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
@@ -561,8 +579,9 @@ enum {
         }
     }
     
+    NSString *tLevel = [NSString stringWithFormat:@"Level-%d-%d",gameData.selectedChapter, gameData.selectedLevel];
     id tracker = [GAI sharedInstance].defaultTracker;
-    [tracker sendEventWithCategory:@"Level"
+    [tracker sendEventWithCategory:tLevel
                         withAction:@"Complete"
                          withLabel:@"Main"
                          withValue:[NSNumber numberWithInt:gameData.selectedLevel]];
@@ -595,6 +614,9 @@ enum {
 }
 - (void)initRewards{
     rewardArray = [[NSMutableArray alloc] init];
+    breakableArray = [[NSMutableArray alloc] init];
+    positionArray = [[NSMutableArray alloc] init];
+    platformArray = [[NSMutableArray alloc] init];
    
     for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
     {
@@ -612,11 +634,27 @@ enum {
                NSLog(@"initRewards");
                 [rewardArray addObject:myActor];
             }
+            if(myActor.tag == BREAKABLE)
+            {
+               
+                [breakableArray addObject:myActor];
+            }
+            if(myActor.tag == REPOSITION)
+            {
+                [platformArray addObject:myActor];
+                CGPoint tPoint = ccp(myActor.position.x, myActor.position.y);
+                NSValue *pointObj = [NSValue valueWithCGPoint:tPoint];	
+                [positionArray addObject:pointObj];
+                NSLog(@"INITIIAL POINT VALUES: %@ : %i", pointObj, [positionArray count]);
+            }
             if(myActor.tag == SHOOTER)
+                
             {
                 shooterSprite = myActor;
                 shooterSprite.position =  ccp(shooterSprite.position.x+(0.5-0.114),shooterSprite.position.y+(0.5-0.345));
                 shooterSprite.anchorPoint = ccp(0.114,0.345);
+                
+                
             }
             
             
@@ -853,6 +891,7 @@ enum {
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
     
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:SPRING idListener:self selListener:@selector(presentSpringCollision:)];
+    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BREAKABLE idListener:self selListener:@selector(presentBreakableCollision:)];
     
 }
 -(void)presentBeltCollision:(LHContactInfo*)contact
@@ -896,6 +935,38 @@ enum {
     [self playSoundEffect:@"spring.mp3"];
     NSLog(@"SPRING");
 }
+
+-(void)presentBreakableCollision:(LHContactInfo*)contact
+{
+    //add particles
+    CCParticleSystem *firework = [[CCParticleExplosion alloc] initWithTotalParticles:60];
+    [self addChild:firework z:101];
+    firework.position = contact.spriteB.position;
+    firework.gravity = ccp(0,-100);
+    // color of particles
+  
+    // color of particles
+	ccColor4F startColor = {2.0f, 2.0f, 2.0f, 1.0f};
+	firework.startColor = startColor;
+	
+	ccColor4F startColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+	firework.startColorVar = startColorVar;
+	
+	ccColor4F endColor = {1.0f, 1.0f, 1.0f, 0.0f};
+	firework.endColor = endColor;
+	
+	ccColor4F endColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+	firework.endColorVar = endColorVar;
+    
+    
+    [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"snowflakepart.png"]];
+    
+    //play break sound
+    [self playSoundEffect:@"shatter.mp3"];
+    contact.spriteB.tag = 0;
+    [contact.spriteB removeSelf];
+}
+
 
 
 + (id)explodeInWorld:(b2World *)w onPosition:(b2Vec2)p withForce:(float)f excludeBody:(b2Body *)eb {
@@ -1143,7 +1214,7 @@ return FALSE;
         //Apply force
         b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14), cosf (CC_DEGREES_TO_RADIANS(shooterSprite.rotation+90))*(shootingPower*0.14));
         myNewSprite.body->ApplyForce(force, myNewSprite.body->GetWorldCenter());
-        
+        shootingPower = 0;
         [self playSoundEffect:@"shoot.mp3"];
         [self playGame];
         
@@ -1250,9 +1321,14 @@ return FALSE;
             LHSprite *myActor = (LHSprite*)b->GetUserData();
             if(myActor.tag == REWARD)
             {
-                NSLog(@"Remove");
+            NSLog(@"Remove");
             [myActor removeSelf];
             [myActor removeBodyFromWorld];
+            }
+            if(myActor.tag == BREAKABLE)
+            {
+                [myActor removeSelf];
+                [myActor removeBodyFromWorld];
             }
             
         }
@@ -1272,8 +1348,32 @@ return FALSE;
         }
         
             
-       //  firefox myNewSprite.position = item.position;
+       // myNewSprite.position = item.position;
         }
+    for(LHSprite *tPlatform in platformArray)
+    {
+        //get the platform
+        //get the target position
+        NSValue *tPoint;
+        tPoint = [positionArray objectAtIndex:[platformArray indexOfObject:tPlatform]];
+        [tPlatform transformPosition:[tPoint CGPointValue]];
+        NSLog(@"POST POINT VALUES: %@", tPoint);
+        //[tSprite transformPosition:ccp(bItem.position.x,bItem.position.y)];
+        //set the postion
+        
+        //[platformArray addObject:myActor];
+        //CGPoint tPoint = ccp(myActor.position.x, myActor.position.y);
+        //NSValue *pointObj = [NSValue valueWithCGPoint:tPoint];
+        //[positionArray addObject:pointObj];
+    }
+    for(LHSprite *bItem in breakableArray)
+    {
+        if(selectedChapter == 2)
+        {
+            LHSprite* myNewSprite = [lh createSpriteWithName:@"iceblocklarge-cracked" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:BREAKABLE];
+            [myNewSprite transformPosition:ccp(bItem.position.x,bItem.position.y)];
+        }
+    }
     }
 -(void)stopAnimations{
    
@@ -1395,7 +1495,7 @@ return FALSE;
     if(bodiesAsleep == allBodiesinWorld)
     {
        //NSLog(@"EVERYONE IS SLEEPING");
-        gameOverTimer+=10;
+        gameOverTimer+=3;
         //isPlaying = false;
         //if (gifts > 7)
         //{
@@ -1596,7 +1696,8 @@ return FALSE;
                         //shooterSprite.anchorPoint = ccp(0.114,0.345);
                         
                         //shooterSprite.position = sPoint;
-                    shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
+                    
+                        
                     //shooterSprite.position = ccp(shooterSprite.position.x-(shooterSprite.contentSize.width*0.114),shooterSprite.position.y-(shooterSprite.contentSize.height*0.345));
                     //myActor.rotation = 45;
                     
@@ -1620,6 +1721,8 @@ return FALSE;
                         float newRotation = angle;
                     shooterSprite.rotation = newRotation;
                     shooterSprite.body->SetTransform(b2Vec2(shooterSprite.position.x/[LevelHelperLoader pointsToMeterRatio] , shooterSprite.position.y/[LevelHelperLoader pointsToMeterRatio] ), CC_DEGREES_TO_RADIANS(-(shooterSprite.rotation)));
+                        
+                        
                     }
                     
                 }
@@ -1645,7 +1748,7 @@ return FALSE;
                         LHSprite* myNewSprite = [lh createSpriteWithName:theGift fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:PRESENT];
                         [myNewSprite.parent reorderChild:myNewSprite z:-5];
                        
-                        [myNewSprite transformPosition:ccp(myActor.position.x,myActor.position.y-50)];
+                        [myNewSprite transformPosition:ccp(myActor.position.x,myActor.position.y-10)];
                         //myNewSprite.zOrder = 1;
                         
                         [myActor.parent reorderChild:myActor z:1000];
@@ -1880,7 +1983,7 @@ return FALSE;
             [shooterSprite setFrame:targetFrame];
             NSLog(@" SHOOTING POWER:%f",shootingPower);
             //[myActor playAnimation];
-           
+            
         }
     }
     else if(!isPlaying)

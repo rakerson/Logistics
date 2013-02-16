@@ -32,19 +32,19 @@
 	<key>BundleIdentifier</key>
 	<string></string>
 	<key>CodePathRelative</key>
-	<string>../..</string>
+	<string>..</string>
 	<key>CustomClasses</key>
 	<array/>
 	<key>CustomScreenSize</key>
-	<string>{480, 320}</string>
+	<string>{1024, 768}</string>
 	<key>Device</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>Engine</key>
 	<integer>0</integer>
 	<key>HDSuffix</key>
 	<string>-hd</string>
 	<key>LastLevelLoaded</key>
-	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level2-11.plhs</string>
+	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level2-12.plhs</string>
 	<key>Orientation</key>
 	<integer>1</integer>
 	<key>ProjectName</key>
@@ -88,6 +88,8 @@
 		<string>SHOOTER_ROTATOR</string>
 		<string>GOALSPRITE</string>
 		<string>HORIZONATALPLATFORM</string>
+		<string>BREAKABLE</string>
+		<string>REPOSITION</string>
 	</array>
 </dict>
 </plist>
