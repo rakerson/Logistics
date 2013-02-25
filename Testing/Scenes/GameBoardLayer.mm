@@ -124,11 +124,32 @@ enum {
 }
 -(void)reloadLevel{
     [lh release];
-        
+    NSString * levelToLoad;
     //creating the objects
-    NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", selectedChapter, selectedLevel];
-    [LevelHelperLoader dontStretchArtOnIpad];
-   
+    if(selectedLevel == 12)
+    {
+        CGSize screenSize = [CCDirector sharedDirector].winSize;
+		if(screenSize.width == 568)
+        {
+            levelToLoad = [NSString stringWithFormat:@"level%i-%i-retina", selectedChapter, selectedLevel];
+        }
+        else if(screenSize.width == 1024)
+        {
+            levelToLoad = [NSString stringWithFormat:@"level%i-%i-ipad", selectedChapter, selectedLevel];
+        }
+        else if(screenSize.width == 480)
+        {
+            levelToLoad = [NSString stringWithFormat:@"level%i-%i-iphone", selectedChapter, selectedLevel];
+        }
+    }
+    else
+    {
+    levelToLoad = [NSString stringWithFormat:@"level%i-%i", selectedChapter, selectedLevel];
+    }
+    
+    
+    [LevelHelperLoader dontStretchArt];
+    NSLog(@"LEVEL TO LOAD IS :%@", levelToLoad);
     lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
     
     [lh addObjectsToWorld:world cocos2dLayer:gameLayer];
@@ -287,7 +308,7 @@ enum {
 		
         NSString * levelToLoad = [NSString stringWithFormat:@"level%i-%i", gameData.selectedChapter, gameData.selectedLevel];
         //TUTORIAL - loading the active leve    l
-        [LevelHelperLoader dontStretchArtOnIpad];
+        [LevelHelperLoader dontStretchArt];
         lh = [[LevelHelperLoader alloc] initWithContentOfFile:levelToLoad];
         
                
@@ -700,7 +721,7 @@ enum {
     float margin = 50;
     int mediumFont = winSize.height / kFontScaleMedium;
     int smallFont = winSize.height / kFontScaleTiny;
-    if(self.device == @"iphone")
+    if([self.device isEqualToString: @"iphone"])
     {
         buttonSpacing = 1.51;
         margin = 24;
@@ -811,7 +832,7 @@ enum {
     [buttonLayer addChild: unmuteButton];
     //unmuteButton.scale = 0.65;
     
-    if(self.device == @"iphone")
+    if([self.device isEqual: @"iphone"])
     {
         [muteButton setPosition:ccp(winSize.width*0.80, winSize.height*0.04)];
         [unmuteButton setPosition:ccp(winSize.width*0.80, winSize.height*0.04)];
@@ -875,28 +896,34 @@ enum {
     NSLog(@"COllisions Setup");
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:PRESENT_FAN idListener:self selListener:@selector(presentFanCollision:)];
+   // [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:PRESENT_FAN idListener:self selListener:@selector(presentFanCollision:)];
     
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:FAN idListener:self selListener:@selector(presentFanCollisionEnd:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:BELT idListener:self selListener:@selector(presentBeltCollisionEnd:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltCollision:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:BELT idListener:self selListener:@selector(presentBeltCollisionEnd:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
+    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
     
-    [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:SPRING idListener:self selListener:@selector(presentSpringCollision:)];
+    
+    //[lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
+    [lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltCollision:)];
+    [lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:SPRING idListener:self selListener:@selector(presentSpringCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BREAKABLE idListener:self selListener:@selector(presentBreakableCollision:)];
     
 }
 -(void)presentBeltCollision:(LHContactInfo*)contact
 {
-    contact.spriteA.tag = PRESENT_BELT;
+    //contact.spriteA.tag = PRESENT_BELT;
+    
+    b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation+90))*1, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation+90))*1);
+    contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
 }
 -(void)presentBeltCollisionEnd:(LHContactInfo*)contact
 {
@@ -905,8 +932,10 @@ enum {
 
 -(void)presentFanCollision:(LHContactInfo*)contact
 {
-    //NSLog(@"Present FAN Collision");
+    NSLog(@"Present FAN Collision");
     contact.spriteA.tag = PRESENT_FAN;
+    
+    
 }
 -(void)presentFanCollisionEnd:(LHContactInfo*)contact
 {
@@ -922,18 +951,19 @@ enum {
     [tSprite restartAnimation];
     //Apply force
     int forceAmt = 0;
-    if(self.device == @"iphone")
+    if([self.device isEqual: @"iphone"])
     {
-        forceAmt = 50;
+        forceAmt = 125;
     }
     else{
-        forceAmt = 100;
+        forceAmt = 250;
     }
     
     b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt);
+    NSLog(@"SPRING FORCE: %f", cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation))*forceAmt);
     contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
     [self playSoundEffect:@"spring.mp3"];
-    NSLog(@"SPRING");
+    
 }
 
 -(void)presentBreakableCollision:(LHContactInfo*)contact
@@ -1220,7 +1250,7 @@ return FALSE;
         
     }
     //NSLog(@"Touch 222  \"%f\" Ended:", location.x);
-    if(editMode == @"move")
+    if([editMode isEqual: @"move"])
     {
     if (CGRectContainsPoint (pauseButton.boundingBox,location) || CGRectContainsPoint (unpauseButton.boundingBox,location))
     {
@@ -1495,7 +1525,7 @@ return FALSE;
     if(bodiesAsleep == allBodiesinWorld)
     {
        //NSLog(@"EVERYONE IS SLEEPING");
-        gameOverTimer+=3;
+        gameOverTimer+=5;
         //isPlaying = false;
         //if (gifts > 7)
         //{
@@ -1564,11 +1594,11 @@ return FALSE;
                 myActor.position = [LevelHelperLoader metersToPoints:b->GetPosition()];
                 myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
                 
-                if(myActor.tag == PRESENT_BELT)
-                    {
-                    b2Vec2 force = b2Vec2(0.6, 0);
-                    b->ApplyForce(force, b->GetWorldCenter());
-                    }
+                //if(myActor.tag == PRESENT_BELT)
+                //    {
+                //    b2Vec2 force = b2Vec2(0.6, 0);
+                //    b->ApplyForce(force, b->GetWorldCenter());
+                //    }
                 if(myActor.tag == PRESENT_FAN)
                 {
                     b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(fanAngle))*1.75, cosf (CC_DEGREES_TO_RADIANS(fanAngle))*1.75);
@@ -1961,7 +1991,7 @@ return FALSE;
             //calulate the power based on distance
             NSLog(@"Shooting Power: %f", shootingPower);
             int targetFrame=0;
-            if(self.device == @"iphone")
+            if([self.device isEqual: @"iphone"])
             {
             shootingPower = ccpDistance(shooterSprite.position, touchingPoint);
             shootingPower*=3;
@@ -1988,11 +2018,11 @@ return FALSE;
     }
     else if(!isPlaying)
     {
-        if(editMode == @"move" && selSprite != Nil)
+        if([editMode isEqualToString:@"move"] && selSprite != Nil)
         {
             [self panForTranslation:translation];
         }
-    else if(editMode == @"rotate" && selSprite != Nil)
+    else if([editMode isEqualToString: @"rotate"] && selSprite != Nil)
         {
             NSLog(@"Rotate");
                 //UITouch *touch = [touch event];  

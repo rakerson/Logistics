@@ -43,7 +43,7 @@
 
 +(void) goMainMenuFromChapter {
     //currentSceneName = @"MainMenu";
-    [AppDelegate currentSceneName:@"MainMenu"];
+    //[AppDelegate currentSceneName:@"MainMenu"];
     //[self setCurrentSceneName:@"MainMenu"];
     //[SceneManager go:[MainMenu node]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInT transitionWithDuration:0.2 scene:[MainMenu node]]];

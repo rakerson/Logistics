@@ -62,7 +62,7 @@
 
        
         CCMenu *menu = [CCMenu menuWithItems:exit, nil];
-        if(self.device == @"iphone")
+        if([self.device isEqualToString: @"iphone"])
         {
             [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
             

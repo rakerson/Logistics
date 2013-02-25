@@ -177,7 +177,7 @@
         
         CCMenu *menu;
         NSLog(@"TTTT:%i",tempScore);
-        if(gameData.selectedLevel == 12 && tempScore == 1)
+        if(gameData.selectedLevel == 12)
         {
         menu = [CCMenu menuWithItems:exit, restart,playCinematic, nil];
         }

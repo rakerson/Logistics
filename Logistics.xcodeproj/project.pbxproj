@@ -492,6 +492,11 @@
 		E59EF8EF16CDD97E009A5ED0 /* feedback-on-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E59EF8E916CDD97E009A5ED0 /* feedback-on-iphone.png */; };
 		E59EF8F116CDE69C009A5ED0 /* level2-12-iphone.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E59EF8F016CDE69C009A5ED0 /* level2-12-iphone.plhs */; };
 		E5AE7342168F1D49006CC451 /* level1-99.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5AE7341168F1D49006CC451 /* level1-99.plhs */; };
+		E5EFC95816DAEB5000FA0FC0 /* level2-12-ipad.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5EFC95616DAEB5000FA0FC0 /* level2-12-ipad.plhs */; };
+		E5EFC95916DAEB5000FA0FC0 /* level2-12-retina.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5EFC95716DAEB5000FA0FC0 /* level2-12-retina.plhs */; };
+		E5EFC95B16DAEF0000FA0FC0 /* level1-12-ipad.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5EFC95A16DAEF0000FA0FC0 /* level1-12-ipad.plhs */; };
+		E5EFC95D16DAF00800FA0FC0 /* level1-12-retina.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5EFC95C16DAF00800FA0FC0 /* level1-12-retina.plhs */; };
+		E5EFC95F16DAF0E000FA0FC0 /* level1-12-iphone.plhs in Resources */ = {isa = PBXBuildFile; fileRef = E5EFC95E16DAF0E000FA0FC0 /* level1-12-iphone.plhs */; };
 		E5F000A516730425000B4FC6 /* help-mask-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F0009B16730425000B4FC6 /* help-mask-ipad.png */; };
 		E5F000A616730425000B4FC6 /* help-mask-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F0009C16730425000B4FC6 /* help-mask-iphone.png */; };
 		E5F9287F16B4B9DB00D09A37 /* 0Star-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F9287116B4B9DB00D09A37 /* 0Star-Normal-iPad-hd.png */; };
@@ -1229,6 +1234,11 @@
 		E59EF8E916CDD97E009A5ED0 /* feedback-on-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback-on-iphone.png"; sourceTree = "<group>"; };
 		E59EF8F016CDE69C009A5ED0 /* level2-12-iphone.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level2-12-iphone.plhs"; path = "Resources/level2-12-iphone.plhs"; sourceTree = "<group>"; };
 		E5AE7341168F1D49006CC451 /* level1-99.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level1-99.plhs"; path = "Resources/level1-99.plhs"; sourceTree = "<group>"; };
+		E5EFC95616DAEB5000FA0FC0 /* level2-12-ipad.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level2-12-ipad.plhs"; path = "Resources/level2-12-ipad.plhs"; sourceTree = "<group>"; };
+		E5EFC95716DAEB5000FA0FC0 /* level2-12-retina.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level2-12-retina.plhs"; path = "Resources/level2-12-retina.plhs"; sourceTree = "<group>"; };
+		E5EFC95A16DAEF0000FA0FC0 /* level1-12-ipad.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level1-12-ipad.plhs"; path = "Resources/level1-12-ipad.plhs"; sourceTree = "<group>"; };
+		E5EFC95C16DAF00800FA0FC0 /* level1-12-retina.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level1-12-retina.plhs"; path = "Resources/level1-12-retina.plhs"; sourceTree = "<group>"; };
+		E5EFC95E16DAF0E000FA0FC0 /* level1-12-iphone.plhs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "level1-12-iphone.plhs"; path = "Resources/level1-12-iphone.plhs"; sourceTree = "<group>"; };
 		E5F0009B16730425000B4FC6 /* help-mask-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-mask-ipad.png"; sourceTree = "<group>"; };
 		E5F0009C16730425000B4FC6 /* help-mask-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-mask-iphone.png"; sourceTree = "<group>"; };
 		E5F9287116B4B9DB00D09A37 /* 0Star-Normal-iPad-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "0Star-Normal-iPad-hd.png"; path = "Testing/Resources/Images/0Star-Normal-iPad-hd.png"; sourceTree = SOURCE_ROOT; };
@@ -1364,6 +1374,11 @@
 		10102E7F13B8AFAD009525FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5EFC95E16DAF0E000FA0FC0 /* level1-12-iphone.plhs */,
+				E5EFC95C16DAF00800FA0FC0 /* level1-12-retina.plhs */,
+				E5EFC95A16DAEF0000FA0FC0 /* level1-12-ipad.plhs */,
+				E5EFC95616DAEB5000FA0FC0 /* level2-12-ipad.plhs */,
+				E5EFC95716DAEB5000FA0FC0 /* level2-12-retina.plhs */,
 				E59EF8F016CDE69C009A5ED0 /* level2-12-iphone.plhs */,
 				E5AE7341168F1D49006CC451 /* level1-99.plhs */,
 				E52FF3A51682BF9D00A966E7 /* level1-a.plhs */,
@@ -2805,6 +2820,11 @@
 				E59EF8EF16CDD97E009A5ED0 /* feedback-on-iphone.png in Resources */,
 				E59EF8F116CDE69C009A5ED0 /* level2-12-iphone.plhs in Resources */,
 				E5077C0516CF541600002F1B /* shatter.mp3 in Resources */,
+				E5EFC95816DAEB5000FA0FC0 /* level2-12-ipad.plhs in Resources */,
+				E5EFC95916DAEB5000FA0FC0 /* level2-12-retina.plhs in Resources */,
+				E5EFC95B16DAEF0000FA0FC0 /* level1-12-ipad.plhs in Resources */,
+				E5EFC95D16DAF00800FA0FC0 /* level1-12-retina.plhs in Resources */,
+				E5EFC95F16DAF0E000FA0FC0 /* level1-12-iphone.plhs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3080,6 +3100,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robert Akerson";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Testing/Prefix.pch;
@@ -3097,6 +3118,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = Logistics;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC7F3F8F-DE81-4B43-A61B-8A230D5FC4FA";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/**";
 				WRAPPER_EXTENSION = app;

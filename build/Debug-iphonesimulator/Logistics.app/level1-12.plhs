@@ -6531,7 +6531,7 @@
 		<key>CustomClasses</key>
 		<array/>
 		<key>Device</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>GameWorld</key>
 		<string>{{0, 0}, {1024, 768}}</string>
 		<key>HDSuffix</key>
@@ -6545,7 +6545,7 @@
 		<key>ProjectPath</key>
 		<string>/Users/rakerson/Desktop/Projects/Logistics/Testing</string>
 		<key>SafeFrame</key>
-		<string>{480, 320}</string>
+		<string>{1024, 768}</string>
 		<key>Tags</key>
 		<array>
 			<string>DEFAULT</string>

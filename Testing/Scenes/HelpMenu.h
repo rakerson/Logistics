@@ -31,5 +31,5 @@
 
 @property (nonatomic, assign) BOOL iPad;
 @property (nonatomic, assign) NSString *device;
-
+- (id)initWithType: (NSString *) type;
 @end

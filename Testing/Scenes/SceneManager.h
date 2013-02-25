@@ -43,6 +43,7 @@
 +(void) goChapterSelectFromLevel;
 +(void) goLevelSelect;
 +(void) goLevelSelectFromLevel;
++(void) goLevelSelectFromLevelNoTransition;
 +(void) goGameScene;
 
 @property (readwrite, assign) NSString *currentSceneName;

@@ -151,9 +151,9 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{241, 319}</string>
+								<string>{243, 346}</string>
 								<key>Scale</key>
-								<string>{41.086498260498047, 1}</string>
+								<string>{43.792377471923828, 1}</string>
 								<key>SpriteSize</key>
 								<string>{12, 12}</string>
 								<key>Tag</key>
@@ -232,9 +232,9 @@
 								<key>SpriteSize</key>
 								<string>{87.5, 87.5}</string>
 								<key>Tag</key>
-								<integer>0</integer>
+								<integer>15</integer>
 								<key>TagName</key>
-								<string>DEFAULT</string>
+								<string>GOALSPRITE</string>
 								<key>TextureOffset</key>
 								<string>{0.375, 4.5}</string>
 								<key>UniqueName</key>
@@ -1761,7 +1761,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{349, 47}, {34, 35.5}}</string>
+								<string>{{349, 140}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1836,7 +1836,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{349, 47}, {34, 35.5}}</string>
+								<string>{{349, 140}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1911,7 +1911,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{349, 47}, {34, 35.5}}</string>
+								<string>{{349, 140}, {34, 35.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -2736,7 +2736,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{379, 151}, {20.75, 32.75}}</string>
+								<string>{{74, 295}, {20.75, 32.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -2811,7 +2811,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{379, 151}, {20.75, 32.75}}</string>
+								<string>{{74, 295}, {20.75, 32.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
