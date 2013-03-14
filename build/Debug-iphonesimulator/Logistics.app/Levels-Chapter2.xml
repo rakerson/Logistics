@@ -100,7 +100,7 @@
 	<Level>
         <Name>Chapter2Level8</Name>
 		<Number>8</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 8 Data</Data>
         <Belts>1</Belts>
@@ -114,7 +114,7 @@
 	<Level>
         <Name>Chapter2Level9</Name>
 		<Number>9</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 9 Data</Data>
         <Belts>3</Belts>
@@ -128,7 +128,7 @@
 	<Level>
         <Name>Chapter2Level10</Name>
 		<Number>10</Number>
-        <Unlocked>1</Unlocked>
+        <Unlocked>0</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 10 Data</Data>
         <Belts>1</Belts>
