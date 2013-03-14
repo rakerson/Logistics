@@ -60,7 +60,7 @@
         
         [layer addChild: menu];
         // Put a label in the new layer based on the passed chapterName
-        layerLabel.position =  ccp( screenSize.width*0.5 , screenSize.height*0.65 );
+        layerLabel.position =  ccp( screenSize.width*0.5 , screenSize.height*0.62 );
     }
     else {
         CCMenuItemImage *image = [CCMenuItemImage itemFromNormalImage:@"chapter-iphone.png" 

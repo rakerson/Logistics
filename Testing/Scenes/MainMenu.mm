@@ -168,11 +168,24 @@
         //CCMenuItemFont *item2 = [CCMenuItemFont itemFromString:@"Options" target:self selector:@selector(onOptions:)];
 
         // Add font based items to CCMenu
+        if([self.device isEqualToString: @"ipad"])
+        {
         CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, feedbackButton, nil];
-        [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
+            [menu alignItemsHorizontally];
+            [self addChild:menu];
+        }
+        else
+        {
+            CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, nil];
+            [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
+            [menu alignItemsHorizontally];
+            [self addChild:menu];
+        }
+        
         NSLog(@"Screen width %f", screenSize.width);
         // Align the menu 
-        [menu alignItemsHorizontally];
+        
 
         // Add the menu to the scene
         
@@ -187,7 +200,7 @@
         
         [self addChild:snow];
         
-        [self addChild:menu];
+        
         
         //place the mute button
         muteButton = [CCSprite spriteWithFile:[NSString stringWithFormat:@"mute-%@.png", self.device]];

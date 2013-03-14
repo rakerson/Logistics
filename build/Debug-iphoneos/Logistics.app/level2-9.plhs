@@ -54,7 +54,7 @@
 		</dict>
 	</array>
 	<key>LHVersion</key>
-	<string>1.4.982</string>
+	<string>1.4.983</string>
 	<key>NODES_INFO</key>
 	<array>
 		<dict>
@@ -119,7 +119,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{62, 273.99999999999994}</string>
+								<string>{62, 248.99999999999994}</string>
 								<key>Scale</key>
 								<string>{2.6230523586273193, 0.96363550424575806}</string>
 								<key>SpriteSize</key>
@@ -194,7 +194,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{240, 346}</string>
+								<string>{244, 321}</string>
 								<key>Scale</key>
 								<string>{43.958415985107422, 1}</string>
 								<key>SpriteSize</key>
@@ -269,7 +269,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{-15.75, 275.25}</string>
+								<string>{-15.75, 250.25}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -344,7 +344,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{41, 272}</string>
+								<string>{41, 247}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -894,7 +894,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{100.43195474147797, 306.69414234161377}</string>
+								<string>{55.431954741477966, 286.69414234161377}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -1918,81 +1918,6 @@
 							<key>SHSheetName</key>
 							<string>chapter-2</string>
 							<key>SHSpriteName</key>
-							<string>iceblocklarge</string>
-							<key>SheetImage</key>
-							<string>logistics_chapter-2.png</string>
-							<key>TextureProperties</key>
-							<dict>
-								<key>Angle</key>
-								<integer>0</integer>
-								<key>Color</key>
-								<string>{{1, 1}, {1, 1}}</string>
-								<key>FlipX</key>
-								<false/>
-								<key>FlipY</key>
-								<false/>
-								<key>Frame</key>
-								<string>{{288, 135}, {46.75, 46}}</string>
-								<key>IsDrawable</key>
-								<true/>
-								<key>IsExpanded</key>
-								<false/>
-								<key>IsRotated</key>
-								<false/>
-								<key>Locked</key>
-								<false/>
-								<key>Opacity</key>
-								<real>1</real>
-								<key>Position</key>
-								<string>{6.0909287929534912, 216.96821427345276}</string>
-								<key>Scale</key>
-								<string>{1, 1}</string>
-								<key>SpriteSize</key>
-								<string>{46.25, 46.25}</string>
-								<key>Tag</key>
-								<integer>0</integer>
-								<key>TagName</key>
-								<string>DEFAULT</string>
-								<key>TextureOffset</key>
-								<string>{0.25, 0.125}</string>
-								<key>UniqueName</key>
-								<string>iceblocklarge_9</string>
-								<key>ZOrder</key>
-								<integer>0</integer>
-							</dict>
-							<key>UniqueName</key>
-							<string>iceblocklarge_9</string>
-						</dict>
-						<dict>
-							<key>AnimationsProperties</key>
-							<dict/>
-							<key>Children</key>
-							<array/>
-							<key>CustomClassInfo</key>
-							<dict>
-								<key>ClassDefaults</key>
-								<dict/>
-								<key>ClassName</key>
-								<string>No Class</string>
-							</dict>
-							<key>NodeType</key>
-							<string>LHSprite</string>
-							<key>ParentClass</key>
-							<string>LHBatch</string>
-							<key>ParentName</key>
-							<string>chapter-2</string>
-							<key>PathProperties</key>
-							<dict/>
-							<key>PhysicProperties</key>
-							<dict>
-								<key>HandledBySH</key>
-								<true/>
-							</dict>
-							<key>SHSceneName</key>
-							<string>logistics.pshs</string>
-							<key>SHSheetName</key>
-							<string>chapter-2</string>
-							<key>SHSpriteName</key>
 							<string>icicle</string>
 							<key>SheetImage</key>
 							<string>logistics_chapter-2.png</string>
@@ -2169,7 +2094,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{206.44278972914438, 314.99968724785975}</string>
+								<string>{161.44278972914438, 294.99968724785975}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>

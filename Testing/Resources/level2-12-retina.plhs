@@ -204,7 +204,7 @@
 		</dict>
 	</array>
 	<key>LHVersion</key>
-	<string>1.4.982</string>
+	<string>1.4.983</string>
 	<key>NODES_INFO</key>
 	<array>
 		<dict>
@@ -419,7 +419,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{554.00677506566558, 572.11378360075173}</string>
+								<string>{554.00677506566558, 573.11378360075173}</string>
 								<key>Scale</key>
 								<string>{88.514915466308594, 1}</string>
 								<key>SpriteSize</key>
@@ -962,7 +962,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{74, 213}, {352, 10}}</string>
+								<string>{{74, 213}, {350.75, 9.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -984,7 +984,7 @@
 								<key>TagName</key>
 								<string>DEFAULT</string>
 								<key>TextureOffset</key>
-								<string>{0, 0.125}</string>
+								<string>{-0.125, -0}</string>
 								<key>UniqueName</key>
 								<string>dottedline</string>
 								<key>ZOrder</key>
@@ -1037,7 +1037,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{74, 213}, {352, 10}}</string>
+								<string>{{74, 213}, {350.75, 9.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1059,7 +1059,7 @@
 								<key>TagName</key>
 								<string>DEFAULT</string>
 								<key>TextureOffset</key>
-								<string>{0, 0.125}</string>
+								<string>{-0.125, -0}</string>
 								<key>UniqueName</key>
 								<string>dottedline_1</string>
 								<key>ZOrder</key>
@@ -5699,7 +5699,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{585.22729393753605, 304.39513464068546}</string>
+								<string>{586.22729393753605, 304.39513464068546}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>
@@ -5774,7 +5774,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{428.72729590621395, 248.39514856243954}</string>
+								<string>{425.72729590621395, 248.39514856243954}</string>
 								<key>Scale</key>
 								<string>{1, 1}</string>
 								<key>SpriteSize</key>

@@ -100,8 +100,10 @@ static RootViewControllerInterface *rootViewControllerInterfaceSingletonDelegate
     [picker setMessageBody:emailBody isHTML:NO];
     
     [rootViewController presentModalViewController:picker animated:YES];
-
+    
     [picker release];
+    NSLog(@"PICKER RELEASE");
+    
     
 }
 

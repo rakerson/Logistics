@@ -219,7 +219,30 @@
     int yPos = arc4random() % yrange;
     firework.position = ccp(xPos+(screenSize.width*0.25),yPos+(screenSize.height*0.5));
     firework.gravity = ccp(0,-100);
+    if(self.currentChapter == 1)
+    {
     [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"spark.png"]];
+    }
+    else if(self.currentChapter == 2)
+    {
+        // color of particles
+        ccColor4F startColor = {2.0f, 2.0f, 2.0f, 1.0f};
+        firework.startColor = startColor;
+        firework.totalParticles = 30;
+        ccColor4F startColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+        firework.startColorVar = startColorVar;
+        
+        ccColor4F endColor = {1.0f, 1.0f, 1.0f, 0.0f};
+        firework.endColor = endColor;
+        
+        ccColor4F endColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+        firework.endColorVar = endColorVar;
+    [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"snowflakepart.png"]];
+    }
+    else
+    {
+    [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"spark.png"]];
+    }
     [self performSelector:@selector(launchFirework) withObject:nil afterDelay:1.5f];
 }
 - (void)onMenu: (id) sender {

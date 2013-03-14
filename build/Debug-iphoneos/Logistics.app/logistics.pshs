@@ -5828,9 +5828,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{74, 213}, {352, 10}}</string>
+						<string>{{74, 213}, {350.75, 9.75}}</string>
 						<key>Frame-HD</key>
-						<string>{{296, 852}, {1408, 40}}</string>
+						<string>{{296, 852}, {1401, 37}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -5852,7 +5852,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/dottedline.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {1408, 40}}</string>
+						<string>{{2, 1}, {1401, 37}}</string>
 						<key>OriginalSize</key>
 						<string>{1408, 41}</string>
 						<key>Position</key>
@@ -5866,7 +5866,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0, 0.125}</string>
+						<string>{-0.125, -0}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -6123,10 +6123,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-15.258958002228439, -20.162216517171828}</string>
-										<string>{14.49177543023788, -20.162216517171828}</string>
-										<string>{14.49177543023788, 8.38177417847794}</string>
-										<string>{-15.258958002228439, 8.38177417847794}</string>
+										<string>{-13.731836204494385, -19.657273737775938}</string>
+										<string>{14.510844642397274, -19.657273737775938}</string>
+										<string>{14.510844642397274, 8.1081539898838741}</string>
+										<string>{-13.731836204494385, 8.1081539898838741}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -6134,7 +6134,7 @@
 								<key>Group</key>
 								<integer>0</integer>
 								<key>Height</key>
-								<real>182</real>
+								<real>176</real>
 								<key>HolesPoints</key>
 								<array/>
 								<key>IsCircle</key>
@@ -6144,30 +6144,30 @@
 								<key>IsSensor</key>
 								<false/>
 								<key>LHHeight</key>
-								<real>45.5</real>
+								<real>44</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-17.625, -22.875}</string>
+								<string>{-15.125, -22.875}</string>
 								<key>LHWidth</key>
-								<real>35.25</real>
+								<real>31</real>
 								<key>Mask</key>
 								<integer>65535</integer>
 								<key>Name</key>
-								<string>UntitledFixture</string>
+								<string>UntitledFixture_1</string>
 								<key>Restitution</key>
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{9.4641679910862422, 57.97290328608824}</string>
-									<string>{128.46710172095152, 57.97290328608824}</string>
-									<string>{128.46710172095152, 172.14886606868731}</string>
-									<string>{9.4641679910862422, 172.14886606868731}</string>
+									<string>{5.5726551820224586, 59.067384040464503}</string>
+									<string>{118.54337856958909, 59.067384040464503}</string>
+									<string>{118.54337856958909, 170.12909495110375}</string>
+									<string>{5.5726551820224586, 170.12909495110375}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
 								<key>Tag</key>
 								<integer>0</integer>
 								<key>Width</key>
-								<real>141</real>
+								<real>124</real>
 							</dict>
 						</array>
 						<key>Type</key>
@@ -6200,9 +6200,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{385, 94}, {35.75, 45.5}}</string>
+						<string>{{385, 94}, {31, 44}}</string>
 						<key>Frame-HD</key>
-						<string>{{1540, 376}, {141, 182}}</string>
+						<string>{{1540, 376}, {124, 176}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6224,7 +6224,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/icebag0.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {141, 182}}</string>
+						<string>{{10, 0}, {124, 176}}</string>
 						<key>OriginalSize</key>
 						<string>{141, 183}</string>
 						<key>Position</key>
@@ -6238,7 +6238,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0.25, 0.125}</string>
+						<string>{0.375, 0.875}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -6281,10 +6281,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-15.06472508952163, -19.336539106160217}</string>
-										<string>{14.805997821388559, -19.336539106160217}</string>
-										<string>{14.805997821388559, 8.5407602703197938}</string>
-										<string>{-15.06472508952163, 8.5407602703197938}</string>
+										<string>{-13.630176649944985, -19.555836725151153}</string>
+										<string>{13.882178012040413, -19.555836725151153}</string>
+										<string>{13.882178012040413, 8.6453043866357859}</string>
+										<string>{-13.630176649944985, 8.6453043866357859}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -6304,7 +6304,7 @@
 								<key>LHHeight</key>
 								<real>45.5</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-17.625, -22.875}</string>
+								<string>{-15.125, -22.875}</string>
 								<key>LHWidth</key>
 								<real>35.25</real>
 								<key>Mask</key>
@@ -6315,10 +6315,10 @@
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{10.241099641913479, 57.336958918720825}</string>
-									<string>{129.72399128555423, 57.336958918720825}</string>
-									<string>{129.72399128555423, 168.84615642464087}</string>
-									<string>{10.241099641913479, 168.84615642464087}</string>
+									<string>{5.9792934002200582, 56.918782453456856}</string>
+									<string>{116.02871204816165, 56.918782453456856}</string>
+									<string>{116.02871204816165, 169.72334690060461}</string>
+									<string>{5.9792934002200582, 169.72334690060461}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
@@ -6358,9 +6358,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{349, 94}, {35.75, 45.5}}</string>
+						<string>{{349, 94}, {31, 44}}</string>
 						<key>Frame-HD</key>
-						<string>{{1396, 376}, {141, 182}}</string>
+						<string>{{1396, 376}, {124, 176}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6382,7 +6382,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/icebag1.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {141, 182}}</string>
+						<string>{{10, 0}, {124, 176}}</string>
 						<key>OriginalSize</key>
 						<string>{141, 183}</string>
 						<key>Position</key>
@@ -6396,7 +6396,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0.25, 0.125}</string>
+						<string>{0.375, 0.875}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -6439,10 +6439,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-15.065475032865038, -19.172303560671708}</string>
-										<string>{14.997980954813556, -19.172303560671708}</string>
-										<string>{14.997980954813556, 8.8369842891564474}</string>
-										<string>{-15.065475032865038, 8.8369842891564474}</string>
+										<string>{-13.443471469762329, -19.442781404047992}</string>
+										<string>{14.109612034079873, -19.442781404047992}</string>
+										<string>{14.109612034079873, 8.6954060430141453}</string>
+										<string>{-13.443471469762329, 8.6954060430141453}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -6462,7 +6462,7 @@
 								<key>LHHeight</key>
 								<real>45.5</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-17.625, -22.875}</string>
+								<string>{-15.125, -22.875}</string>
 								<key>LHWidth</key>
 								<real>35.25</real>
 								<key>Mask</key>
@@ -6473,10 +6473,10 @@
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{10.238099868539848, 56.15206284337421}</string>
-									<string>{130.49192381925423, 56.15206284337421}</string>
-									<string>{130.49192381925423, 168.18921424268683}</string>
-									<string>{10.238099868539848, 168.18921424268683}</string>
+									<string>{6.7261141209506832, 56.718375827943419}</string>
+									<string>{116.93844813631949, 56.718375827943419}</string>
+									<string>{116.93844813631949, 169.27112561619197}</string>
+									<string>{6.7261141209506832, 169.27112561619197}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
@@ -6516,9 +6516,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{385, 47}, {35.75, 45.5}}</string>
+						<string>{{385, 47}, {31, 44}}</string>
 						<key>Frame-HD</key>
-						<string>{{1540, 188}, {141, 182}}</string>
+						<string>{{1540, 188}, {124, 176}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6540,7 +6540,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/icebag2.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {141, 182}}</string>
+						<string>{{10, 0}, {124, 176}}</string>
 						<key>OriginalSize</key>
 						<string>{141, 183}</string>
 						<key>Position</key>
@@ -6554,7 +6554,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0.25, 0.125}</string>
+						<string>{0.375, 0.875}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -6597,10 +6597,10 @@
 								<key>Fixture</key>
 								<array>
 									<array>
-										<string>{-15.390946331292241, -19.940235927500623}</string>
-										<string>{14.845744295082596, -19.940235927500623}</string>
-										<string>{14.845744295082596, 8.58650559772056}</string>
-										<string>{-15.390946331292241, 8.58650559772056}</string>
+										<string>{-13.550447343508182, -19.158402603174181}</string>
+										<string>{14.587490077911241, -19.158402603174181}</string>
+										<string>{14.587490077911241, 8.3861693496464227}</string>
+										<string>{-13.550447343508182, 8.3861693496464227}</string>
 									</array>
 								</array>
 								<key>Friction</key>
@@ -6620,7 +6620,7 @@
 								<key>LHHeight</key>
 								<real>45.5</real>
 								<key>LHShapePositionOffset</key>
-								<string>{-17.625, -22.875}</string>
+								<string>{-15.125, -22.875}</string>
 								<key>LHWidth</key>
 								<real>35.25</real>
 								<key>Mask</key>
@@ -6631,10 +6631,10 @@
 								<real>0.20000000298023224</real>
 								<key>ShapePoints</key>
 								<array>
-									<string>{8.9362146748310352, 57.15397760911776}</string>
-									<string>{129.88297718033039, 57.15397760911776}</string>
-									<string>{129.88297718033039, 171.26094371000249}</string>
-									<string>{8.9362146748310352, 171.26094371000249}</string>
+									<string>{6.2982106259672719, 57.955322601414309}</string>
+									<string>{118.84996031164496, 57.955322601414309}</string>
+									<string>{118.84996031164496, 168.13361041269673}</string>
+									<string>{6.2982106259672719, 168.13361041269673}</string>
 								</array>
 								<key>ShapePositionOffset</key>
 								<string>{0, 0}</string>
@@ -6674,9 +6674,9 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{349, 48}, {35.75, 45.5}}</string>
+						<string>{{349, 48}, {31, 44}}</string>
 						<key>Frame-HD</key>
-						<string>{{1396, 192}, {141, 182}}</string>
+						<string>{{1396, 192}, {124, 176}}</string>
 						<key>Image</key>
 						<string>logistics_chapter-2.png</string>
 						<key>Image-HD</key>
@@ -6698,7 +6698,7 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../../../../LogisticsImages/icebag3.png/</string>
 						<key>OriginalRect</key>
-						<string>{{0, 0}, {141, 182}}</string>
+						<string>{{10, 0}, {124, 176}}</string>
 						<key>OriginalSize</key>
 						<string>{141, 183}</string>
 						<key>Position</key>
@@ -6712,7 +6712,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0.25, 0.125}</string>
+						<string>{0.375, 0.875}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>

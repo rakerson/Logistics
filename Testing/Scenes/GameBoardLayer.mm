@@ -953,7 +953,7 @@ enum {
     int forceAmt = 0;
     if([self.device isEqual: @"iphone"])
     {
-        forceAmt = 125;
+        forceAmt = 160;
     }
     else{
         forceAmt = 250;
