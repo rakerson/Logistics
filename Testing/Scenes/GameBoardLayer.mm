@@ -425,6 +425,10 @@ enum {
         {
         currentSpriteSheet = @"chapter-2";
         }
+        else if(selectedChapter == 3)
+        {
+            currentSpriteSheet = @"chapter-3";
+        }
         
         //currentSpriteSheet = [NSString stringWithFormat:@"chapter-%@", selectedChapter];
         NSLog(@"Current Chapter:  %@" , currentSpriteSheet);
@@ -855,13 +859,11 @@ enum {
         muteButton.visible = true;
     }
     
-    
     //add bell counter
     bellCounter = [CCLabelTTF labelWithString:@"Bells: 0" fontName:@"Fontdinerdotcom" fontSize:mediumFont];
     bellCounter.position =  ccp(winSize.width*0.6,winSize.height-40);
     bellCounter.visible = false;
     [buttonLayer addChild: bellCounter];
-    
     
     //Add stike counter
     NSString *strikeImage = [NSString stringWithFormat:@"%istrikes-%@.png",strikes, self.device];
@@ -874,7 +876,6 @@ enum {
     rotateTool = [lh createSpriteWithName:@"rotate" fromSheet:@"tools" fromSHFile:currentFile  tag:ROTATOR];
     //rotateTool.zOrder = 10000;
     rotateTool.visible = false;
-    
     
     [rotateTool setPosition:ccp(-1000,-1000)];
     
@@ -893,35 +894,89 @@ enum {
     
     
     [lh useLevelHelperCollisionHandling];
-    NSLog(@"COllisions Setup");
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:GOAL idListener:self selListener:@selector(presentGoalCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:REWARD idListener:self selListener:@selector(presentRewardCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
-   // [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:PRESENT_FAN idListener:self selListener:@selector(presentFanCollision:)];
-    
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:FAN idListener:self selListener:@selector(presentFanCollisionEnd:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltCollision:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:BELT idListener:self selListener:@selector(presentBeltCollisionEnd:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_FAN andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
-    //[lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT_BELT andTagB:FLOOR idListener:self selListener:@selector(presentFloorCollision:)];
-    
-    
-    //[lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:FAN idListener:self selListener:@selector(presentFanCollision:)];
     [lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltCollision:)];
     [lh registerPreCollisionCallbackBetweenTagA:PRESENT andTagB:SPRING idListener:self selListener:@selector(presentSpringCollision:)];
     [lh registerBeginOrEndCollisionCallbackBetweenTagA:PRESENT andTagB:BREAKABLE idListener:self selListener:@selector(presentBreakableCollision:)];
+   // [lh registerPostCollisionCallbackBetweenTagA:PRESENT andTagB:BELT idListener:self selListener:@selector(presentBeltPostCollision:)];
     
 }
+
+-(void)presentBeltPostCollision:(LHContactInfo*)contact
+{
+    const b2ContactImpulse* impulse = [contact impulse];
+    
+    if(impulse)
+    {
+       
+        if(impulse->normalImpulses[0] > .4)
+        {
+        NSLog(@"Normal Impulse %f", impulse->normalImpulses[0]);
+        //NSLog(@"Tangent Impulse %f", impulse->tangentImpulses[0]);
+                       //gifts-=1;
+            strikes+=1;
+            [self playSoundEffect:@"floor.mp3"];
+            //partical powdered
+            
+            CCParticleSystem *firework = [[CCParticleExplosion alloc] initWithTotalParticles:300];
+            [self addChild:firework z:101];
+            firework.position = contact.spriteA.position;
+            firework.speed = 10;
+            firework.gravity = ccp(0,0);
+            // color of particles
+            
+            // color of particles
+            ccColor4F startColor = {2.0f, 2.0f, 2.0f, 1.0f};
+            firework.startColor = startColor;
+            
+            ccColor4F startColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+            firework.startColorVar = startColorVar;
+            
+            ccColor4F endColor = {1.0f, 1.0f, 1.0f, 0.0f};
+            firework.endColor = endColor;
+            
+            ccColor4F endColorVar = {0.0f, 0.0f, 0.0f, 0.0f};
+            firework.endColorVar = endColorVar;
+            
+            
+            [firework setTexture:[[CCTextureCache sharedTextureCache] addImage:@"flour.png"]];
+
+            //add the flour particles...
+            
+            //LHSprite* myNewSprite = [lh createSpriteWithName:@"flour" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:PRESENT];
+            //[myNewSprite.parent reorderChild:myNewSprite z:-5];
+            
+            //[myNewSprite transformPosition:ccp(contact.spriteA.position.x,contact.spriteA.position.y-10)];
+            
+            //LHSprite* myNewSprite = [lh createSpriteWithName:@"gum3" fromSheet:@"chapter-1" fromSHFile:currentFile  tag:DEFAULT_TAG];
+            //[myNewSprite.parent reorderChild:myNewSprite z:500];
+            //[myNewSprite prepareAnimationNamed:@"spark" fromSHScene:@"logistics"];
+            //[myNewSprite transformPosition:ccp(contact.spriteA.position.x,contact.spriteA.position.y)];
+            //[myNewSprite playAnimation];
+            //[flourSprite1 transformPosition:ccp(contact.spriteA.position.x,contact.spriteA.position.y)];
+            
+            
+            contact.spriteA.tag = 0;
+            [[contact.spriteA parent] removeChild:contact.spriteA cleanup:YES];
+
+            
+            [self updateHUD];
+
+        }
+        
+    }
+}
+
+
 -(void)presentBeltCollision:(LHContactInfo*)contact
 {
-    //contact.spriteA.tag = PRESENT_BELT;
-    
     b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation+90))*1, cosf (CC_DEGREES_TO_RADIANS(contact.spriteB.rotation+90))*1);
     contact.bodyA->ApplyForce(force, contact.bodyA->GetWorldCenter());
 }
@@ -1049,14 +1104,8 @@ enum {
     [myNewSprite prepareAnimationNamed:@"spark" fromSHScene:@"logistics"];
     [myNewSprite transformPosition:ccp(contact.spriteB.position.x,contact.spriteB.position.y)];
     [myNewSprite playAnimation];
-    //NSLog(@"Sprite A \"%@\" Sprite B \"%@\" ",  contact.spriteA, contact.spriteB);
-    //remove spriteA
     contact.spriteB.tag = 0;
     [contact.spriteB removeSelf];
-    //[contact.spriteB removeBodyFromWorld];
-    
-    //
-    //[[contact.spriteB parent] removeChild:contact.spriteB cleanup:YES];
     [self playSoundEffect:@"bell.mp3"];
     bells+=1;
     [self updateHUD];
@@ -1089,13 +1138,11 @@ enum {
 
 -(void)placeFan{
     currentItemName = @"fan0";
-    
     currentTAG = FAN;
     currentFile = @"logistics";
 }
 -(void)placeBelt{
     currentItemName = @"belt0";
-    
     currentTAG = BELT;
     currentFile = @"logistics";
 }
@@ -1376,7 +1423,12 @@ return FALSE;
             LHSprite* myNewSprite = [lh createSpriteWithName:@"snowflake2" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
             [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
         }
-        
+        else if(selectedChapter == 3)
+        {
+            LHSprite* myNewSprite = [lh createSpriteWithName:@"chip" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
+            [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
+        }
+
             
        // myNewSprite.position = item.position;
         }
@@ -1567,6 +1619,8 @@ return FALSE;
             if (b->GetUserData() != NULL) {
                 
                 //Synchronize the AtlasSprites position and rotation with the corresponding body
+                
+                
                 LHSprite *myActor = (LHSprite*)b->GetUserData();
                 if(myActor.tag == HORIZONTALPLATFORM)
                 {
@@ -1645,17 +1699,7 @@ return FALSE;
     }
 }
 
-/*
-- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"Touches began");
 
-}
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"Touches Ended");
-
-}*/
 - (void)accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration
 {	
 	static float prevX=0, prevY=0;

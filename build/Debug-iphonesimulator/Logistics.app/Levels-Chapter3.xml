@@ -2,86 +2,170 @@
 	<Level>
         <Name>Chapter3Level1</Name>
 		<Number>1</Number>
-        <Unlocked>0</Unlocked>
+        <Unlocked>1</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 3 Level 1 Data</Data>
-	</Level>    
+        <Belts>1</Belts>
+        <Fans>1</Fans>
+        <Springs>1</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>flourbag</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level2</Name>
 		<Number>2</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 2 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 2 Data</Data>
+        <Belts>3</Belts>
+        <Fans>1</Fans>
+        <Springs>2</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icecube</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level3</Name>
 		<Number>3</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 3 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 3 Data</Data>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>2</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icecube</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level4</Name>
 		<Number>4</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 4 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 4 Data</Data>
+        <Belts>3</Belts>
+        <Fans>0</Fans>
+        <Springs>2</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icecube</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level5</Name>
 		<Number>5</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 5 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 5 Data</Data>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>2</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>iceball</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level6</Name>
 		<Number>6</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 6 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 6 Data</Data>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>3</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icecube</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level7</Name>
 		<Number>7</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 7 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 7 Data</Data>
+        <Belts>2</Belts>
+        <Fans>1</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icecube</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level8</Name>
 		<Number>8</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 8 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 8 Data</Data>
+        <Belts>1</Belts>
+        <Fans>1</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icebag</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level9</Name>
 		<Number>9</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 9 Data</Data>
-	</Level>    
+		<Data>Some Chapter 2 Level 9 Data</Data>
+        <Belts>3</Belts>
+        <Fans>1</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>iceball</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level10</Name>
 		<Number>10</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 10 Data</Data>
-	</Level>    
-	  
+		<Data>Some Chapter 2 Level 10 Data</Data>
+        <Belts>1</Belts>
+        <Fans>1</Fans>
+        <Springs>1</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>icebag</Item>
+	</Level>
 	<Level>
         <Name>Chapter3Level11</Name>
-		<Number>10</Number>
+		<Number>11</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 11 Data</Data>
+		<Data>Some Chapter 2 Level 11 Data</Data>
+        <Belts>3</Belts>
+        <Fans>1</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>iceball</Item>
 	</Level>
-    <Level>
+	<Level>
         <Name>Chapter3Level12</Name>
-		<Number>10</Number>
+		<Number>12</Number>
         <Unlocked>0</Unlocked>
         <Stars>0</Stars>
-		<Data>Some Chapter 3 Level 12 Data</Data>
+		<Data>Some Chapter 2 Level 12 Data</Data>
+        <Belts>2</Belts>
+        <Fans>0</Fans>
+        <Springs>1</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>iceball</Item>
 	</Level>
+	
 </Levels>

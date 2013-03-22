@@ -15928,6 +15928,983 @@
 			<key>ZOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>2HDSuffix</key>
+			<string>-ipadhd</string>
+			<key>AllowRotation</key>
+			<true/>
+			<key>Crop</key>
+			<false/>
+			<key>DropSprites</key>
+			<false/>
+			<key>HDSuffix</key>
+			<string>-hd</string>
+			<key>IsRendable</key>
+			<true/>
+			<key>MaxSheetSize</key>
+			<integer>4096</integer>
+			<key>NpotSize</key>
+			<string>{192, 672}</string>
+			<key>Padding</key>
+			<integer>8</integer>
+			<key>PixelFormat</key>
+			<integer>0</integer>
+			<key>SheetImage</key>
+			<string>logistics_chapter-3.png</string>
+			<key>SheetImage-HD</key>
+			<string>logistics_chapter-3-ipadhd.png</string>
+			<key>SheetName</key>
+			<string>chapter-3</string>
+			<key>SheetSceneImageName</key>
+			<string></string>
+			<key>Sheet_Sprites_Info</key>
+			<dict>
+				<key>chip</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-12.654803713791349, -11.843342328730955}</string>
+										<string>{12.863479326420013, -11.843342328730955}</string>
+										<string>{12.863479326420013, 10.757503473126249}</string>
+										<string>{-12.654803713791349, 10.757503473126249}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>124</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<true/>
+								<key>LHHeight</key>
+								<real>31</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-13.125, -11.125}</string>
+								<key>LHWidth</key>
+								<real>35</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{1.8807851448346078, 1.4699861074950036}</string>
+									<string>{103.95391730568005, 1.4699861074950036}</string>
+									<string>{103.95391730568005, 91.873369314923821}</string>
+									<string>{1.8807851448346078, 91.873369314923821}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>140</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>chip</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{2, 144}, {26.75, 23.75}}</string>
+						<key>Frame-HD</key>
+						<string>{{8, 576}, {105, 93}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>chip</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/chip.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/chip.png/</string>
+						<key>OriginalRect</key>
+						<string>{{4, 11}, {105, 93}}</string>
+						<key>OriginalSize</key>
+						<string>{113, 111}</string>
+						<key>Position</key>
+						<string>{8, 576}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{28.25, 27.75}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0.25, -0.75}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>flour</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array/>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>20</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<true/>
+								<key>IsRectangle</key>
+								<false/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>LHWidth</key>
+								<real>2</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array/>
+								<key>ShapePositionOffset</key>
+								<string>{10, 10}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>8</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>flour</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{43, 3}, {5, 5}}</string>
+						<key>Frame-HD</key>
+						<string>{{172, 12}, {20, 20}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>flour</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/flour.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/flour.png/</string>
+						<key>OriginalRect</key>
+						<string>{{0, 0}, {20, 20}}</string>
+						<key>OriginalSize</key>
+						<string>{20, 20}</string>
+						<key>Position</key>
+						<string>{172, 12}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{5, 5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{0, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>flourbag0</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-10.577506826857892, -12.433445409881877}</string>
+										<string>{8.3756179594544307, -12.433445409881877}</string>
+										<string>{8.3756179594544307, 11.721642575861516}</string>
+										<string>{-10.577506826857892, 11.721642575861516}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>126</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>31.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-18.75, -15.75}</string>
+								<key>LHWidth</key>
+								<real>37</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{32.689972692568432, 16.113429696553943}</string>
+									<string>{108.50247183781772, 16.113429696553943}</string>
+									<string>{108.50247183781772, 112.73378163952751}</string>
+									<string>{32.689972692568432, 112.73378163952751}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>148</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>flourbag0</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{2, 2}, {37, 31.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{8, 8}, {148, 126}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>flourbag0</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/flourbag.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/flourbag.png/</string>
+						<key>OriginalRect</key>
+						<string>{{1, 2}, {148, 126}}</string>
+						<key>OriginalSize</key>
+						<string>{152, 130}</string>
+						<key>Position</key>
+						<string>{8, 8}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{38, 32.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{-0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>flourbag1</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-10.375544233663767, -12.054959597705206}</string>
+										<string>{8.4207875655128603, -12.054959597705206}</string>
+										<string>{8.4207875655128603, 11.669205063645208}</string>
+										<string>{-10.375544233663767, 11.669205063645208}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>126</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>31.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-18.75, -15.75}</string>
+								<key>LHWidth</key>
+								<real>37</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{33.497823065344932, 16.323179745419168}</string>
+									<string>{108.68315026205144, 16.323179745419168}</string>
+									<string>{108.68315026205144, 111.21983839082083}</string>
+									<string>{33.497823065344932, 111.21983839082083}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>148</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>flourbag1</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{2, 38}, {37, 31.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{8, 152}, {148, 126}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>flourbag1</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/flourbag.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/flourbag.png/</string>
+						<key>OriginalRect</key>
+						<string>{{1, 2}, {148, 126}}</string>
+						<key>OriginalSize</key>
+						<string>{152, 130}</string>
+						<key>Position</key>
+						<string>{8, 152}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{38, 32.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{-0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>flourbag2</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-10.516762559044169, -12.287554515466368}</string>
+										<string>{8.5183943376670399, -12.287554515466368}</string>
+										<string>{8.5183943376670399, 11.928797605912798}</string>
+										<string>{-10.516762559044169, 11.928797605912798}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>126</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>31.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-18.75, -15.75}</string>
+								<key>LHWidth</key>
+								<real>37</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{32.932949763823324, 15.284809576348806}</string>
+									<string>{109.07357735066816, 15.284809576348806}</string>
+									<string>{109.07357735066816, 112.15021806186547}</string>
+									<string>{32.932949763823324, 112.15021806186547}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>148</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>flourbag2</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{2, 73}, {37, 31.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{8, 292}, {148, 126}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>flourbag2</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/flourbag.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/flourbag.png/</string>
+						<key>OriginalRect</key>
+						<string>{{1, 2}, {148, 126}}</string>
+						<key>OriginalSize</key>
+						<string>{152, 130}</string>
+						<key>Position</key>
+						<string>{8, 292}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{38, 32.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{-0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+				<key>flourbag3</key>
+				<dict>
+					<key>IsSHSprite</key>
+					<true/>
+					<key>PhysicProperties</key>
+					<dict>
+						<key>AngularDamping</key>
+						<real>0.0</real>
+						<key>AngularVelocity</key>
+						<real>0.0</real>
+						<key>CanSleep</key>
+						<true/>
+						<key>FixedRot</key>
+						<false/>
+						<key>GravityScale</key>
+						<real>1</real>
+						<key>HandledBySH</key>
+						<true/>
+						<key>IsBullet</key>
+						<false/>
+						<key>LinearDamping</key>
+						<real>0.0</real>
+						<key>LinearVelocity</key>
+						<string>{0, 0}</string>
+						<key>SH_ComplexShapes</key>
+						<array>
+							<dict>
+								<key>Angle</key>
+								<integer>0</integer>
+								<key>Category</key>
+								<integer>1</integer>
+								<key>Density</key>
+								<real>0.20000000298023224</real>
+								<key>Fixture</key>
+								<array>
+									<array>
+										<string>{-10.417078265202571, -12.287554202531837}</string>
+										<string>{8.3346019133232794, -12.287554202531837}</string>
+										<string>{8.3346019133232794, 11.835863117841882}</string>
+										<string>{-10.417078265202571, 11.835863117841882}</string>
+									</array>
+								</array>
+								<key>Friction</key>
+								<real>0.20000000298023224</real>
+								<key>Group</key>
+								<integer>0</integer>
+								<key>Height</key>
+								<real>126</real>
+								<key>HolesPoints</key>
+								<array/>
+								<key>IsCircle</key>
+								<false/>
+								<key>IsRectangle</key>
+								<true/>
+								<key>IsSensor</key>
+								<false/>
+								<key>LHHeight</key>
+								<real>31.5</real>
+								<key>LHShapePositionOffset</key>
+								<string>{-18.75, -15.75}</string>
+								<key>LHWidth</key>
+								<real>37</real>
+								<key>Mask</key>
+								<integer>65535</integer>
+								<key>Name</key>
+								<string>UntitledFixture</string>
+								<key>Restitution</key>
+								<real>0.20000000298023224</real>
+								<key>ShapePoints</key>
+								<array>
+									<string>{33.331686939189716, 15.656547528632473}</string>
+									<string>{108.33840765329312, 15.656547528632473}</string>
+									<string>{108.33840765329312, 112.15021681012735}</string>
+									<string>{33.331686939189716, 112.15021681012735}</string>
+								</array>
+								<key>ShapePositionOffset</key>
+								<string>{0, 0}</string>
+								<key>Tag</key>
+								<integer>0</integer>
+								<key>Width</key>
+								<real>148</real>
+							</dict>
+						</array>
+						<key>Type</key>
+						<integer>2</integer>
+					</dict>
+					<key>SHSheetName</key>
+					<string>chapter-3</string>
+					<key>SHSpriteName</key>
+					<string>flourbag3</string>
+					<key>SheetImage</key>
+					<string>logistics_chapter-3.png</string>
+					<key>SheetImage-HD</key>
+					<string>logistics_chapter-3-ipadhd.png</string>
+					<key>TextureProperties</key>
+					<dict>
+						<key>Angle</key>
+						<integer>0</integer>
+						<key>Border</key>
+						<integer>0</integer>
+						<key>CanBeTrimmed</key>
+						<true/>
+						<key>Color</key>
+						<string>{{1, 1}, {1, 1}}</string>
+						<key>ConvertedFromOldFormat</key>
+						<false/>
+						<key>CustomClassName</key>
+						<string></string>
+						<key>FlipX</key>
+						<false/>
+						<key>FlipY</key>
+						<false/>
+						<key>Frame</key>
+						<string>{{2, 109}, {37, 31.5}}</string>
+						<key>Frame-HD</key>
+						<string>{{8, 436}, {148, 126}}</string>
+						<key>Image</key>
+						<string>logistics_chapter-3.png</string>
+						<key>Image-HD</key>
+						<string>logistics_chapter-3-ipadhd.png</string>
+						<key>IsCropped</key>
+						<false/>
+						<key>IsDrawable</key>
+						<true/>
+						<key>IsRotated</key>
+						<false/>
+						<key>IsTrimmed</key>
+						<true/>
+						<key>Name</key>
+						<string>flourbag3</string>
+						<key>Opacity</key>
+						<real>1</real>
+						<key>OriginalImage</key>
+						<string>/Users/rakerson/Desktop/LogisticsImages/level3/flourbag.png</string>
+						<key>OriginalImage_RelativePath</key>
+						<string>../../../../LogisticsImages/level3/flourbag.png/</string>
+						<key>OriginalRect</key>
+						<string>{{1, 2}, {148, 126}}</string>
+						<key>OriginalSize</key>
+						<string>{152, 130}</string>
+						<key>Position</key>
+						<string>{8, 436}</string>
+						<key>Scale</key>
+						<string>{1, 1}</string>
+						<key>SpriteSize</key>
+						<string>{38, 32.5}</string>
+						<key>SpriteWasBreaked</key>
+						<false/>
+						<key>Tag</key>
+						<integer>0</integer>
+						<key>TextureOffset</key>
+						<string>{-0.25, -0}</string>
+						<key>UsesBatchRendering</key>
+						<true/>
+						<key>ZOrder</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+			</dict>
+			<key>Size</key>
+			<string>{256, 1024}</string>
+			<key>Trim</key>
+			<true/>
+			<key>ZOrder</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>SH_ANIMATIONS_LIST</key>
 	<array>
@@ -16825,6 +17802,6 @@
 		<integer>0</integer>
 	</dict>
 	<key>Version</key>
-	<string>1.8.219</string>
+	<string>1.8.224</string>
 </dict>
 </plist>

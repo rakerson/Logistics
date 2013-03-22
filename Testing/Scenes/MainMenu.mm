@@ -177,7 +177,7 @@
         }
         else
         {
-            CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, nil];
+            CCMenu *menu = [CCMenu menuWithItems:aboutButton, playButton, feedbackButton, nil];
             [menu setPosition:ccp(screenSize.width*0.5, screenSize.height*0.22)];
             [menu alignItemsHorizontally];
             [self addChild:menu];
@@ -214,32 +214,14 @@
         unmuteButton.scale = 0.80;
         [unmuteButton setPosition:ccp(screenSize.width*0.92, screenSize.height*0.08)];
         unmuteButton.visible = false;
-        //[self launchFirework];
-        // Testing GameData
-        /*
-        GameData *gameData = [GameDataParser loadData];
-
-        CCLOG(@"Read from XML 'Selected Chapter' = %i", gameData.selectedChapter);
-        CCLOG(@"Read from XML 'Selected Level' = %i", gameData.selectedLevel);
-        CCLOG(@"Read from XML 'Music' = %i", gameData.music);
-        CCLOG(@"Read from XML 'Sound' = %i", gameData.sound);
-        
-        gameData.selectedChapter = 7;
-        gameData.selectedLevel = 4;
-        gameData.music = 0;
-        gameData.sound = 0;
-        
-        [GameDataParser saveData:gameData];
-        */
-    }
+        }
     return self;
 
 }
 
 -(void) feedbackForm:(id)sender {
-    NSLog(@"Show the Feedback From");
     [[RootViewControllerInterface rootViewControllerInterfaceSharedInstance] sendContactMail];
-    NSLog(@"Should've Showed the Feedback From");
+    
 }
 -(void)launchFirework
 {

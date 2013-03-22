@@ -140,7 +140,7 @@
     // Optional: set debug to YES for extra debugging information.
     [GAI sharedInstance].debug = YES;
     // Create tracker instance.
-    //id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-37403876-1"];
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-37403876-1"];
     
 	// Run the intro Scene
 	//[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
@@ -148,7 +148,7 @@
     
     // Add the viewController to the RootViewControllerInterface.
     [[RootViewControllerInterface rootViewControllerInterfaceSharedInstance] setRootViewController:viewController];
-
+    [tracker setSessionTimeout:60];
     
     }
 

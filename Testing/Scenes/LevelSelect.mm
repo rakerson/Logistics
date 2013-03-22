@@ -123,11 +123,11 @@
     if( (self=[super init])) {
         
         
-        //id tracker = [GAI sharedInstance].defaultTracker;
-        //[tracker sendEventWithCategory:@"Scene"
-        //                    withAction:@"Go"
-         //                    withLabel:@"Level"
-         //                    withValue:[NSNumber numberWithInt:100]];
+        id tracker = [GAI sharedInstance].defaultTracker;
+        [tracker sendEventWithCategory:@"Scene"
+                            withAction:@"Go"
+                             withLabel:@"Level"
+                             withValue:[NSNumber numberWithInt:100]];
         
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
         if (self.iPad) {
