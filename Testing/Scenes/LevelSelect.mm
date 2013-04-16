@@ -74,6 +74,8 @@
     NSArray *tempLevelArray = [LevelParser loadLevelsForChapter:gameData.selectedChapter];
     BOOL showA = NO;
     BOOL showB = NO;
+    if(gameData.selectedChapter > 0)
+    {
        for (Level *level in tempLevelArray) {
         if ([[NSNumber numberWithInt:level.number] intValue] == 1 && level.userLastScore > 1) {
             showA = YES;
@@ -81,6 +83,7 @@
         if ([[NSNumber numberWithInt:level.number] intValue] == 12 && level.userLastScore > 1) {
             showB = YES;
         }
+       }
     }
 
     
@@ -158,7 +161,7 @@
 
         for (Chapter *chapter in selectedChapters) {            //for (Chapter *chapter in selectedChapters.chapters) {            
             if ([[NSNumber numberWithInt:chapter.number] intValue] == selectedChapter) {
-                CCLOG(@"Selected Chapter is %@ (ie: number %i)", chapter.name, chapter.number);
+                NSLog(@"Selected Chapter is %@ (ie: number %i)", chapter.name, chapter.number);
                 selectedChapterName = chapter.name;
             }
         }
@@ -214,12 +217,16 @@
             }
 
         }
-
-        [levelMenu alignItemsInColumns:
-          [NSNumber numberWithInt:4],
-          [NSNumber numberWithInt:4],
-          [NSNumber numberWithInt:4],
-          nil];
+        NSLog(@" Selected Chapter %i", gameData.selectedChapter);
+        if (gameData.selectedChapter < 1)
+        {
+          [levelMenu alignItemsInColumns:[NSNumber numberWithInt:3], [NSNumber numberWithInt:3], nil];
+        }
+        else
+        {
+        [levelMenu alignItemsInColumns:[NSNumber numberWithInt:4],[NSNumber numberWithInt:4],[NSNumber numberWithInt:4], nil];
+        }
+        
 
      // Move the whole menu up by a small percentage so it doesn't overlap the back button
         

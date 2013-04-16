@@ -43,6 +43,9 @@
     CCLabelTTF *bellCounter;
     CCLabelTTF *giftCounter;
     CCLabelTTF *giftRemainingCounter;
+    //CCLabelTTF *giftRemainingCounter2;
+    LHSprite *giftRemainingCounter2;
+    LHSprite *giftSucessCounter;
     CCLabelTTF *beltCounter;
     CCLabelTTF *fanCounter;
     CCLabelTTF *springCounter;

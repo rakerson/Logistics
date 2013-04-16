@@ -1,5 +1,10 @@
 
 <Chapters>
+    <Chapter>
+		<Name>Introduction</Name>
+        <Icon>intro-icon</Icon>
+		<Number>0</Number>
+	</Chapter>
 	<Chapter>
 		<Name>Candy Factory</Name>
         <Icon>chapter-2</Icon>
@@ -12,7 +17,7 @@
 	</Chapter>
 	<Chapter>
 		<Name>Cookie Bakery</Name>
-        <Icon>comingsoon</Icon>
+        <Icon>cookie-icon</Icon>
 		<Number>3</Number>
 	</Chapter>
 	<Chapter>

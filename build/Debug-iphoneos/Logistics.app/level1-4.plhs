@@ -11,7 +11,7 @@
 	<key>JOINTS_INFO</key>
 	<array/>
 	<key>LHVersion</key>
-	<string>1.4.976</string>
+	<string>1.4.987</string>
 	<key>NODES_INFO</key>
 	<array>
 		<dict>
@@ -64,7 +64,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{249, 121}, {12, 12}}</string>
+								<string>{{235, 158}, {12, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -76,7 +76,7 @@
 								<key>Opacity</key>
 								<real>1</real>
 								<key>Position</key>
-								<string>{481, 257}</string>
+								<string>{479, 253}</string>
 								<key>Scale</key>
 								<string>{2.6230523586273193, 0.96363550424575806}</string>
 								<key>SpriteSize</key>
@@ -139,7 +139,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{249, 121}, {12, 12}}</string>
+								<string>{{235, 158}, {12, 12}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -214,13 +214,13 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{105, 427}, {80.5, 82.5}}</string>
+								<string>{{129, 547}, {80.5, 82.5}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
 								<false/>
 								<key>IsRotated</key>
-								<false/>
+								<true/>
 								<key>Locked</key>
 								<false/>
 								<key>Opacity</key>
@@ -289,7 +289,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -364,7 +364,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -439,7 +439,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -514,7 +514,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -589,7 +589,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -664,7 +664,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -739,7 +739,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -814,7 +814,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{206, 86}, {42.75, 45.75}}</string>
+								<string>{{2, 358}, {42.75, 45.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -889,7 +889,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{206, 86}, {42.75, 45.75}}</string>
+								<string>{{2, 358}, {42.75, 45.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -964,7 +964,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{206, 86}, {42.75, 45.75}}</string>
+								<string>{{2, 358}, {42.75, 45.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1039,7 +1039,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1114,7 +1114,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1189,7 +1189,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{361, 258}, {21.75, 74.75}}</string>
+								<string>{{78, 800}, {21.75, 74.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1264,7 +1264,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{295, 184}, {84.75, 74}}</string>
+								<string>{{49, 378}, {84.75, 83.75}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1286,7 +1286,7 @@
 								<key>TagName</key>
 								<string>GOALSPRITE</string>
 								<key>TextureOffset</key>
-								<string>{0.375, 4.5}</string>
+								<string>{0.375, 0.125}</string>
 								<key>UniqueName</key>
 								<string>goal0</string>
 								<key>ZOrder</key>
@@ -1356,7 +1356,7 @@
 								<key>FlipY</key>
 								<false/>
 								<key>Frame</key>
-								<string>{{209, 183}, {84.75, 74}}</string>
+								<string>{{26, 630}, {84.75, 76}}</string>
 								<key>IsDrawable</key>
 								<true/>
 								<key>IsExpanded</key>
@@ -1378,7 +1378,7 @@
 								<key>TagName</key>
 								<string>PRESENT_DROP</string>
 								<key>TextureOffset</key>
-								<string>{0.375, 4.5}</string>
+								<string>{0.375, 5.5}</string>
 								<key>UniqueName</key>
 								<string>gift-launcher0</string>
 								<key>ZOrder</key>
@@ -1404,7 +1404,7 @@
 					<key>SheetImage</key>
 					<string>logistics_tools.png</string>
 					<key>SheetImageRelative</key>
-					<string>/Resources/logistics_tools.png</string>
+					<string>/logistics_tools.png</string>
 					<key>Tag</key>
 					<integer>0</integer>
 					<key>TagName</key>
@@ -1659,7 +1659,7 @@
 					<key>SheetImage</key>
 					<string>logistics_chapter-1.png</string>
 					<key>SheetImageRelative</key>
-					<string>/Resources/logistics_chapter-1.png</string>
+					<string>/logistics_chapter-1.png</string>
 					<key>Tag</key>
 					<integer>0</integer>
 					<key>TagName</key>
@@ -1738,6 +1738,8 @@
 			<string>SHOOTER_ROTATOR</string>
 			<string>GOALSPRITE</string>
 			<string>HORIZONATALPLATFORM</string>
+			<string>BREAKABLE</string>
+			<string>REPOSITION</string>
 		</array>
 		<key>ZoomValue</key>
 		<real>0.0</real>

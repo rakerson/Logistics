@@ -261,7 +261,12 @@
 - (void) nextLevel: (CCMenuItemImage*) sender {
     // store the selected level in GameData
     GameData *gameData = [GameDataParser loadData];
-    if(gameData.selectedLevel == 12)
+    if(gameData.selectedChapter == 0 && gameData.selectedLevel == 6)
+    {
+        gameData.selectedChapter = gameData.selectedChapter+1;
+        gameData.selectedLevel = 1;
+    }
+    else if(gameData.selectedLevel == 12)
     {
     gameData.selectedChapter = gameData.selectedChapter+1;
     gameData.selectedLevel = 1;

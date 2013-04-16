@@ -384,16 +384,17 @@ enum {
         topMatte.color = ccc3(rr, gg,bb);
         
         
-        [buttonLayer addChild: topMatte];
+        //
         topMatte.scaleX = screenSize.width/topMatte.contentSize.width;
         if([self.device isEqual: @"iphone"])
         {
             topMatte.scaleY = (screenSize.height*0.1)/topMatte.contentSize.height;
+            
         }
         else
         {
             topMatte.scaleY = (screenSize.height*0.08)/topMatte.contentSize.height;
-           
+           [buttonLayer addChild: topMatte];
         }
         [topMatte setAnchorPoint:ccp(0,0)];
         [topMatte setPosition:ccp(0, screenSize.height-(topMatte.contentSize.height*topMatte.scaleY))];
@@ -408,6 +409,7 @@ enum {
         bottomMatte.color = ccc3(rr, gg,bb);
         if([self.device isEqual: @"iphone"]){
             bottomMatte.scaleY = (screenSize.height*0.1)/bottomMatte.contentSize.height;
+            bottomMatte.opacity = 0;
         }
         else
         {
@@ -417,7 +419,11 @@ enum {
               
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         currentItemName = @"";
-        if(selectedChapter == 1)
+        if(selectedChapter == 0)
+        {
+            currentSpriteSheet = @"chapter-0";
+        }
+        else if(selectedChapter == 1)
         {
         currentSpriteSheet = @"chapter-1";
         }
@@ -438,10 +444,10 @@ enum {
         [self setupCollisionHandling];
         [self initHUDLayer];
         [self initRewards];
-        if(selectedLevel == 1 && selectedChapter == 1 && nextLevelUnlocked == false){
+        if(selectedLevel == 3 && selectedChapter == 0){
             [self showHelpMenu:@"drop"];
         }
-        if(selectedLevel == 9 && selectedChapter == 1 && nextLevelUnlocked == false){
+        if(selectedLevel == 6 && selectedChapter == 0){
             [self showHelpMenu:@"shoot"];
         }
        // if(selectedLevel == 12 && selectedChapter == 1){
@@ -457,7 +463,7 @@ enum {
         //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"level-1.mp3" loop:TRUE];
         
         //launch a cinematic if the leve is one and the score is > 1
-        if(gameData.selectedLevel == 1 && showCinematic)
+        if(gameData.selectedLevel == 1 && showCinematic && gameData.selectedChapter > 0)
         {
           //launch the cinematic...
             [self showCinematicA];
@@ -649,10 +655,35 @@ enum {
         if (b->GetUserData() != NULL) {
             //Synchronize the AtlasSprites position and rotation with the corresponding body
             LHSprite *myActor = (LHSprite*)b->GetUserData();
+            if(myActor.tag == PRESENT_DROP)
+            {
+                //pposition the label for counter
+                 if([self.device isEqual: @"iphone"]){
+                giftRemainingCounter2.position =  ccp(myActor.position.x-4,myActor.position.y+18);
+                 }
+                 else{
+                 giftRemainingCounter2.position =  ccp(myActor.position.x-8,myActor.position.y+36);
+                 }
+  
+            }
+            if(myActor.tag == GOAL)
+            {
+                //pposition the label for counter
+               
+                
+            }
+            
             if(myActor.tag == GOALSPRITE)
             {
                 goalSprite = myActor;
-                NSLog(@"WE HAVE A Goal SPRITE");
+                //NSLog(@"WE HAVE A Goal SPRITE");
+                if([self.device isEqual: @"iphone"]){
+                giftSucessCounter.position =  ccp(myActor.position.x+3,myActor.position.y-17);
+                }
+                else
+                {
+                giftSucessCounter.position =  ccp(myActor.position.x+8,myActor.position.y-38);
+                }
             }
             if(myActor.tag == REWARD)
             {
@@ -702,7 +733,11 @@ enum {
     [beltCounter setString:[NSString stringWithFormat:@"%d", belts]];
     [fanCounter setString:[NSString stringWithFormat:@"%d", fans]];
     [springCounter setString:[NSString stringWithFormat:@"%d", springs]];
-    [giftRemainingCounter setString:[NSString stringWithFormat:@"items: %d", giftsRemaining]];
+    //[giftRemainingCounter setString:[NSString stringWithFormat:@"items: %d", giftsRemaining]];
+    
+    [giftRemainingCounter2 setFrame:giftsRemaining];
+    //[giftSucessCounter setString:[NSString stringWithFormat:@"%d", gifts]];
+    [giftSucessCounter setFrame:gifts];
     //update strikes
     if(strikes >3)
     {
@@ -742,7 +777,7 @@ enum {
     //fans= 1;
     //add level title
    
-   //int largeFont = winSize.height / kFontScaleLarge;
+   int largeFont = winSize.height / kFontScaleLarge;
     
     giftCounter = [CCLabelTTF labelWithString:@"Gifts: 0" fontName:@"Fontdinerdotcom" fontSize:32];
     
@@ -752,11 +787,28 @@ enum {
     [buttonLayer addChild: giftCounter];
     
     //add the gift remaining counter
-    giftRemainingCounter = [CCLabelTTF labelWithString:@"items: 10"  fontName:@"Fontdinerdotcom" fontSize:smallFont];
-    [giftRemainingCounter setAnchorPoint:CGPointMake(0, 0.5)];
-    giftRemainingCounter.position =  ccp(winSize.width*0.05,winSize.height*0.96);
-    [giftRemainingCounter setColor:ccc3 (255,255,255)];
-    [buttonLayer addChild: giftRemainingCounter];
+    //giftRemainingCounter = [CCLabelTTF labelWithString:@"items: 10"  fontName:@"Fontdinerdotcom" fontSize:smallFont];
+    //giftRemainingCounter2 = [CCLabelTTF labelWithString:@"10"  fontName:@"Fontdinerdotcom" fontSize:largeFont];
+    giftRemainingCounter2 = [lh createSpriteWithName:@"count-10" fromSheet:@"tools" fromSHFile:currentFile  tag:DEFAULT_TAG];
+    
+    
+    [giftRemainingCounter2 prepareAnimationNamed:@"count-anim" fromSHScene:@"logistics"];
+    [giftRemainingCounter2 setFrame:10];
+    //giftSucessCounter = [CCLabelTTF labelWithString:@"0"  fontName:@"Fontdinerdotcom" fontSize:largeFont];
+    giftSucessCounter = [lh createSpriteWithName:@"count-0" fromSheet:@"tools" fromSHFile:currentFile  tag:DEFAULT_TAG];
+    [giftSucessCounter prepareAnimationNamed:@"count-anim" fromSHScene:@"logistics"];
+    [giftSucessCounter setFrame:0];
+    //[giftRemainingCounter setAnchorPoint:CGPointMake(0, 0.5)];
+    
+   // giftRemainingCounter.position =  ccp(winSize.width*0.05,winSize.height*0.96);
+    //[giftRemainingCounter setColor:ccc3 (255,255,255)];
+    [giftRemainingCounter2 setColor:ccc3 (222,32,32)];
+   // giftRemainingCounter2.opacity = 155;
+    
+    [giftSucessCounter setColor:ccc3 (0,126,19)];
+    //[buttonLayer addChild: giftRemainingCounter];
+    //[buttonLayer addChild: giftRemainingCounter2];
+    //[buttonLayer addChild: giftSucessCounter];
     
     
     //place the pause button
@@ -874,7 +926,7 @@ enum {
     
     //rotate tool
     rotateTool = [lh createSpriteWithName:@"rotate" fromSheet:@"tools" fromSHFile:currentFile  tag:ROTATOR];
-    //rotateTool.zOrder = 10000;
+    
     rotateTool.visible = false;
     
     [rotateTool setPosition:ccp(-1000,-1000)];
@@ -886,6 +938,7 @@ enum {
     //to account for scaled down levels
     rotateTool.scale = 1;
     scopeSprite.scale = 1;
+    
     
     
 }
@@ -1166,7 +1219,7 @@ enum {
     if (CGRectContainsPoint (beltButton.boundingBox,touchLocation) && belts > 0)
     {
         LHSprite* myNewSprite = [lh createSpriteWithName:@"belt0" fromSheet:@"tools" fromSHFile:currentFile  tag:BELT];
-        [myNewSprite.parent reorderChild:myNewSprite z:-500];
+        [myNewSprite.parent reorderChild:myNewSprite z:100];
         [myNewSprite prepareAnimationNamed:@"belt-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         [myNewSprite playAnimation];
@@ -1174,6 +1227,7 @@ enum {
         selSprite = myNewSprite;
         selSpriteBody = myNewSprite.body;
         rotateTool.position = myNewSprite.position;
+        [rotateTool.parent reorderChild:rotateTool z:500];
         editMode = @"move";
         belts-=1;
         [self updateHUD];
@@ -1182,7 +1236,7 @@ enum {
     else if (CGRectContainsPoint (fanButton.boundingBox,touchLocation) && fans > 0)
     {
         LHSprite* myNewSprite = [lh createSpriteWithName:@"fan0" fromSheet:@"tools" fromSHFile:currentFile  tag:FAN];
-         [myNewSprite.parent reorderChild:myNewSprite z:-500];
+         [myNewSprite.parent reorderChild:myNewSprite z:100];
         [myNewSprite prepareAnimationNamed:@"fan-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         [myNewSprite playAnimation];
@@ -1197,7 +1251,7 @@ enum {
     else if (CGRectContainsPoint (springButton.boundingBox,touchLocation) && springs > 0)
     {
         LHSprite* myNewSprite = [lh createSpriteWithName:@"spring0" fromSheet:@"tools" fromSHFile:currentFile  tag:SPRING];
-        [myNewSprite.parent reorderChild:myNewSprite z:-500];
+        [myNewSprite.parent reorderChild:myNewSprite z:100];
         [myNewSprite prepareAnimationNamed:@"spring-anim" fromSHScene:@"logistics"];
         [myNewSprite transformPosition:ccp(touchLocation.x,touchLocation.y)];
         //[myNewSprite playAnimation];
@@ -1413,7 +1467,12 @@ return FALSE;
 
     for (LHSprite *item in rewardArray)
         {
-        if(selectedChapter == 1)
+        if(selectedChapter == 0)
+        {
+            LHSprite* myNewSprite = [lh createSpriteWithName:@"spark1" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
+            [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
+        }
+        else if(selectedChapter == 1)
         {
             LHSprite* myNewSprite = [lh createSpriteWithName:@"candy" fromSheet:currentSpriteSheet fromSHFile:currentFile  tag:REWARD];
             [myNewSprite transformPosition:ccp(item.position.x,item.position.y)];
@@ -1810,7 +1869,7 @@ return FALSE;
                         [myActor playAnimation];
                 
                          //start the game
-                        //NSLog(@"DROP THE PRESENT");
+                        NSLog(@"DROP THE PRESENT: %@", itemType);
                         giftsRemaining -=1;
                         [self updateHUD];
                         int random = [self getRandomNumberBetweenMin:0 andMax:3];
@@ -1838,7 +1897,18 @@ return FALSE;
             //{
             if (CGRectContainsPoint(myActor.boundingBox, touchLocation))
                 {
-                if(myActor.tag == BELT || myActor.tag == FAN || myActor.tag == SPRING)
+                NSLog(@"TAG: %i",myActor.tag);
+                if(myActor.tag == ROTATOR)
+                    {
+                        [self restartGame];
+                        
+                        editMode = @"rotate";
+                        rotateTool.visible = true;
+                        [rotateTool setPosition:ccp(selSprite.position.x,selSprite.position.y)];
+                        //NSLog(@"ROTATE");
+                        break;
+                    }
+                else if(myActor.tag == BELT || myActor.tag == FAN || myActor.tag == SPRING)
                     {
                    
                     NSLog(@"BELT/Actor");
@@ -1852,16 +1922,7 @@ return FALSE;
                     [rotateTool setPosition:ccp(selSprite.position.x,selSprite.position.y)];
                     break;
                     }
-                if(myActor.tag == ROTATOR)
-                    {
-                    [self restartGame];
-                    
-                    editMode = @"rotate";
-                    rotateTool.visible = true;
-                    [rotateTool setPosition:ccp(selSprite.position.x,selSprite.position.y)];
-                    //NSLog(@"ROTATE");
-                    break;
-                    }
+                
                 }
             //}
         }

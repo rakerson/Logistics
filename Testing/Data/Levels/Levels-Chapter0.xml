@@ -1,0 +1,94 @@
+
+<Levels>
+	<Level>
+        <Name>Chapter0Level1</Name>
+		<Number>1</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 0 Level 1 Data</Data>
+        <Belts>0</Belts>
+        <Fans>0</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-1</Background>
+        <Item>ball</Item>
+	</Level>    
+	<Level>
+        <Name>Chapter0Level2</Name>
+		<Number>2</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 1 Level 2 Data</Data>
+        <Belts>0</Belts>
+        <Fans>0</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-2</Background>
+        <Item>ball</Item>
+	</Level>    
+	<Level>
+        <Name>Chapter0Level3</Name>
+		<Number>3</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 1 Level 3 Data</Data>
+        <Belts>1</Belts>
+        <Fans>0</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-3</Background>
+        <Item>ball</Item>
+	</Level>    
+	<Level>
+        <Name>Chapter0Level4</Name>
+		<Number>4</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 1 Level 4 Data</Data>
+        <Belts>0</Belts>
+        <Fans>1</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-4</Background>
+        <Item>ball</Item>
+	</Level>    
+	<Level>
+        <Name>Chapter0Level5</Name>
+		<Number>5</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 1 Level 5 Data</Data>
+        <Belts>0</Belts>
+        <Fans>0</Fans>
+        <Springs>1</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-5</Background>
+        <Item>ball</Item>
+	</Level>    
+	<Level>
+        <Name>Chapter0Level6</Name>
+		<Number>6</Number>
+        <Unlocked>1</Unlocked>
+        <Stars>0</Stars>
+        <UserLastStars>0</UserLastStars>
+		<Data>Some Chapter 1 Level 6 Data</Data>
+        <Belts>0</Belts>
+        <Fans>0</Fans>
+        <Springs>0</Springs>
+        <UserLastScore>1</UserLastScore>
+        <UserHighScore>1</UserHighScore>
+        <Background>level-back-6</Background>
+        <Item>ball</Item>
+	</Level>    
+	
+</Levels>
