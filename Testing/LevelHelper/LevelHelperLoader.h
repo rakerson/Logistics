@@ -80,7 +80,8 @@ enum LevelHelper_TAG
     HORIZONTALPLATFORM  = 16,
     BREAKABLE = 17,
     REPOSITION = 18,
-	NUMBER_OF_TAGS 	= 19
+    VERTICALPLATFORM = 19,
+	NUMBER_OF_TAGS = 20
 };
 
 CGSize  LHSizeFromString(NSString* val);

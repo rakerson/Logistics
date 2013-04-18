@@ -16,7 +16,7 @@
 	<Level>
         <Name>Chapter3Level2</Name>
 		<Number>2</Number>
-        <Unlocked>0</Unlocked>
+        <Unlocked>1</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 2 Data</Data>
         <Belts>3</Belts>
@@ -25,21 +25,21 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icecube</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level3</Name>
 		<Number>3</Number>
-        <Unlocked>0</Unlocked>
+        <Unlocked>1</Unlocked>
         <Stars>0</Stars>
 		<Data>Some Chapter 2 Level 3 Data</Data>
         <Belts>2</Belts>
         <Fans>0</Fans>
-        <Springs>2</Springs>
+        <Springs>1</Springs>
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icecube</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level4</Name>
@@ -53,7 +53,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icecube</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level5</Name>
@@ -67,7 +67,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>iceball</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level6</Name>
@@ -81,7 +81,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icecube</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level7</Name>
@@ -95,7 +95,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icecube</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level8</Name>
@@ -109,7 +109,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icebag</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level9</Name>
@@ -123,7 +123,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>iceball</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level10</Name>
@@ -137,7 +137,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>icebag</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level11</Name>
@@ -151,7 +151,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>iceball</Item>
+        <Item>flourbag</Item>
 	</Level>
 	<Level>
         <Name>Chapter3Level12</Name>
@@ -165,7 +165,7 @@
         <UserLastScore>1</UserLastScore>
         <UserHighScore>1</UserHighScore>
         <Background>level-back-5</Background>
-        <Item>iceball</Item>
+        <Item>flourbag</Item>
 	</Level>
 	
 </Levels>

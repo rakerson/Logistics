@@ -44,7 +44,7 @@
 	<key>HDSuffix</key>
 	<string>-hd</string>
 	<key>LastLevelLoaded</key>
-	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level3-12.plhs</string>
+	<string>/Users/rakerson/Desktop/Projects/Logistics/Testing/Resources/level3-2.plhs</string>
 	<key>Orientation</key>
 	<integer>1</integer>
 	<key>ProjectName</key>
@@ -90,6 +90,7 @@
 		<string>HORIZONATALPLATFORM</string>
 		<string>BREAKABLE</string>
 		<string>REPOSITION</string>
+		<string>VERTICALPLATFORM</string>
 	</array>
 </dict>
 </plist>

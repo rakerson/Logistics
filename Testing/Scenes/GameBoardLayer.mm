@@ -1669,7 +1669,7 @@ return FALSE;
 	// Instruct the world to perform a single step of simulation. It is
 	// generally best to keep the time step and iterations fixed.
 	world->Step(dt, velocityIterations, positionIterations);
-
+        CGSize winSize = [CCDirector sharedDirector].winSize;
        
 	//Iterate over the bodies in the physics world
 	for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
@@ -1679,8 +1679,29 @@ return FALSE;
                 
                 //Synchronize the AtlasSprites position and rotation with the corresponding body
                 
-                
                 LHSprite *myActor = (LHSprite*)b->GetUserData();
+                if(myActor.tag == VERTICALPLATFORM)
+                {
+                    
+                    //b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(0))*.2, cosf (CC_DEGREES_TO_RADIANS(0))*.2);
+                    b2Vec2 force = b2Vec2(0, 6);
+                    b->ApplyForce(force, b->GetWorldCenter());
+                    
+                }
+                if(myActor.tag == VERTICALPLATFORM && myActor.position.y > 745)
+                {
+                    NSLog(@"ACTOR POS:%f", myActor.position.y);
+                    
+                   //myActor.position = ccp(myActor.position.x,0);
+                   // myActor.body->SetTransform(b2Vec2(myActor.position.x/[LevelHelperLoader pointsToMeterRatio] , 0, myActor.body->GetAngle());
+                   // myActor.body->SetTransform(b2Vec2(myActor.position.x/[LevelHelperLoader pointsToMeterRatio] , 0), myActor.body->GetAngle());
+                    //[myActor setPosition:ccp(myActor.position.x,0)];
+                    //myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO, 0);
+                    //  b2Vec2 force = b2Vec2(sinf (CC_DEGREES_TO_RADIANS(-90))*2, cosf (CC_DEGREES_TO_RADIANS(-90))*2);
+                    //  b->ApplyForce(force, b->GetWorldCenter());
+                    
+                }
+                //LHSprite *myActor = (LHSprite*)b->GetUserData();
                 if(myActor.tag == HORIZONTALPLATFORM)
                 {
                
